@@ -604,3 +604,34 @@ footer a:hover {
     }
 
 }
+
+/* =========================================
+   PLAYER CARDS
+========================================= */
+
+.player-card {
+    padding-top: 10px;
+    height: auto;
+}
+
+.custom-card img.player-img {
+    width: 85%;
+    height: 210px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.player-card .card-content {
+    padding: 15px 20px 20px;
+}
+
+.player-card h4 {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.player-card p {
+    margin-bottom: 8px;
+}
