@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Event Schedule | E-Sports Club</title>
+    <title>Event Schedule | NexArena</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -28,11 +29,12 @@
      NAVIGATION BAR
 ========================= -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
     <div class="container">
 
         <a class="navbar-brand" href="index.html">
             <i class="bi bi-controller"></i>
-            E-SPORTS CLUB
+            NexArena
         </a>
 
         <button
@@ -108,7 +110,9 @@
             </ul>
 
         </div>
+
     </div>
+
 </nav>
 
 
@@ -125,7 +129,7 @@
 
         <p>
             Stay updated with upcoming tournaments, training sessions,
-            community activities and other E-Sports Club events.
+            community activities and other NexArena events.
         </p>
 
     </div>
@@ -144,6 +148,7 @@
 
             <div class="row g-4">
 
+                <!-- Game Filter -->
                 <div class="col-md-6">
 
                     <label for="gameFilter" class="form-label">
@@ -154,16 +159,48 @@
                         id="gameFilter"
                         class="form-select"
                     >
-                        <option value="all">All Games</option>
-                        <option value="valorant">Valorant</option>
-                        <option value="mlbb">Mobile Legends</option>
-                        <option value="fc">EA Sports FC</option>
-                        <option value="dota">DOTA 2</option>
-                        <option value="various">Various Games</option>
+                        <option value="all">
+                            All Games
+                        </option>
+
+                        <option value="valorant">
+                            Valorant
+                        </option>
+
+                        <option value="cs2">
+                            Counter-Strike 2
+                        </option>
+
+                        <option value="pubg">
+                            PUBG
+                        </option>
+
+                        <option value="hok">
+                            Honor of Kings
+                        </option>
+
+                        <option value="dota2">
+                            DOTA 2
+                        </option>
+
+                        <option value="fc">
+                            EA Sports FC
+                        </option>
+
+                        <option value="rocket">
+                            Rocket League
+                        </option>
+
+                        <option value="various">
+                            Various Games
+                        </option>
+
                     </select>
 
                 </div>
 
+
+                <!-- Event Type Filter -->
                 <div class="col-md-6">
 
                     <label for="typeFilter" class="form-label">
@@ -174,11 +211,27 @@
                         id="typeFilter"
                         class="form-select"
                     >
-                        <option value="all">All Events</option>
-                        <option value="tournament">Tournament</option>
-                        <option value="training">Training</option>
-                        <option value="community">Community</option>
-                        <option value="workshop">Workshop</option>
+
+                        <option value="all">
+                            All Events
+                        </option>
+
+                        <option value="tournament">
+                            Tournament
+                        </option>
+
+                        <option value="training">
+                            Training
+                        </option>
+
+                        <option value="community">
+                            Community
+                        </option>
+
+                        <option value="workshop">
+                            Workshop
+                        </option>
+
                     </select>
 
                 </div>
@@ -194,7 +247,9 @@
         <div class="row g-4" id="eventContainer">
 
 
-            <!-- EVENT 1 -->
+            <!-- =========================
+                 EVENT 1 - VALORANT
+            ========================= -->
             <div
                 class="col-md-6 col-lg-4 event-item"
                 data-game="valorant"
@@ -207,17 +262,19 @@
 
                         <div class="event-date">
                             <span class="day">20</span>
-                            <span class="month">AUG</span>
+                            <span class="month">OCT</span>
                         </div>
 
                         <div>
+
                             <span class="badge badge-tournament">
                                 TOURNAMENT
                             </span>
 
                             <h4 class="event-title mt-2">
-                                E-Sports Championship
+                                Valorant Championship
                             </h4>
+
                         </div>
 
                     </div>
@@ -254,7 +311,393 @@
             </div>
 
 
-            <!-- EVENT 2 -->
+            <!-- =========================
+                 EVENT 2 - COUNTER STRIKE 2
+            ========================= -->
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-game="cs2"
+                data-type="tournament"
+            >
+
+                <div class="event-card">
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">OCT</span>
+                        </div>
+
+                        <div>
+
+                            <span class="badge badge-tournament">
+                                TOURNAMENT
+                            </span>
+
+                            <h4 class="event-title mt-2">
+                                CS2 Campus Clash
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <p class="event-info">
+                        <i class="bi bi-controller"></i>
+                        Counter-Strike 2
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-clock"></i>
+                        2:00 PM – 6:00 PM
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-geo-alt"></i>
+                        Main Arena
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-people"></i>
+                        12 Teams
+                    </p>
+
+                    <a
+                        href="registration.html"
+                        class="btn btn-main w-100 mt-3"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 EVENT 3 - PUBG
+            ========================= -->
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-game="pubg"
+                data-type="tournament"
+            >
+
+                <div class="event-card">
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+                            <span class="day">24</span>
+                            <span class="month">OCT</span>
+                        </div>
+
+                        <div>
+
+                            <span class="badge badge-tournament">
+                                TOURNAMENT
+                            </span>
+
+                            <h4 class="event-title mt-2">
+                                PUBG Battle Royale
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <p class="event-info">
+                        <i class="bi bi-controller"></i>
+                        PUBG
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-clock"></i>
+                        3:00 PM – 7:00 PM
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-globe"></i>
+                        Online
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-people"></i>
+                        20 Teams
+                    </p>
+
+                    <a
+                        href="registration.html"
+                        class="btn btn-main w-100 mt-3"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 EVENT 4 - HONOR OF KINGS
+            ========================= -->
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-game="hok"
+                data-type="tournament"
+            >
+
+                <div class="event-card">
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+                            <span class="day">26</span>
+                            <span class="month">OCT</span>
+                        </div>
+
+                        <div>
+
+                            <span class="badge badge-tournament">
+                                TOURNAMENT
+                            </span>
+
+                            <h4 class="event-title mt-2">
+                                Honor of Kings Cup
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <p class="event-info">
+                        <i class="bi bi-phone"></i>
+                        Honor of Kings
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-clock"></i>
+                        2:00 PM – 6:00 PM
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-globe"></i>
+                        Online
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-people"></i>
+                        12 Teams
+                    </p>
+
+                    <a
+                        href="registration.html"
+                        class="btn btn-main w-100 mt-3"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 EVENT 5 - DOTA 2
+            ========================= -->
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-game="dota2"
+                data-type="tournament"
+            >
+
+                <div class="event-card">
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">OCT</span>
+                        </div>
+
+                        <div>
+
+                            <span class="badge badge-tournament">
+                                TOURNAMENT
+                            </span>
+
+                            <h4 class="event-title mt-2">
+                                DOTA 2 Arena
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <p class="event-info">
+                        <i class="bi bi-controller"></i>
+                        DOTA 2
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-clock"></i>
+                        2:00 PM – 7:00 PM
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-globe"></i>
+                        Online
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-people"></i>
+                        10 Teams
+                    </p>
+
+                    <a
+                        href="registration.html"
+                        class="btn btn-main w-100 mt-3"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 EVENT 6 - EA SPORTS FC
+            ========================= -->
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-game="fc"
+                data-type="tournament"
+            >
+
+                <div class="event-card">
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+                            <span class="day">30</span>
+                            <span class="month">OCT</span>
+                        </div>
+
+                        <div>
+
+                            <span class="badge badge-tournament">
+                                TOURNAMENT
+                            </span>
+
+                            <h4 class="event-title mt-2">
+                                FC Gaming Tournament
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <p class="event-info">
+                        <i class="bi bi-trophy"></i>
+                        EA Sports FC
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-clock"></i>
+                        3:00 PM – 5:00 PM
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-geo-alt"></i>
+                        Main Arena
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-people"></i>
+                        16 Players
+                    </p>
+
+                    <a
+                        href="registration.html"
+                        class="btn btn-main w-100 mt-3"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 EVENT 7 - ROCKET LEAGUE
+            ========================= -->
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-game="rocket"
+                data-type="tournament"
+            >
+
+                <div class="event-card">
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+                            <span class="day">02</span>
+                            <span class="month">OCT</span>
+                        </div>
+
+                        <div>
+
+                            <span class="badge badge-tournament">
+                                TOURNAMENT
+                            </span>
+
+                            <h4 class="event-title mt-2">
+                                Rocket League Cup
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                    <p class="event-info">
+                        <i class="bi bi-lightning-charge"></i>
+                        Rocket League
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-clock"></i>
+                        3:00 PM – 6:00 PM
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-globe"></i>
+                        Online
+                    </p>
+
+                    <p class="event-info">
+                        <i class="bi bi-people"></i>
+                        12 Teams
+                    </p>
+
+                    <a
+                        href="registration.html"
+                        class="btn btn-main w-100 mt-3"
+                    >
+                        Register Now
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 EVENT 8 - TEAM TRAINING
+            ========================= -->
             <div
                 class="col-md-6 col-lg-4 event-item"
                 data-game="valorant"
@@ -266,11 +709,12 @@
                     <div class="d-flex align-items-start gap-3 mb-4">
 
                         <div class="event-date">
-                            <span class="day">23</span>
-                            <span class="month">AUG</span>
+                            <span class="day">04</span>
+                            <span class="month">OCT</span>
                         </div>
 
                         <div>
+
                             <span class="badge badge-training">
                                 TRAINING
                             </span>
@@ -278,6 +722,7 @@
                             <h4 class="event-title mt-2">
                                 Team Training Session
                             </h4>
+
                         </div>
 
                     </div>
@@ -314,67 +759,9 @@
             </div>
 
 
-            <!-- EVENT 3 -->
-            <div
-                class="col-md-6 col-lg-4 event-item"
-                data-game="mlbb"
-                data-type="tournament"
-            >
-
-                <div class="event-card">
-
-                    <div class="d-flex align-items-start gap-3 mb-4">
-
-                        <div class="event-date">
-                            <span class="day">25</span>
-                            <span class="month">AUG</span>
-                        </div>
-
-                        <div>
-                            <span class="badge badge-tournament">
-                                TOURNAMENT
-                            </span>
-
-                            <h4 class="event-title mt-2">
-                                Mobile Legends Cup
-                            </h4>
-                        </div>
-
-                    </div>
-
-                    <p class="event-info">
-                        <i class="bi bi-controller"></i>
-                        Mobile Legends
-                    </p>
-
-                    <p class="event-info">
-                        <i class="bi bi-clock"></i>
-                        2:00 PM – 6:00 PM
-                    </p>
-
-                    <p class="event-info">
-                        <i class="bi bi-geo-alt"></i>
-                        Main Arena
-                    </p>
-
-                    <p class="event-info">
-                        <i class="bi bi-people"></i>
-                        12 Teams
-                    </p>
-
-                    <a
-                        href="registration.html"
-                        class="btn btn-main w-100 mt-3"
-                    >
-                        Register Now
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- EVENT 4 -->
+            <!-- =========================
+                 EVENT 9 - COMMUNITY NIGHT
+            ========================= -->
             <div
                 class="col-md-6 col-lg-4 event-item"
                 data-game="various"
@@ -386,11 +773,12 @@
                     <div class="d-flex align-items-start gap-3 mb-4">
 
                         <div class="event-date">
-                            <span class="day">28</span>
-                            <span class="month">AUG</span>
+                            <span class="day">06</span>
+                            <span class="month">OCT</span>
                         </div>
 
                         <div>
+
                             <span class="badge badge-community">
                                 COMMUNITY
                             </span>
@@ -398,6 +786,7 @@
                             <h4 class="event-title mt-2">
                                 Community Gaming Night
                             </h4>
+
                         </div>
 
                     </div>
@@ -413,7 +802,7 @@
                     </p>
 
                     <p class="event-info">
-                        <i class="bi bi-geo-alt"></i>
+                        <i class="bi bi-discord"></i>
                         Online / Discord
                     </p>
 
@@ -434,7 +823,9 @@
             </div>
 
 
-            <!-- EVENT 5 -->
+            <!-- =========================
+                 EVENT 10 - WORKSHOP
+            ========================= -->
             <div
                 class="col-md-6 col-lg-4 event-item"
                 data-game="various"
@@ -446,11 +837,12 @@
                     <div class="d-flex align-items-start gap-3 mb-4">
 
                         <div class="event-date">
-                            <span class="day">30</span>
-                            <span class="month">AUG</span>
+                            <span class="day">08</span>
+                            <span class="month">OCT</span>
                         </div>
 
                         <div>
+
                             <span class="badge badge-workshop">
                                 WORKSHOP
                             </span>
@@ -458,6 +850,7 @@
                             <h4 class="event-title mt-2">
                                 E-Sports Strategy Workshop
                             </h4>
+
                         </div>
 
                     </div>
@@ -493,65 +886,6 @@
 
             </div>
 
-
-            <!-- EVENT 6 -->
-            <div
-                class="col-md-6 col-lg-4 event-item"
-                data-game="fc"
-                data-type="tournament"
-            >
-
-                <div class="event-card">
-
-                    <div class="d-flex align-items-start gap-3 mb-4">
-
-                        <div class="event-date">
-                            <span class="day">03</span>
-                            <span class="month">SEP</span>
-                        </div>
-
-                        <div>
-                            <span class="badge badge-tournament">
-                                TOURNAMENT
-                            </span>
-
-                            <h4 class="event-title mt-2">
-                                FC Gaming Tournament
-                            </h4>
-                        </div>
-
-                    </div>
-
-                    <p class="event-info">
-                        <i class="bi bi-controller"></i>
-                        EA Sports FC
-                    </p>
-
-                    <p class="event-info">
-                        <i class="bi bi-clock"></i>
-                        3:00 PM – 5:00 PM
-                    </p>
-
-                    <p class="event-info">
-                        <i class="bi bi-geo-alt"></i>
-                        Main Arena
-                    </p>
-
-                    <p class="event-info">
-                        <i class="bi bi-people"></i>
-                        16 Players
-                    </p>
-
-                    <a
-                        href="registration.html"
-                        class="btn btn-main w-100 mt-3"
-                    >
-                        Register Now
-                    </a>
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -596,7 +930,7 @@
         </div>
 
         <p class="mb-0">
-            &copy; 2026 E-Sports Club. All Rights Reserved.
+            &copy; 2026 NexArena. All Rights Reserved.
         </p>
 
     </div>
@@ -615,39 +949,68 @@
 ========================= -->
 <script>
 
-    const gameFilter = document.getElementById("gameFilter");
-    const typeFilter = document.getElementById("typeFilter");
-    const eventItems = document.querySelectorAll(".event-item");
+    const gameFilter =
+        document.getElementById("gameFilter");
+
+    const typeFilter =
+        document.getElementById("typeFilter");
+
+    const eventItems =
+        document.querySelectorAll(".event-item");
+
 
     function filterEvents() {
 
-        const selectedGame = gameFilter.value;
-        const selectedType = typeFilter.value;
+        const selectedGame =
+            gameFilter.value;
+
+        const selectedType =
+            typeFilter.value;
+
 
         eventItems.forEach(function(event) {
 
-            const eventGame = event.dataset.game;
-            const eventType = event.dataset.type;
+            const eventGame =
+                event.dataset.game;
+
+            const eventType =
+                event.dataset.type;
+
 
             const gameMatch =
                 selectedGame === "all" ||
                 selectedGame === eventGame;
 
+
             const typeMatch =
                 selectedType === "all" ||
                 selectedType === eventType;
 
+
             if (gameMatch && typeMatch) {
+
                 event.style.display = "";
+
             } else {
+
                 event.style.display = "none";
+
             }
 
         });
+
     }
 
-    gameFilter.addEventListener("change", filterEvents);
-    typeFilter.addEventListener("change", filterEvents);
+
+    gameFilter.addEventListener(
+        "change",
+        filterEvents
+    );
+
+    typeFilter.addEventListener(
+        "change",
+        filterEvents
+    );
 
 </script>
 
