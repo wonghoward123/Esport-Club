@@ -9,19 +9,13 @@
     <title>NexArena | Home</title>
 
     <!-- Bootstrap CSS -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Shared CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Bootstrap Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
@@ -29,54 +23,41 @@
 <body>
 
 
-<!-- =========================
+    <!-- =========================
      NAVIGATION BAR
 ========================= -->
 
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 
-    <div class="container">
-
-
-        <!-- Logo -->
-
-        <a
-            class="navbar-brand"
-            href="index.html"
-        >
-
-            <i class="bi bi-controller"></i>
-
-            NexArena
-
-        </a>
+        <div class="container">
 
 
-        <!-- Mobile Menu Button -->
+            <!-- Logo -->
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
+            <a class="navbar-brand" href="index.html">
 
-            <span class="navbar-toggler-icon"></span>
+                <i class="bi bi-controller"></i>
 
-        </button>
+                NexArena
+
+            </a>
 
 
-        <!-- Navigation Links -->
+            <!-- Mobile Menu Button -->
 
-        <div
-            class="collapse navbar-collapse"
-            id="mainNavbar"
-        >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
 
-            <ul class="navbar-nav ms-auto">
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation Links -->
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">
@@ -146,386 +127,671 @@
 
                 </div>
 
+            </div>
+
         </div>
 
-    </div>
-
-</nav>
+    </nav>
 
 
 
-<!-- =========================
+    <!-- =========================
      HERO SECTION
 ========================= -->
 
-<section class="hero">
+    <section class="hero">
 
-    <div class="container">
-
-        <div class="row align-items-center">
-
-
-            <!-- HERO TEXT -->
-
-            <div class="col-lg-5 hero-content">
-
-                <h1>
-
-                    PLAY.<br>
-
-                    COMPETE.<br>
-
-                    <span>
-                        CONQUER.
-                    </span>
-
-                </h1>
+        <div class="container">
+            <div id="welcomeMessage" class="welcome-message">
+            </div>
+            <div class="row align-items-center">
 
 
-                <p class="mt-4">
+                <!-- HERO TEXT -->
 
-                    Welcome to NexArena.
-                    Discover tournaments,
-                    explore games,
-                    follow teams and players
-                    and stay updated
-                    with the latest gaming events.
+                <div class="col-lg-5 hero-content">
 
-                </p>
+                    <h1>
 
+                        PLAY.<br>
 
-                <div class="mt-4">
+                        COMPETE.<br>
 
+                        <span>
+                            CONQUER.
+                        </span>
 
-                    <!-- Tournament Button -->
-
-                    <a
-                        href="tournaments.html"
-                        class="btn btn-main btn-lg me-2"
-                    >
-
-                        <i class="bi bi-trophy"></i>
-
-                        Explore Tournaments
-
-                    </a>
+                    </h1>
 
 
-                    <!-- Join Button -->
+                    <p class="mt-4">
 
-                    <a
-                        href="registration.html"
-                        class="btn btn-outline-light btn-lg"
-                    >
+                        Welcome to NexArena.
+                        Discover tournaments,
+                        explore games,
+                        follow teams and players
+                        and stay updated
+                        with the latest gaming events.
 
-                        Join NexArena
+                    </p>
 
-                    </a>
 
+                    <div class="mt-4">
+
+
+                        <!-- Tournament Button -->
+
+                        <a href="tournaments.html" class="btn btn-main btn-lg me-2">
+
+                            <i class="bi bi-trophy"></i>
+
+                            Explore Tournaments
+
+                        </a>
+
+
+                        <!-- Join Button -->
+
+                        <a href="registration.html" class="btn btn-outline-light btn-lg">
+
+                            Join NexArena
+
+                        </a>
+
+
+                    </div>
 
                 </div>
 
-            </div>
+
+
+                <!-- HERO SLIDER -->
+
+                <div class="col-lg-7">
+
+                    <div class="hero-slider">
+
+
+                        <!-- LEFT ARROW -->
+
+                        <button class="slider-arrow slider-prev" id="prevSlide" type="button"
+                            aria-label="Previous slide">
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </button>
 
 
 
-            <!-- HERO SLIDER -->
+                        <!-- SLIDES -->
 
-            <div class="col-lg-7">
-
-                <div class="hero-slider">
+                        <div class="hero-slides">
 
 
-                    <!-- LEFT ARROW -->
+                            <!-- Slide 1 -->
 
-                    <button
-                        class="slider-arrow slider-prev"
-                        id="prevSlide"
-                        type="button"
-                        aria-label="Previous slide"
-                    >
+                            <div class="hero-slide active">
 
-                        <i class="bi bi-chevron-left"></i>
-
-                    </button>
+                                <img src="images/tournament.png" alt="NexArena gaming event">
 
 
-
-                    <!-- SLIDES -->
-
-                    <div class="hero-slides">
+                                <div class="slide-overlay">
 
 
-                        <!-- Slide 1 -->
-
-                        <div class="hero-slide active">
-
-                            <img
-                                src="images/tournament.png"
-                                alt="NexArena gaming event"
-                            >
+                                    <h3>
+                                        NexArena Championship
+                                    </h3>
 
 
-                            <div class="slide-overlay">
+                                    <p>
+                                        Compete and prove your skills.
+                                    </p>
 
 
-                                <h3>
-                                    NexArena Championship
-                                </h3>
-
-
-                                <p>
-                                    Compete and prove your skills.
-                                </p>
-
+                                </div>
 
                             </div>
+
+
+
+                            <!-- Slide 2 -->
+
+                            <div class="hero-slide">
+
+                                <img src="images/girlsWinner.jpg" alt="NexArena esports tournament">
+
+
+                                <div class="slide-overlay">
+
+
+                                    <h3>
+                                        Play. Compete. Conquer.
+                                    </h3>
+
+
+                                    <p>
+                                        Join the next competitive battle.
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Slide 3 -->
+
+                            <div class="hero-slide">
+
+                                <img src="images/joinUs.png" alt="NexArena gaming community">
+
+
+                                <div class="slide-overlay">
+
+
+                                    <h3>
+                                        Become Part of NexArena
+                                    </h3>
+
+
+                                    <p>
+                                        Connect with gamers and teams.
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+
 
                         </div>
 
 
 
-                        <!-- Slide 2 -->
+                        <!-- RIGHT ARROW -->
 
-                        <div class="hero-slide">
+                        <button class="slider-arrow slider-next" id="nextSlide" type="button" aria-label="Next slide">
 
-                            <img
-                                src="images/girlsWinner.jpg"
-                                alt="NexArena esports tournament"
-                            >
+                            <i class="bi bi-chevron-right"></i>
 
-
-                            <div class="slide-overlay">
-
-
-                                <h3>
-                                    Play. Compete. Conquer.
-                                </h3>
-
-
-                                <p>
-                                    Join the next competitive battle.
-                                </p>
-
-
-                            </div>
-
-                        </div>
+                        </button>
 
 
 
-                        <!-- Slide 3 -->
+                        <!-- DOTS -->
 
-                        <div class="hero-slide">
-
-                            <img
-                                src="images/joinUs.png"
-                                alt="NexArena gaming community"
-                            >
+                        <div class="slider-dots">
 
 
-                            <div class="slide-overlay">
+                            <button class="slider-dot active" data-slide="0" type="button" aria-label="Go to slide 1">
+                            </button>
 
 
-                                <h3>
-                                    Become Part of NexArena
-                                </h3>
+                            <button class="slider-dot" data-slide="1" type="button" aria-label="Go to slide 2">
+                            </button>
 
 
-                                <p>
-                                    Connect with gamers and teams.
-                                </p>
+                            <button class="slider-dot" data-slide="2" type="button" aria-label="Go to slide 3">
+                            </button>
 
-
-                            </div>
 
                         </div>
 
 
                     </div>
 
-
-
-                    <!-- RIGHT ARROW -->
-
-                    <button
-                        class="slider-arrow slider-next"
-                        id="nextSlide"
-                        type="button"
-                        aria-label="Next slide"
-                    >
-
-                        <i class="bi bi-chevron-right"></i>
-
-                    </button>
-
-
-
-                    <!-- DOTS -->
-
-                    <div class="slider-dots">
-
-
-                        <button
-                            class="slider-dot active"
-                            data-slide="0"
-                            type="button"
-                            aria-label="Go to slide 1"
-                        >
-                        </button>
-
-
-                        <button
-                            class="slider-dot"
-                            data-slide="1"
-                            type="button"
-                            aria-label="Go to slide 2"
-                        >
-                        </button>
-
-
-                        <button
-                            class="slider-dot"
-                            data-slide="2"
-                            type="button"
-                            aria-label="Go to slide 3"
-                        >
-                        </button>
-
-
-                    </div>
-
-
                 </div>
 
-            </div>
 
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================
+    <!-- =========================
      FEATURED TOURNAMENT
 ========================= -->
 
-<section class="section-padding">
+    <section class="section-padding">
 
-    <div class="container">
-
-
-        <h2 class="section-title">
-
-            Featured
-            <span>
-                Tournament
-            </span>
-
-        </h2>
+        <div class="container">
 
 
-        <div class="row align-items-center">
+            <h2 class="section-title">
 
-
-            <!-- IMAGE -->
-
-            <div
-                class="col-lg-6 mb-4 mb-lg-0 pe-lg-4"
-            >
-
-                <img
-                    src="images/valorantChampion1.png"
-                    class="img-fluid rounded-4"
-                    alt="Featured NexArena tournament"
-                >
-
-            </div>
-
-
-
-            <!-- INFORMATION -->
-
-            <div class="col-lg-6 ps-lg-4">
-
-
-                <span class="badge badge-custom mb-3">
-
-                    REGISTRATION OPEN
-
+                Featured
+                <span>
+                    Tournament
                 </span>
 
-
-                <h3 class="display-6 fw-bold">
-
-                    NexArena Championship 2026
-
-                </h3>
+            </h2>
 
 
-                <p class="text-secondary">
-
-                    Compete against talented players and teams in our
-                    upcoming e-sports tournament. Register now and prove
-                    your skills on the battlefield.
-
-                </p>
+            <div class="row align-items-center">
 
 
-                <div class="mb-3">
+                <!-- IMAGE -->
+
+                <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-4">
+
+                    <img src="images/valorantChampion1.png" class="img-fluid rounded-4"
+                        alt="Featured NexArena tournament">
+
+                </div>
 
 
-                    <p>
 
-                        <i class="bi bi-controller"></i>
+                <!-- INFORMATION -->
 
-                        <strong>
-                            Game:
-                        </strong>
-
-                        Valorant
-
-                    </p>
+                <div class="col-lg-6 ps-lg-4">
 
 
-                    <p>
+                    <span class="badge badge-custom mb-3">
 
-                        <i class="bi bi-calendar"></i>
+                        REGISTRATION OPEN
 
-                        <strong>
-                            Date:
-                        </strong>
-
-                        20 October 2026
-
-                    </p>
+                    </span>
 
 
-                    <p>
+                    <h3 class="display-6 fw-bold">
 
-                        <i class="bi bi-people"></i>
+                        Valorant Championship 2026
 
-                        <strong>
-                            Teams:
-                        </strong>
+                    </h3>
 
-                        16 Teams
+
+                    <p class="text-secondary">
+
+                        Compete against talented players and teams in our
+                        upcoming e-sports tournament. Register now and prove
+                        your skills on the battlefield.
 
                     </p>
+
+
+                    <div class="mb-3">
+
+
+                        <p>
+
+                            <i class="bi bi-controller"></i>
+
+                            <strong>
+                                Game:
+                            </strong>
+
+                            Valorant
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="bi bi-calendar"></i>
+
+                            <strong>
+                                Date:
+                            </strong>
+
+                            20 October 2026
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="bi bi-people"></i>
+
+                            <strong>
+                                Teams:
+                            </strong>
+
+                            16 Teams
+
+                        </p>
+
+
+                    </div>
+
+
+                    <a href="tournaments.html" class="btn btn-main">
+
+                        View Tournament
+
+                    </a>
 
 
                 </div>
 
 
-                <a
-                    href="tournaments.html"
-                    class="btn btn-main"
-                >
+            </div>
 
-                    View Tournament
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+     UPCOMING EVENTS
+========================= -->
+
+    <section class="section-padding">
+
+        <div class="container">
+
+
+            <h2 class="section-title">
+
+                Upcoming
+                <span>
+                    Events
+                </span>
+
+            </h2>
+
+
+
+            <div class="row g-4">
+
+
+                <!-- EVENT 1 -->
+
+                <div class="col-md-4">
+
+                    <div class="custom-card">
+
+
+                        <img src="images/valorantChampion.png" alt="Valorant tournament">
+
+
+                        <div class="card-content">
+
+
+                            <span class="badge badge-custom mb-2">
+
+                                TOURNAMENT
+
+                            </span>
+
+
+                            <h4>
+                                Valorant Championship
+                            </h4>
+
+
+                            <p class="text-secondary">
+
+                                20 October 2026
+
+                            </p>
+
+
+                            <a href="schedule.html" class="btn btn-outline-light btn-sm">
+
+                                View Details
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EVENT 2 -->
+
+                <div class="col-md-4">
+
+                    <div class="custom-card">
+
+
+                        <img src="images/training.jpg" alt="Team training session">
+
+
+                        <div class="card-content">
+
+
+                            <span class="badge badge-custom mb-2">
+
+                                TRAINING
+
+                            </span>
+
+
+                            <h4>
+                                Team Training Session
+                            </h4>
+
+
+                            <p class="text-secondary">
+
+                                23 October 2026
+
+                            </p>
+
+
+                            <a href="schedule.html" class="btn btn-outline-light btn-sm">
+
+                                View Details
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EVENT 3 -->
+
+                <div class="col-md-4">
+
+                    <div class="custom-card">
+
+
+                        <img src="images/gameNight.png" alt="Community gaming night">
+
+
+                        <div class="card-content">
+
+
+                            <span class="badge badge-custom mb-2">
+
+                                COMMUNITY
+
+                            </span>
+
+
+                            <h4>
+                                Community Gaming Night
+                            </h4>
+
+
+                            <p class="text-secondary">
+
+                                28 October 2026
+
+                            </p>
+
+
+                            <a href="schedule.html" class="btn btn-outline-light btn-sm">
+
+                                View Details
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+     FEATURED PLAYERS
+========================= -->
+
+    <section class="section-padding">
+
+        <div class="container">
+
+
+            <h2 class="section-title">
+
+                Featured
+                <span>
+                    Players
+                </span>
+
+            </h2>
+
+
+            <div class="row g-4">
+
+
+                <!-- PLAYER 1 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="custom-card player-card text-center">
+
+
+                        <img src="images/kangkang1.webp" alt="Player zmjjKK" class="player-img">
+
+
+                        <div class="card-content">
+
+
+                            <h4>
+                                zmjjKK
+                            </h4>
+
+
+                            <p class="text-secondary mb-1">
+                                EDG
+                            </p>
+
+
+                            <span class="badge badge-custom">
+
+                                Valorant
+
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PLAYER 2 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="custom-card player-card text-center">
+
+
+                        <img src="images/yinuo.png" alt="Player Yi Nuo" class="player-img">
+
+
+                        <div class="card-content">
+
+
+                            <h4>
+                                Yi Nuo
+                            </h4>
+
+
+                            <p class="text-secondary mb-1">
+                                AG
+                            </p>
+
+
+                            <span class="badge badge-custom">
+
+                                Honor of Kings
+
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PLAYER 3 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="custom-card player-card text-center">
+
+
+                        <img src="images/vejrgang.png" alt="Player Anders Vejrgang" class="player-img">
+
+
+                        <div class="card-content">
+
+
+                            <h4>
+                                Anders Vejrgang
+                            </h4>
+
+
+                            <p class="text-secondary mb-1">
+                                Team Falcons
+                            </p>
+
+
+                            <span class="badge badge-custom">
+
+                                EA Sports FC
+
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="text-center mt-4">
+
+
+                <a href="players.html" class="btn btn-outline-light">
+
+                    View All Players
 
                 </a>
 
@@ -535,767 +801,393 @@
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
 
-
-<!-- =========================
-     UPCOMING EVENTS
-========================= -->
-
-<section class="section-padding">
-
-    <div class="container">
-
-
-        <h2 class="section-title">
-
-            Upcoming
-            <span>
-                Events
-            </span>
-
-        </h2>
-
-
-
-        <div class="row g-4">
-
-
-            <!-- EVENT 1 -->
-
-            <div class="col-md-4">
-
-                <div class="custom-card">
-
-
-                    <img
-                        src="images/valorantChampion.png"
-                        alt="Valorant tournament"
-                    >
-
-
-                    <div class="card-content">
-
-
-                        <span class="badge badge-custom mb-2">
-
-                            TOURNAMENT
-
-                        </span>
-
-
-                        <h4>
-                            Valorant Championship
-                        </h4>
-
-
-                        <p class="text-secondary">
-
-                            20 October 2026
-
-                        </p>
-
-
-                        <a
-                            href="schedule.html"
-                            class="btn btn-outline-light btn-sm"
-                        >
-
-                            View Details
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- EVENT 2 -->
-
-            <div class="col-md-4">
-
-                <div class="custom-card">
-
-
-                    <img
-                        src="images/training.jpg"
-                        alt="Team training session"
-                    >
-
-
-                    <div class="card-content">
-
-
-                        <span class="badge badge-custom mb-2">
-
-                            TRAINING
-
-                        </span>
-
-
-                        <h4>
-                            Team Training Session
-                        </h4>
-
-
-                        <p class="text-secondary">
-
-                            23 October 2026
-
-                        </p>
-
-
-                        <a
-                            href="schedule.html"
-                            class="btn btn-outline-light btn-sm"
-                        >
-
-                            View Details
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- EVENT 3 -->
-
-            <div class="col-md-4">
-
-                <div class="custom-card">
-
-
-                    <img
-                        src="images/gameNight.png"
-                        alt="Community gaming night"
-                    >
-
-
-                    <div class="card-content">
-
-
-                        <span class="badge badge-custom mb-2">
-
-                            COMMUNITY
-
-                        </span>
-
-
-                        <h4>
-                            Community Gaming Night
-                        </h4>
-
-
-                        <p class="text-secondary">
-
-                            28 October 2026
-
-                        </p>
-
-
-                        <a
-                            href="schedule.html"
-                            class="btn btn-outline-light btn-sm"
-                        >
-
-                            View Details
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     FEATURED PLAYERS
-========================= -->
-
-<section class="section-padding">
-
-    <div class="container">
-
-
-        <h2 class="section-title">
-
-            Featured
-            <span>
-                Players
-            </span>
-
-        </h2>
-
-
-        <div class="row g-4">
-
-
-            <!-- PLAYER 1 -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="custom-card player-card text-center">
-
-
-                    <img
-                        src="images/kangkang1.webp"
-                        alt="Player zmjjKK"
-                        class="player-img"
-                    >
-
-
-                    <div class="card-content">
-
-
-                        <h4>
-                            zmjjKK
-                        </h4>
-
-
-                        <p class="text-secondary mb-1">
-                            EDG
-                        </p>
-
-
-                        <span class="badge badge-custom">
-
-                            Valorant
-
-                        </span>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PLAYER 2 -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="custom-card player-card text-center">
-
-
-                    <img
-                        src="images/yinuo.png"
-                        alt="Player Yi Nuo"
-                        class="player-img"
-                    >
-
-
-                    <div class="card-content">
-
-
-                        <h4>
-                            Yi Nuo
-                        </h4>
-
-
-                        <p class="text-secondary mb-1">
-                            AG
-                        </p>
-
-
-                        <span class="badge badge-custom">
-
-                            Honor of Kings
-
-                        </span>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PLAYER 3 -->
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="custom-card player-card text-center">
-
-
-                    <img
-                        src="images/vejrgang.png"
-                        alt="Player Anders Vejrgang"
-                        class="player-img"
-                    >
-
-
-                    <div class="card-content">
-
-
-                        <h4>
-                            Anders Vejrgang
-                        </h4>
-
-
-                        <p class="text-secondary mb-1">
-                            Team Falcons
-                        </p>
-
-
-                        <span class="badge badge-custom">
-
-                            EA Sports FC
-
-                        </span>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="text-center mt-4">
-
-
-            <a
-                href="players.html"
-                class="btn btn-outline-light"
-            >
-
-                View All Players
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
+    <!-- =========================
      TEAM RANKINGS
 ========================= -->
 
-<section class="section-padding">
+    <section class="section-padding">
 
-    <div class="container">
+        <div class="container">
 
 
-        <h2 class="section-title">
+            <h2 class="section-title">
 
-            Top
-            <span>
-                Teams
-            </span>
-
-        </h2>
-
-
-        <div class="ranking-table">
-
-
-            <div class="table-responsive">
-
-
-                <table class="table table-hover align-middle">
-
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                Rank
-                            </th>
-
-                            <th>
-                                Team
-                            </th>
-
-                            <th>
-                                Wins
-                            </th>
-
-                            <th>
-                                Losses
-                            </th>
-
-                            <th>
-                                Points
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody>
-
-
-                        <tr>
-
-                            <td>
-                                🥇 1
-                            </td>
-
-                            <td>
-                                DragonX
-                            </td>
-
-                            <td>
-                                18
-                            </td>
-
-                            <td>
-                                2
-                            </td>
-
-                            <td>
-                                920
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                🥈 2
-                            </td>
-
-                            <td>
-                                Phoenix
-                            </td>
-
-                            <td>
-                                16
-                            </td>
-
-                            <td>
-                                4
-                            </td>
-
-                            <td>
-                                875
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                🥉 3
-                            </td>
-
-                            <td>
-                                Titans
-                            </td>
-
-                            <td>
-                                15
-                            </td>
-
-                            <td>
-                                5
-                            </td>
-
-                            <td>
-                                830
-                            </td>
-
-                        </tr>
-
-
-                    </tbody>
-
-
-                </table>
-
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="text-center mt-4">
-
-
-            <a
-                href="teams.html"
-                class="btn btn-outline-light"
-            >
-
-                View Full Rankings
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     SUPPORTED GAMES
-========================= -->
-
-<section class="section-padding">
-
-    <div class="container">
-
-
-        <h2 class="section-title">
-
-            Supported
-            <span>
-                Games
-            </span>
-
-        </h2>
-
-
-        <div class="row g-4">
-
-
-            <!-- VALORANT -->
-
-            <div class="col-6 col-md-3">
-
-                <div class="custom-card text-center p-4">
-
-
-                    <i class="bi bi-crosshair fs-1 text-info"></i>
-
-
-                    <h5 class="mt-3">
-
-                        Valorant
-
-                    </h5>
-
-
-                    <p class="text-secondary">
-
-                        Tactical FPS
-
-                    </p>
-
-
-                </div>
-
-            </div>
-
-
-
-            <!-- HONOR OF KINGS -->
-
-            <div class="col-6 col-md-3">
-
-                <div class="custom-card text-center p-4">
-
-
-                    <i class="bi bi-phone fs-1 text-info"></i>
-
-
-                    <h5 class="mt-3">
-
-                        Honor of Kings
-
-                    </h5>
-
-
-                    <p class="text-secondary">
-
-                        Mobile MOBA
-
-                    </p>
-
-
-                </div>
-
-            </div>
-
-
-
-            <!-- EA SPORTS FC -->
-
-            <div class="col-6 col-md-3">
-
-                <div class="custom-card text-center p-4">
-
-
-                    <i class="bi bi-trophy fs-1 text-info"></i>
-
-
-                    <h5 class="mt-3">
-
-                        EA Sports FC
-
-                    </h5>
-
-
-                    <p class="text-secondary">
-
-                        Sports
-
-                    </p>
-
-
-                </div>
-
-            </div>
-
-
-
-            <!-- DOTA 2 -->
-
-            <div class="col-6 col-md-3">
-
-                <div class="custom-card text-center p-4">
-
-
-                    <i class="bi bi-controller fs-1 text-info"></i>
-
-
-                    <h5 class="mt-3">
-
-                        DOTA 2
-
-                    </h5>
-
-
-                    <p class="text-secondary">
-
-                        PC MOBA
-
-                    </p>
-
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="text-center mt-4">
-
-
-            <a
-                href="games.html"
-                class="btn btn-outline-light"
-            >
-
-                Explore Games
-
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     JOIN NEXARENA CTA
-========================= -->
-
-<section class="section-padding">
-
-    <div class="container">
-
-
-        <div class="cta text-center">
-
-
-            <i class="bi bi-controller fs-1 text-info"></i>
-
-
-            <h2 class="mt-3">
-
-                Ready to Join NexArena?
+                Top
+                <span>
+                    Teams
+                </span>
 
             </h2>
 
 
-            <p class="text-secondary">
-
-                Become part of our gaming community and participate
-                in tournaments, events and exciting e-sports activities.
-
-            </p>
+            <div class="ranking-table">
 
 
-            <a
-                href="registration.html"
-                class="btn btn-main btn-lg"
-            >
+                <div class="table-responsive">
 
-                Register Now
 
-            </a>
+                    <table class="table table-hover align-middle">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Rank
+                                </th>
+
+                                <th>
+                                    Team
+                                </th>
+
+                                <th>
+                                    Wins
+                                </th>
+
+                                <th>
+                                    Losses
+                                </th>
+
+                                <th>
+                                    Points
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    🥇 1
+                                </td>
+
+                                <td>
+                                    DragonX
+                                </td>
+
+                                <td>
+                                    18
+                                </td>
+
+                                <td>
+                                    2
+                                </td>
+
+                                <td>
+                                    920
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    🥈 2
+                                </td>
+
+                                <td>
+                                    Phoenix
+                                </td>
+
+                                <td>
+                                    16
+                                </td>
+
+                                <td>
+                                    4
+                                </td>
+
+                                <td>
+                                    875
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    🥉 3
+                                </td>
+
+                                <td>
+                                    Titans
+                                </td>
+
+                                <td>
+                                    15
+                                </td>
+
+                                <td>
+                                    5
+                                </td>
+
+                                <td>
+                                    830
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="text-center mt-4">
+
+
+                <a href="teams.html" class="btn btn-outline-light">
+
+                    View Full Rankings
+
+                </a>
+
+
+            </div>
 
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================
+    <!-- =========================
+     SUPPORTED GAMES
+========================= -->
+
+    <section class="section-padding">
+
+        <div class="container">
+
+
+            <h2 class="section-title">
+
+                Supported
+                <span>
+                    Games
+                </span>
+
+            </h2>
+
+
+            <div class="row g-4">
+
+
+                <!-- VALORANT -->
+
+                <div class="col-6 col-md-3">
+
+                    <div class="custom-card text-center p-4">
+
+
+                        <i class="bi bi-crosshair fs-1 text-info"></i>
+
+
+                        <h5 class="mt-3">
+
+                            Valorant
+
+                        </h5>
+
+
+                        <p class="text-secondary">
+
+                            Tactical FPS
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HONOR OF KINGS -->
+
+                <div class="col-6 col-md-3">
+
+                    <div class="custom-card text-center p-4">
+
+
+                        <i class="bi bi-phone fs-1 text-info"></i>
+
+
+                        <h5 class="mt-3">
+
+                            Honor of Kings
+
+                        </h5>
+
+
+                        <p class="text-secondary">
+
+                            Mobile MOBA
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EA SPORTS FC -->
+
+                <div class="col-6 col-md-3">
+
+                    <div class="custom-card text-center p-4">
+
+
+                        <i class="bi bi-trophy fs-1 text-info"></i>
+
+
+                        <h5 class="mt-3">
+
+                            EA Sports FC
+
+                        </h5>
+
+
+                        <p class="text-secondary">
+
+                            Sports
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DOTA 2 -->
+
+                <div class="col-6 col-md-3">
+
+                    <div class="custom-card text-center p-4">
+
+
+                        <i class="bi bi-controller fs-1 text-info"></i>
+
+
+                        <h5 class="mt-3">
+
+                            DOTA 2
+
+                        </h5>
+
+
+                        <p class="text-secondary">
+
+                            PC MOBA
+
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="text-center mt-4">
+
+
+                <a href="games.html" class="btn btn-outline-light">
+
+                    Explore Games
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+     JOIN NEXARENA CTA
+========================= -->
+
+    <section class="section-padding">
+
+        <div class="container">
+
+
+            <div class="cta text-center">
+
+
+                <i class="bi bi-controller fs-1 text-info"></i>
+
+
+                <h2 class="mt-3">
+
+                    Ready to Join NexArena?
+
+                </h2>
+
+
+                <p class="text-secondary">
+
+                    Become part of our gaming community and participate
+                    in tournaments, events and exciting e-sports activities.
+
+                </p>
+
+
+                <a href="registration.html" class="btn btn-main btn-lg">
+
+                    Register Now
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
      FOOTER
 ========================= -->
 
 <footer>
 
     <div class="container text-center">
-
 
         <h5 class="text-white">
 
@@ -1313,26 +1205,44 @@
         </p>
 
 
+        <!-- SOCIAL MEDIA LINKS -->
+
         <div class="mb-3">
 
+            <!-- Instagram -->
 
-            <a href="#">
+            <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <i class="bi bi-instagram"></i>
                 Instagram
             </a>
 
 
-            <a href="#">
+            <!-- Discord -->
+
+            <a
+                href="https://discord.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <i class="bi bi-discord"></i>
                 Discord
             </a>
 
 
-            <a href="#">
+            <!-- YouTube -->
+
+            <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <i class="bi bi-youtube"></i>
                 YouTube
             </a>
-
 
         </div>
 
@@ -1351,145 +1261,171 @@
 
 
 
-<!-- =========================
+    <!-- =========================
      BOOTSTRAP JAVASCRIPT
 ========================= -->
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
-<!-- =========================
+    <!-- =========================
      HERO SLIDER JAVASCRIPT
 ========================= -->
 
-<script>
+    <script>
 
-    const slides =
-        document.querySelectorAll(".hero-slide");
-
-
-    const dots =
-        document.querySelectorAll(".slider-dot");
+        const slides =
+            document.querySelectorAll(".hero-slide");
 
 
-    const previousButton =
-        document.getElementById("prevSlide");
+        const dots =
+            document.querySelectorAll(".slider-dot");
 
 
-    const nextButton =
-        document.getElementById("nextSlide");
+        const previousButton =
+            document.getElementById("prevSlide");
 
 
-    let currentSlide = 0;
+        const nextButton =
+            document.getElementById("nextSlide");
 
 
-
-    function showSlide(index) {
-
-
-        if (index >= slides.length) {
-
-            currentSlide = 0;
-
-        }
-
-        else if (index < 0) {
-
-            currentSlide = slides.length - 1;
-
-        }
-
-        else {
-
-            currentSlide = index;
-
-        }
+        let currentSlide = 0;
 
 
 
-        slides.forEach(function(slide) {
-
-            slide.classList.remove("active");
-
-        });
+        function showSlide(index) {
 
 
+            if (index >= slides.length) {
 
-        dots.forEach(function(dot) {
+                currentSlide = 0;
 
-            dot.classList.remove("active");
+            }
 
-        });
+            else if (index < 0) {
+
+                currentSlide = slides.length - 1;
+
+            }
+
+            else {
+
+                currentSlide = index;
+
+            }
 
 
 
-        slides[currentSlide].classList.add("active");
+            slides.forEach(function (slide) {
 
-        dots[currentSlide].classList.add("active");
+                slide.classList.remove("active");
 
-    }
+            });
 
 
 
-    previousButton.addEventListener(
-        "click",
-        function() {
+            dots.forEach(function (dot) {
 
-            showSlide(currentSlide - 1);
+                dot.classList.remove("active");
+
+            });
+
+
+
+            slides[currentSlide].classList.add("active");
+
+            dots[currentSlide].classList.add("active");
 
         }
-    );
 
 
 
-    nextButton.addEventListener(
-        "click",
-        function() {
-
-            showSlide(currentSlide + 1);
-
-        }
-    );
-
-
-
-    dots.forEach(function(dot) {
-
-        dot.addEventListener(
+        previousButton.addEventListener(
             "click",
-            function() {
+            function () {
 
-                const slideNumber =
-                    Number(this.dataset.slide);
-
-
-                showSlide(slideNumber);
+                showSlide(currentSlide - 1);
 
             }
         );
 
-    });
+
+
+        nextButton.addEventListener(
+            "click",
+            function () {
+
+                showSlide(currentSlide + 1);
+
+            }
+        );
 
 
 
-    // Automatically switch slide every 8 seconds
+        dots.forEach(function (dot) {
 
-    setInterval(
-        function() {
+            dot.addEventListener(
+                "click",
+                function () {
 
-            showSlide(currentSlide + 1);
-
-        },
-        8000
-    );
+                    const slideNumber =
+                        Number(this.dataset.slide);
 
 
-</script>
+                    showSlide(slideNumber);
+
+                }
+            );
+
+        });
 
 
+
+        // Automatically switch slide every 8 seconds
+
+        setInterval(
+            function () {
+
+                showSlide(currentSlide + 1);
+
+            },
+            8000
+        );
+
+
+    </script>
+
+    <script>
+
+        const welcomeMessage =
+            document.getElementById("welcomeMessage");
+
+        const savedUser =
+            sessionStorage.getItem("currentUser");
+
+
+        if (savedUser) {
+
+            try {
+
+                const user = JSON.parse(savedUser);
+
+                welcomeMessage.innerHTML =
+                    `Welcome back, <span>${user.username}</span>`;
+
+            }
+
+            catch (error) {
+
+                sessionStorage.removeItem("currentUser");
+
+            }
+
+        }
+
+    </script>
 </body>
 
 </html>
