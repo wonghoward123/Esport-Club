@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tournament Registration | NexArena</title>
+
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================
+         BOOTSTRAP ICONS
+    ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- =========================
+         SHARED CSS
+    ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- =========================
+         PAGE-SPECIFIC CSS
+    ========================= -->
+
+    <style>
+
+        /* =========================================
+           REGISTRATION SECTION
+        ========================================= */
+
+        .registration-section {
+
+            padding: 80px 0;
+
+            background-color: #0b0b14;
+
+            min-height: 70vh;
+
+        }
+
+
+        /* =========================================
+           REGISTRATION CARD
+        ========================================= */
+
+        .registration-card {
+
+            background-color: #151522;
+
+            border: 1px solid #29293a;
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+            height: 100%;
+
+            transition: 0.3s;
+
+        }
+
+
+        .registration-card:hover {
+
+            border-color: #00e5ff;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0, 229, 255, 0.08);
+
+        }
+
+
+        /* =========================================
+           TOURNAMENT INFO CARD
+        ========================================= */
+
+        .registration-info {
+
+            background-color: #151522;
+
+            border: 1px solid #29293a;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            height: 100%;
+
+        }
+
+
+        .registration-info h4 {
+
+            color: #ffffff;
+
+            font-weight: bold;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .info-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            margin-bottom: 20px;
+
+            line-height: 1.5;
+
+        }
+
+
+        .info-item i {
+
+            color: #00e5ff;
+
+            font-size: 1.1rem;
+
+            margin-top: 3px;
+
+            min-width: 18px;
+
+        }
+
+
+        .info-item span {
+
+            color: #bbbbbb;
+
+        }
+
+
+        /* =========================================
+           TOURNAMENT BANNER
+        ========================================= */
+
+        .tournament-banner {
+
+            background-color: #11111d;
+
+            border: 1px solid #29293a;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .tournament-banner .small-title {
+
+            color: #bbbbbb;
+
+            font-size: 0.8rem;
+
+            font-weight: 600;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .tournament-banner h3 {
+
+            color: #00e5ff;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .tournament-banner p {
+
+            color: #bbbbbb;
+
+            margin-bottom: 0;
+
+        }
+
+
+        /* =========================================
+           FORM
+        ========================================= */
+
+        .registration-card .form-label {
+
+            color: #dddddd;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .registration-card .form-control,
+        .registration-card .form-select {
+
+            background-color: #0f0f19;
+
+            color: #ffffff;
+
+            border: 1px solid #3a3a4c;
+
+            min-height: 48px;
+
+            border-radius: 8px;
+
+        }
+
+
+        .registration-card .form-control::placeholder {
+
+            color: #77778a;
+
+        }
+
+
+        .registration-card .form-control:focus,
+        .registration-card .form-select:focus {
+
+            background-color: #0f0f19;
+
+            color: #ffffff;
+
+            border-color: #00e5ff;
+
+            box-shadow:
+                0 0 0 0.2rem
+                rgba(0, 229, 255, 0.15);
+
+        }
+
+
+        .registration-card .form-control[readonly] {
+
+            background-color: #11111d;
+
+            color: #00e5ff;
+
+            border-color: #29293a;
+
+            opacity: 1;
+
+            cursor: not-allowed;
+
+        }
+
+
+        .registration-card .form-select option {
+
+            background-color: #0f0f19;
+
+            color: #ffffff;
+
+        }
+
+
+        .registration-card textarea.form-control {
+
+            min-height: 120px;
+
+        }
+
+
+        /* =========================================
+           REQUIRED FIELD
+        ========================================= */
+
+        .required-star {
+
+            color: #00e5ff;
+
+        }
+
+
+        /* =========================================
+           INFO NOTE
+        ========================================= */
+
+        .registration-note {
+
+            border-left: 3px solid #00e5ff;
+
+            padding-left: 15px;
+
+            color: #bbbbbb;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================================
+           NO TOURNAMENT SELECTED
+        ========================================= */
+
+        .selection-error {
+
+            background-color: #151522;
+
+            border: 1px solid #dc3545;
+
+            border-radius: 15px;
+
+            padding: 45px;
+
+            text-align: center;
+
+        }
+
+
+        .selection-error i {
+
+            color: #dc3545;
+
+            font-size: 3rem;
+
+        }
+
+
+        .selection-error h3 {
+
+            color: #ffffff;
+
+            margin-top: 15px;
+
+        }
+
+
+        .selection-error p {
+
+            color: #bbbbbb;
+
+            max-width: 650px;
+
+            margin:
+                0 auto;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================================
+           SUCCESS MESSAGE
+        ========================================= */
+
+        .success-message {
+
+            display: none;
+
+            background-color: #151522;
+
+            border: 1px solid #198754;
+
+            border-radius: 15px;
+
+            padding: 45px;
+
+            text-align: center;
+
+        }
+
+
+        .success-message i {
+
+            font-size: 3.5rem;
+
+            color: #00e5ff;
+
+        }
+
+
+        .success-message h3 {
+
+            color: #ffffff;
+
+            margin-top: 15px;
+
+        }
+
+
+        .success-message p {
+
+            color: #bbbbbb;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .registration-section {
+
+                padding: 60px 0;
+
+            }
+
+
+            .registration-card {
+
+                padding: 25px;
+
+            }
+
+
+            .registration-info {
+
+                padding: 20px;
+
+            }
+
+
+            .selection-error {
+
+                padding: 30px 20px;
+
+            }
+
+
+            .success-message {
+
+                padding: 30px 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION BAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+
+        <!-- BRAND -->
+
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+
+            <i class="bi bi-controller"></i>
+
+            NexArena
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="games.html"
+                    >
+                        Games
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="tournaments.html"
+                    >
+                        Tournaments
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="teams.html"
+                    >
+                        Teams
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="players.html"
+                    >
+                        Players
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="schedule.html"
+                    >
+                        Schedule
+                    </a>
+
+                </li>
+
+
+                <!-- MEMBER REGISTRATION -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="registration.html"
+                    >
+                        Register
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     PAGE HEADER
+========================= -->
+
+<section class="schedule-header">
+
+    <div class="container text-center">
+
+
+        <h1>
+
+            Tournament <span>Registration</span>
+
+        </h1>
+
+
+        <p>
+
+            Register yourself or your team
+            for a NexArena tournament.
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     REGISTRATION SECTION
+========================= -->
+
+<section class="registration-section">
+
+    <div class="container">
+
+
+        <!-- =========================
+             ERROR MESSAGE
+        ========================= -->
+
+        <div
+            id="selectionError"
+            class="selection-error"
+            style="display: none;"
+        >
+
+            <i class="bi bi-exclamation-circle"></i>
+
+
+            <h3>
+                No Tournament Selected
+            </h3>
+
+
+            <p>
+
+                Please return to the event schedule
+                and click <strong>Register Now</strong>
+                on the tournament you want to join.
+
+            </p>
+
+
+            <a
+                href="schedule.html"
+                class="btn btn-main mt-4"
+            >
+
+                <i class="bi bi-calendar-event"></i>
+
+                Back to Schedule
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =========================
+             MAIN REGISTRATION CONTENT
+        ========================= -->
+
+        <div
+            id="registrationContent"
+            class="row g-4"
+        >
+
+
+            <!-- =========================
+                 LEFT: TOURNAMENT INFO
+            ========================= -->
+
+            <div class="col-lg-4">
+
+
+                <div class="registration-info">
+
+
+                    <h4>
+
+                        <i
+                            class="bi bi-trophy"
+                            style="color:#00e5ff;"
+                        ></i>
+
+                        Tournament Info
+
+                    </h4>
+
+
+                    <!-- DATE -->
+
+                    <div class="info-item">
+
+                        <i
+                            class="bi bi-calendar-event"
+                        ></i>
+
+                        <span id="displayDate">
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <!-- GAME -->
+
+                    <div class="info-item">
+
+                        <i
+                            class="bi bi-controller"
+                        ></i>
+
+                        <span id="displayGame">
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <!-- TIME -->
+
+                    <div class="info-item">
+
+                        <i
+                            class="bi bi-clock"
+                        ></i>
+
+                        <span id="displayTime">
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <!-- VENUE -->
+
+                    <div class="info-item">
+
+                        <i
+                            class="bi bi-geo-alt"
+                        ></i>
+
+                        <span id="displayVenue">
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <hr
+                        style="
+                            border-color:#29293a;
+                        "
+                    >
+
+
+                    <p class="registration-note">
+
+                        Please make sure all information
+                        entered in the registration form
+                        is correct.
+
+                        Tournament participants may be
+                        contacted by the NexArena organisers
+                        for further details.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 RIGHT: REGISTRATION FORM
+            ========================= -->
+
+            <div class="col-lg-8">
+
+
+                <!-- REGISTRATION CARD -->
+
+                <div
+                    class="registration-card"
+                    id="registrationCard"
+                >
+
+
+                    <!-- SELECTED TOURNAMENT -->
+
+                    <div class="tournament-banner">
+
+
+                        <div class="small-title">
+
+                            REGISTERING FOR
+
+                        </div>
+
+
+                        <h3
+                            id="tournamentName"
+                        >
+
+                            Loading tournament...
+
+                        </h3>
+
+
+                        <p>
+
+                            Complete the form below
+                            to submit your registration.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- =========================
+                         FORM
+                    ========================= -->
+
+                    <form
+                        id="tournamentForm"
+                        novalidate
+                    >
+
+
+                        <div class="row g-4">
+
+
+                            <!-- =========================
+                                 FULL NAME
+                            ========================= -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="fullName"
+                                    class="form-label"
+                                >
+
+                                    Full Name
+
+                                    <span
+                                        class="required-star"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    class="form-control"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 EMAIL
+                            ========================= -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="email"
+                                    class="form-label"
+                                >
+
+                                    Email Address
+
+                                    <span
+                                        class="required-star"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 PHONE
+                            ========================= -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="phone"
+                                    class="form-label"
+                                >
+
+                                    Phone Number
+
+                                    <span
+                                        class="required-star"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    class="form-control"
+                                    placeholder="Enter your phone number"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 GAMER TAG
+                            ========================= -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="gamerTag"
+                                    class="form-label"
+                                >
+
+                                    Gamer Tag
+
+                                    <span
+                                        class="required-star"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="gamerTag"
+                                    class="form-control"
+                                    placeholder="Enter your gamer tag"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 TEAM NAME
+                            ========================= -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="teamName"
+                                    class="form-label"
+                                >
+
+                                    Team Name
+
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="teamName"
+                                    class="form-control"
+                                    placeholder="Enter your team name"
+                                >
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 PLAYER COUNT
+                            ========================= -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="playerCount"
+                                    class="form-label"
+                                >
+
+                                    Number of Players
+
+                                    <span
+                                        class="required-star"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <select
+                                    id="playerCount"
+                                    class="form-select"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Number
+                                    </option>
+
+                                    <option value="1">
+                                        1 Player
+                                    </option>
+
+                                    <option value="2">
+                                        2 Players
+                                    </option>
+
+                                    <option value="3">
+                                        3 Players
+                                    </option>
+
+                                    <option value="4">
+                                        4 Players
+                                    </option>
+
+                                    <option value="5">
+                                        5 Players
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 GAME
+                            ========================= -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="selectedGame"
+                                    class="form-label"
+                                >
+
+                                    Game
+
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="selectedGame"
+                                    class="form-control"
+                                    readonly
+                                >
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 EXPERIENCE
+                            ========================= -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="experience"
+                                    class="form-label"
+                                >
+
+                                    Competitive Experience
+
+                                    <span
+                                        class="required-star"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <select
+                                    id="experience"
+                                    class="form-select"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Experience
+                                    </option>
+
+                                    <option value="Beginner">
+                                        Beginner
+                                    </option>
+
+                                    <option value="Intermediate">
+                                        Intermediate
+                                    </option>
+
+                                    <option value="Advanced">
+                                        Advanced
+                                    </option>
+
+                                    <option value="Professional">
+                                        Professional
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 ADDITIONAL NOTES
+                            ========================= -->
+
+                            <div class="col-12">
+
+                                <label
+                                    for="notes"
+                                    class="form-label"
+                                >
+
+                                    Additional Notes
+
+                                </label>
+
+
+                                <textarea
+                                    id="notes"
+                                    class="form-control"
+                                    placeholder="Tell us anything the organisers should know..."
+                                ></textarea>
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 TERMS
+                            ========================= -->
+
+                            <div class="col-12">
+
+                                <div class="form-check">
+
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="terms"
+                                        required
+                                    >
+
+
+                                    <label
+                                        class="form-check-label"
+                                        for="terms"
+                                        style="color:#bbbbbb;"
+                                    >
+
+                                        I confirm that the
+                                        information provided
+                                        is correct and I agree
+                                        to follow the tournament
+                                        rules.
+
+                                        <span
+                                            class="required-star"
+                                        >
+                                            *
+                                        </span>
+
+                                    </label>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =========================
+                                 SUBMIT
+                            ========================= -->
+
+                            <div class="col-12">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-main btn-lg w-100"
+                                    id="submitButton"
+                                >
+
+                                    <i
+                                        class="bi bi-check-circle"
+                                    ></i>
+
+                                    Submit Tournament Registration
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     SUCCESS MESSAGE
+                ========================= -->
+
+                <div
+                    id="successMessage"
+                    class="success-message"
+                >
+
+
+                    <i
+                        class="bi bi-check-circle-fill"
+                    ></i>
+
+
+                    <h3>
+                        Registration Successful!
+                    </h3>
+
+
+                    <p>
+
+                        Your registration for
+
+                        <strong
+                            id="successTournament"
+                            style="color:#00e5ff;"
+                        ></strong>
+
+                        has been submitted successfully.
+
+                    </p>
+
+
+                    <p>
+
+                        Your tournament registration
+                        has been saved.
+
+                    </p>
+
+
+                    <a
+                        href="schedule.html"
+                        class="btn btn-main mt-3"
+                    >
+
+                        <i
+                            class="bi bi-calendar-event"
+                        ></i>
+
+                        Back to Schedule
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container text-center">
+
+
+        <h5 class="text-white">
+
+            <i class="bi bi-controller"></i>
+
+            E-Sports Club
+
+        </h5>
+
+
+        <p class="mt-3">
+
+            Play. Compete. Connect.
+
+        </p>
+
+
+        <div class="mb-3">
+
+
+            <a href="#">
+
+                <i class="bi bi-instagram"></i>
+
+                Instagram
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="bi bi-discord"></i>
+
+                Discord
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="bi bi-youtube"></i>
+
+                YouTube
+
+            </a>
+
+
+        </div>
+
+
+        <p class="mb-0">
+
+            &copy; 2026 NexArena.
+            All Rights Reserved.
+
+        </p>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     BOOTSTRAP JS
+========================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+
+<!-- =========================
+     TOURNAMENT REGISTRATION JS
+========================= -->
+
+<script>
+
+
+    /* =========================================
+       TOURNAMENT DATA
+    ========================================= */
+
+    const tournaments = {
+
+
+        /* =====================================
+           OCTOBER 02
+           ROCKET LEAGUE
+        ====================================== */
+
+        "rocket-turbo": {
+
+            name:
+                "Rocket League: Turbo Rush",
+
+            game:
+                "Rocket League",
+
+            date:
+                "October 2, 2026",
+
+            time:
+                "3:00 PM – 6:00 PM",
+
+            venue:
+                "Online"
+
+        },
+
+
+        /* =====================================
+           OCTOBER 20
+           VALORANT
+        ====================================== */
+
+        "valorant-neon": {
+
+            name:
+                "Valorant: Neon Ascension",
+
+            game:
+                "Valorant",
+
+            date:
+                "October 20, 2026",
+
+            time:
+                "2:00 PM – 6:00 PM",
+
+            venue:
+                "Main Arena"
+
+        },
+
+
+        /* =====================================
+           OCTOBER 22
+           CS2
+        ====================================== */
+
+        "cs2-lockdown": {
+
+            name:
+                "CS2: Tactical Lockdown",
+
+            game:
+                "Counter-Strike 2",
+
+            date:
+                "October 22, 2026",
+
+            time:
+                "2:00 PM – 6:00 PM",
+
+            venue:
+                "Main Arena"
+
+        },
+
+
+        /* =====================================
+           OCTOBER 24
+           PUBG
+        ====================================== */
+
+        "pubg-last-squad": {
+
+            name:
+                "PUBG: Last Squad Standing",
+
+            game:
+                "PUBG",
+
+            date:
+                "October 24, 2026",
+
+            time:
+                "3:00 PM – 7:00 PM",
+
+            venue:
+                "Online"
+
+        },
+
+
+        /* =====================================
+           OCTOBER 26
+           HONOR OF KINGS
+        ====================================== */
+
+        "hok-rise": {
+
+            name:
+                "Honor of Kings: Rise of Champions",
+
+            game:
+                "Honor of Kings",
+
+            date:
+                "October 26, 2026",
+
+            time:
+                "2:00 PM – 6:00 PM",
+
+            venue:
+                "Online"
+
+        },
+
+
+        /* =====================================
+           OCTOBER 28
+           DOTA 2
+        ====================================== */
+
+        "dota2-throne": {
+
+            name:
+                "DOTA 2: Battle for the Throne",
+
+            game:
+                "DOTA 2",
+
+            date:
+                "October 28, 2026",
+
+            time:
+                "2:00 PM – 7:00 PM",
+
+            venue:
+                "Online"
+
+        },
+
+
+        /* =====================================
+           OCTOBER 30
+           EA SPORTS FC
+        ====================================== */
+
+        "fc-road": {
+
+            name:
+                "EA FC: Road to Glory",
+
+            game:
+                "EA Sports FC",
+
+            date:
+                "October 30, 2026",
+
+            time:
+                "3:00 PM – 5:00 PM",
+
+            venue:
+                "Main Arena"
+
+        },
+
+
+        /* =====================================
+           NOVEMBER 02
+           VALORANT
+        ====================================== */
+
+        "valo-neon-rush": {
+
+            name:
+                "Valo Night: Neon Rush",
+
+            game:
+                "Valorant",
+
+            date:
+                "November 2, 2026",
+
+            time:
+                "7:00 PM – 11:00 PM",
+
+            venue:
+                "Gaming Lab"
+
+        },
+
+
+        /* =====================================
+           NOVEMBER 08
+           CS2
+        ====================================== */
+
+        "cs2-clutch": {
+
+            name:
+                "CS2: Clutch Protocol",
+
+            game:
+                "Counter-Strike 2",
+
+            date:
+                "November 8, 2026",
+
+            time:
+                "2:00 PM – 7:00 PM",
+
+            venue:
+                "Main Arena"
+
+        },
+
+
+        /* =====================================
+           NOVEMBER 14
+           PUBG
+        ====================================== */
+
+        "pubg-survival": {
+
+            name:
+                "PUBG: Survival Protocol",
+
+            game:
+                "PUBG",
+
+            date:
+                "November 14, 2026",
+
+            time:
+                "3:00 PM – 8:00 PM",
+
+            venue:
+                "Online"
+
+        },
+
+
+        /* =====================================
+           NOVEMBER 21
+           ALL STAR NIGHT
+        ====================================== */
+
+        "all-star-night": {
+
+            name:
+                "NexArena All-Star Night",
+
+            game:
+                "Various Games",
+
+            date:
+                "November 21, 2026",
+
+            time:
+                "6:00 PM – 10:00 PM",
+
+            venue:
+                "Main Arena"
+
+        },
+
+
+        /* =====================================
+           NOVEMBER 29
+           FINAL STRIKE
+        ====================================== */
+
+        "final-strike": {
+
+            name:
+                "NexArena: Final Strike",
+
+            game:
+                "Various Games",
+
+            date:
+                "November 29, 2026",
+
+            time:
+                "2:00 PM – 8:00 PM",
+
+            venue:
+                "Main Arena"
+
+        }
+
+    };
+
+
+
+    /* =========================================
+       READ EVENT FROM URL
+    ========================================= */
+
+    const urlParams =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const eventId =
+        urlParams.get("event");
+
+
+    /* =========================================
+       FIND SELECTED TOURNAMENT
+    ========================================= */
+
+    const selectedTournament =
+        tournaments[eventId];
+
+
+
+    /* =========================================
+       GET PAGE ELEMENTS
+    ========================================= */
+
+    const selectionError =
+        document.getElementById(
+            "selectionError"
+        );
+
+
+    const registrationContent =
+        document.getElementById(
+            "registrationContent"
+        );
+
+
+    const registrationCard =
+        document.getElementById(
+            "registrationCard"
+        );
+
+
+    const successMessage =
+        document.getElementById(
+            "successMessage"
+        );
+
+
+    const tournamentForm =
+        document.getElementById(
+            "tournamentForm"
+        );
+
+
+
+    /* =========================================
+       LOAD SELECTED TOURNAMENT
+    ========================================= */
+
+    function loadTournament() {
+
+
+        /* ================================
+           NO TOURNAMENT
+        ================================= */
+
+        if (!selectedTournament) {
+
+
+            registrationContent.style.display =
+                "none";
+
+
+            selectionError.style.display =
+                "block";
+
+
+            return;
+
+        }
+
+
+        /* ================================
+           SHOW REGISTRATION
+        ================================= */
+
+        selectionError.style.display =
+            "none";
+
+
+        registrationContent.style.display =
+            "";
+
+
+        /* ================================
+           TOURNAMENT NAME
+        ================================= */
+
+        document.getElementById(
+            "tournamentName"
+        ).textContent =
+            selectedTournament.name;
+
+
+        /* ================================
+           DATE
+        ================================= */
+
+        document.getElementById(
+            "displayDate"
+        ).textContent =
+            selectedTournament.date;
+
+
+        /* ================================
+           GAME
+        ================================= */
+
+        document.getElementById(
+            "displayGame"
+        ).textContent =
+            selectedTournament.game;
+
+
+        /* ================================
+           TIME
+        ================================= */
+
+        document.getElementById(
+            "displayTime"
+        ).textContent =
+            selectedTournament.time;
+
+
+        /* ================================
+           VENUE
+        ================================= */
+
+        document.getElementById(
+            "displayVenue"
+        ).textContent =
+            selectedTournament.venue;
+
+
+        /* ================================
+           READ-ONLY GAME FIELD
+        ================================= */
+
+        document.getElementById(
+            "selectedGame"
+        ).value =
+            selectedTournament.game;
+
+
+        /* ================================
+           PLAYER COUNT
+        ================================= */
+
+        setupPlayerCount(
+            selectedTournament.game
+        );
+
+    }
+
+
+
+    /* =========================================
+       SET PLAYER COUNT OPTIONS
+    ========================================= */
+
+    function setupPlayerCount(game) {
+
+
+        const playerCount =
+            document.getElementById(
+                "playerCount"
+            );
+
+
+        /*
+            EA SPORTS FC IS SOLO
+        */
+
+        if (
+            game === "EA Sports FC"
+        ) {
+
+            playerCount.innerHTML = `
+
+                <option value="1">
+                    1 Player
+                </option>
+
+            `;
+
+
+            return;
+
+        }
+
+
+        /*
+            NORMAL TEAM OPTIONS
+        */
+
+        playerCount.innerHTML = `
+
+            <option value="">
+                Select Number
+            </option>
+
+            <option value="1">
+                1 Player
+            </option>
+
+            <option value="2">
+                2 Players
+            </option>
+
+            <option value="3">
+                3 Players
+            </option>
+
+            <option value="4">
+                4 Players
+            </option>
+
+            <option value="5">
+                5 Players
+            </option>
+
+        `;
+
+    }
+
+
+
+    /* =========================================
+       FORM SUBMISSION
+    ========================================= */
+
+    tournamentForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            /* ==============================
+               SAFETY CHECK
+            ============================== */
+
+            if (!selectedTournament) {
+
+                alert(
+                    "No tournament has been selected. Please return to the schedule."
+                );
+
+                window.location.href =
+                    "schedule.html";
+
+                return;
+
+            }
+
+
+            /* ==============================
+               HTML FORM VALIDATION
+            ============================== */
+
+            if (
+                !tournamentForm.checkValidity()
+            ) {
+
+                tournamentForm.reportValidity();
+
+                return;
+
+            }
+
+
+            /* ==============================
+               GET FORM VALUES
+            ============================== */
+
+            const registration = {
+
+                tournamentId:
+                    eventId,
+
+                tournamentName:
+                    selectedTournament.name,
+
+                game:
+                    selectedTournament.game,
+
+                eventDate:
+                    selectedTournament.date,
+
+                eventTime:
+                    selectedTournament.time,
+
+                eventVenue:
+                    selectedTournament.venue,
+
+                fullName:
+                    document.getElementById(
+                        "fullName"
+                    ).value.trim(),
+
+                email:
+                    document.getElementById(
+                        "email"
+                    ).value.trim(),
+
+                phone:
+                    document.getElementById(
+                        "phone"
+                    ).value.trim(),
+
+                gamerTag:
+                    document.getElementById(
+                        "gamerTag"
+                    ).value.trim(),
+
+                teamName:
+                    document.getElementById(
+                        "teamName"
+                    ).value.trim(),
+
+                playerCount:
+                    document.getElementById(
+                        "playerCount"
+                    ).value,
+
+                experience:
+                    document.getElementById(
+                        "experience"
+                    ).value,
+
+                notes:
+                    document.getElementById(
+                        "notes"
+                    ).value.trim(),
+
+                registeredAt:
+                    new Date().toISOString()
+
+            };
+
+
+            /* ==============================
+               GET OLD REGISTRATIONS
+            ============================== */
+
+            let registrations = [];
+
+
+            try {
+
+                registrations =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "nexArenaTournamentRegistrations"
+                        )
+                    ) || [];
+
+            }
+
+            catch (error) {
+
+                registrations = [];
+
+            }
+
+
+            /* ==============================
+               SAVE NEW REGISTRATION
+            ============================== */
+
+            registrations.push(
+                registration
+            );
+
+
+            localStorage.setItem(
+
+                "nexArenaTournamentRegistrations",
+
+                JSON.stringify(
+                    registrations
+                )
+
+            );
+
+
+            /* ==============================
+               SHOW SUCCESS
+            ============================== */
+
+            registrationCard.style.display =
+                "none";
+
+
+            successMessage.style.display =
+                "block";
+
+
+            document.getElementById(
+                "successTournament"
+            ).textContent =
+                selectedTournament.name;
+
+
+            /* ==============================
+               SCROLL TO SUCCESS
+            ============================== */
+
+            successMessage.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "center"
+
+            });
+
+        }
+    );
+
+
+
+    /* =========================================
+       START PAGE
+    ========================================= */
+
+    loadTournament();
+
+
+</script>
+
+
+</body>
+
+</html>
