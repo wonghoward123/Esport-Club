@@ -1,12 +1,1112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NexArena | About</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           ABOUT PAGE
+        ========================================= */
+
+        .about-header {
+            padding: 90px 0 60px;
+            text-align: center;
+        }
+
+        .about-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+
+        .about-header h1 span {
+            color: #00e5ff;
+        }
+
+        .about-header p {
+            max-width: 750px;
+            margin: 20px auto 0;
+            color: #bbbbbb;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           ABOUT INTRO
+        ========================================= */
+
+        .about-image {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid #29293a;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        .about-text h2 span {
+            color: #00e5ff;
+        }
+
+        .about-text p {
+            color: #bbbbbb;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           MISSION / VISION
+        ========================================= */
+
+        .about-box {
+            background-color: #151522;
+            border: 1px solid #29293a;
+            border-radius: 18px;
+            padding: 30px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .about-box:hover {
+            transform: translateY(-6px);
+            border-color: #00e5ff;
+            box-shadow: 0 10px 30px rgba(0, 229, 255, 0.08);
+        }
+
+        .about-box-icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #00e5ff;
+            color: #000000;
+
+            border-radius: 12px;
+
+            font-size: 1.5rem;
+
+            margin-bottom: 20px;
+        }
+
+        .about-box h3 {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .about-box p {
+            color: #aaaaaa;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           OBJECTIVES
+        ========================================= */
+
+        .objective-card {
+            background-color: #151522;
+            border: 1px solid #29293a;
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .objective-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        .objective-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .objective-card p {
+            color: #aaaaaa;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           GAME CATEGORIES
+        ========================================= */
+
+        .game-category {
+            background-color: #151522;
+            border: 1px solid #29293a;
+            border-radius: 15px;
+            padding: 25px 15px;
+            text-align: center;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .game-category:hover {
+            border-color: #00e5ff;
+            transform: translateY(-5px);
+        }
+
+        .game-category i {
+            font-size: 2rem;
+            color: #00e5ff;
+        }
+
+        .game-category h5 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .game-category p {
+            color: #888888;
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           BENEFITS
+        ========================================= */
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefit-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #29293a;
+            color: #cccccc;
+        }
+
+        .benefit-list li:last-child {
+            border-bottom: none;
+        }
+
+        .benefit-list i {
+            color: #00e5ff;
+            margin-right: 10px;
+        }
+
+
+        /* =========================================
+           COMMITTEE
+        ========================================= */
+
+        .committee-card {
+            background-color: #151522;
+            border: 1px solid #29293a;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .committee-avatar {
+            width: 90px;
+            height: 90px;
+
+            border-radius: 50%;
+
+            margin: 0 auto 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #00e5ff;
+            color: #000000;
+
+            font-size: 2rem;
+        }
+
+        .committee-card h5 {
+            margin-bottom: 5px;
+        }
+
+        .committee-card p {
+            color: #888888;
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           MEMBERSHIP CTA
+        ========================================= */
+
+        .membership-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    #11111d,
+                    #18182a
+                );
+
+            border: 1px solid #29293a;
+            border-radius: 20px;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .membership-box h2 {
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        .membership-box p {
+            color: #aaaaaa;
+            max-width: 700px;
+            margin: 15px auto 25px;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .about-header {
+                padding: 70px 0 40px;
+            }
+
+            .about-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-text {
+                margin-top: 25px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
-  <body>
-    <p>HI TSEU KWAN LI BANANA APPLE:)</p>
-  </body>
+<body>
 
+
+<!-- =========================
+     NAVIGATION BAR
+========================= -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-controller"></i>
+            NexArena
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="games.html">
+                        Games
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="tournaments.html">
+                        Tournaments
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="teams.html">
+                        Teams
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="players.html">
+                        Players
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="schedule.html">
+                        Schedule
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">
+                        Register
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     PAGE HEADER
+========================= -->
+<section class="about-header">
+
+    <div class="container">
+
+        <h1>
+            About <span>NexArena</span>
+        </h1>
+
+        <p>
+            Discover our esports community, our goals, and the competitive
+            gaming experiences we provide for players and fans.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CLUB INTRODUCTION
+========================= -->
+<section class="section-padding pt-3">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img
+                    src="images/about.jpg"
+                    alt="NexArena esports community"
+                    class="about-image"
+                >
+
+            </div>
+
+            <div class="col-lg-6 about-text">
+
+                <h2>
+                    Welcome to <span>NexArena</span>
+                </h2>
+
+                <p>
+                    NexArena is an esports community created for gamers
+                    who enjoy competition, teamwork and connecting with
+                    other players.
+                </p>
+
+                <p>
+                    Our club brings together players across multiple
+                    competitive games and provides opportunities to
+                    participate in tournaments, training sessions,
+                    workshops and community events.
+                </p>
+
+                <p>
+                    Whether you are an experienced competitor or someone
+                    discovering esports for the first time, NexArena gives
+                    you a place to play, learn and grow.
+                </p>
+
+                <a
+                    href="registration.html"
+                    class="btn btn-main mt-2"
+                >
+                    Join NexArena
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MISSION & VISION
+========================= -->
+<section class="section-padding">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Mission -->
+            <div class="col-md-6">
+
+                <div class="about-box">
+
+                    <div class="about-box-icon">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+
+                    <h3>
+                        Our Mission
+                    </h3>
+
+                    <p>
+                        To create an inclusive and competitive gaming
+                        community where students can develop teamwork,
+                        communication, strategic thinking and esports skills
+                        through meaningful gaming activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Vision -->
+            <div class="col-md-6">
+
+                <div class="about-box">
+
+                    <div class="about-box-icon">
+                        <i class="bi bi-eye"></i>
+                    </div>
+
+                    <h3>
+                        Our Vision
+                    </h3>
+
+                    <p>
+                        To build a strong esports culture where players,
+                        teams and gaming enthusiasts can connect, compete
+                        and represent the spirit of NexArena.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OBJECTIVES
+========================= -->
+<section class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Our <span>Objectives</span>
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="objective-card">
+
+                    <div class="objective-number">
+                        01
+                    </div>
+
+                    <h4>
+                        Develop Skills
+                    </h4>
+
+                    <p>
+                        Help members improve their gameplay,
+                        strategy and competitive skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="objective-card">
+
+                    <div class="objective-number">
+                        02
+                    </div>
+
+                    <h4>
+                        Build Teamwork
+                    </h4>
+
+                    <p>
+                        Encourage communication, teamwork and
+                        leadership through competitive gaming.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="objective-card">
+
+                    <div class="objective-number">
+                        03
+                    </div>
+
+                    <h4>
+                        Create Opportunities
+                    </h4>
+
+                    <p>
+                        Provide tournaments, events and training
+                        opportunities for members.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="objective-card">
+
+                    <div class="objective-number">
+                        04
+                    </div>
+
+                    <h4>
+                        Grow Community
+                    </h4>
+
+                    <p>
+                        Connect gamers and create a welcoming
+                        esports community.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GAME CATEGORIES
+========================= -->
+<section class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Games We <span>Support</span>
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-3">
+
+                <div class="game-category">
+
+                    <i class="bi bi-crosshair"></i>
+
+                    <h5>
+                        Valorant
+                    </h5>
+
+                    <p>
+                        Tactical FPS
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="game-category">
+
+                    <i class="bi bi-controller"></i>
+
+                    <h5>
+                        Counter-Strike 2
+                    </h5>
+
+                    <p>
+                        Tactical FPS
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="game-category">
+
+                    <i class="bi bi-phone"></i>
+
+                    <h5>
+                        Honor of Kings
+                    </h5>
+
+                    <p>
+                        Mobile MOBA
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="game-category">
+
+                    <i class="bi bi-trophy"></i>
+
+                    <h5>
+                        EA Sports FC
+                    </h5>
+
+                    <p>
+                        Sports
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="game-category">
+
+                    <i class="bi bi-shield"></i>
+
+                    <h5>
+                        PUBG
+                    </h5>
+
+                    <p>
+                        Battle Royale
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="game-category">
+
+                    <i class="bi bi-diagram-3"></i>
+
+                    <h5>
+                        DOTA 2
+                    </h5>
+
+                    <p>
+                        PC MOBA
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="game-category">
+
+                    <i class="bi bi-lightning-charge"></i>
+
+                    <h5>
+                        Rocket League
+                    </h5>
+
+                    <p>
+                        Competitive Sports
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-3">
+
+                <div class="game-category">
+
+                    <i class="bi bi-controller"></i>
+
+                    <h5>
+                        More Games
+                    </h5>
+
+                    <p>
+                        Coming Soon
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BENEFITS
+========================= -->
+<section class="section-padding">
+
+    <div class="container">
+
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6">
+
+                <h2 class="section-title mb-4">
+                    Why Join <span>NexArena?</span>
+                </h2>
+
+                <p class="text-secondary">
+                    NexArena is more than just gaming. It is a place where
+                    members can build friendships, improve their skills and
+                    experience the competitive esports environment.
+                </p>
+
+                <ul class="benefit-list mt-4">
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Participate in esports tournaments
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Join team training sessions
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Meet other gaming enthusiasts
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Improve teamwork and communication
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Attend workshops and gaming events
+                    </li>
+
+                    <li>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Represent NexArena in competitions
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="about-box">
+
+                    <div class="about-box-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h3>
+                        A Community for Gamers
+                    </h3>
+
+                    <p>
+                        From casual gaming nights to competitive
+                        tournaments, NexArena welcomes players with
+                        different experience levels and interests.
+                    </p>
+
+                    <p class="mt-3">
+                        Work together, learn from one another and
+                        enjoy the journey of competitive gaming.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMMITTEE
+========================= -->
+<section class="section-padding">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Club <span>Committee</span>
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="committee-card">
+
+                    <div class="committee-avatar">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h5>
+                        Club President
+                    </h5>
+
+                    <p>
+                        Leadership & Management
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="committee-card">
+
+                    <div class="committee-avatar">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h5>
+                        Vice President
+                    </h5>
+
+                    <p>
+                        Events & Operations
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="committee-card">
+
+                    <div class="committee-avatar">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h5>
+                        Secretary
+                    </h5>
+
+                    <p>
+                        Administration
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="committee-card">
+
+                    <div class="committee-avatar">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h5>
+                        Treasurer
+                    </h5>
+
+                    <p>
+                        Finance & Resources
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMBERSHIP
+========================= -->
+<section class="section-padding">
+
+    <div class="container">
+
+        <div class="membership-box">
+
+            <i class="bi bi-controller fs-1 text-info"></i>
+
+            <h2 class="mt-3">
+                Become a NexArena Member
+            </h2>
+
+            <p>
+                Join a community of gamers, participate in exciting
+                activities and discover your competitive potential.
+            </p>
+
+            <a
+                href="registration.html"
+                class="btn btn-main btn-lg"
+            >
+                Join NexArena
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+
+    <div class="container text-center">
+
+        <h5 class="text-white">
+            <i class="bi bi-controller"></i>
+            NexArena
+        </h5>
+
+        <p class="mt-3">
+            Play. Compete. Connect.
+        </p>
+
+        <div class="mb-3">
+
+            <a href="#">
+                <i class="bi bi-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="#">
+                <i class="bi bi-discord"></i>
+                Discord
+            </a>
+
+            <a href="#">
+                <i class="bi bi-youtube"></i>
+                YouTube
+            </a>
+
+        </div>
+
+        <p class="mb-0">
+            &copy; 2026 NexArena. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+</body>
 </html>
