@@ -1,1 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NexArena | Players</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           PLAYER PAGE
+        ========================================= */
+
+        .players-header {
+            padding: 90px 0 60px;
+            text-align: center;
+        }
+
+        .players-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+
+        .players-header h1 span {
+            color: #00e5ff;
+        }
+
+        .players-header p {
+            max-width: 750px;
+            margin: 20px auto 0;
+            color: #bbbbbb;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           SEARCH
+        ========================================= */
+
+        .player-search {
+            max-width: 600px;
+            margin: 0 auto 50px;
+        }
+
+        .player-search input {
+            background-color: #151522;
+            color: #ffffff;
+            border: 1px solid #29293a;
+            border-radius: 10px;
+            min-height: 48px;
+        }
+
+        .player-search input::placeholder {
+            color: #888888;
+        }
+
+        .player-search input:focus {
+            background-color: #151522;
+            color: #ffffff;
+            border-color: #00e5ff;
+            box-shadow: none;
+        }
+
+
+        /* =========================================
+           PLAYER CARD
+        ========================================= */
+
+        .player-profile-card {
+            background-color: #151522;
+            border: 1px solid #29293a;
+            border-radius: 18px;
+            overflow: hidden;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .player-profile-card:hover {
+            transform: translateY(-8px);
+            border-color: #00e5ff;
+            box-shadow: 0 15px 35px rgba(0, 229, 255, 0.08);
+        }
+
+        .player-profile-image {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            object-position: center bottom;
+            background-color: #10101b;
+            display: block;
+        }
+
+        .player-profile-content {
+            padding: 25px;
+        }
+
+
+        /* =========================================
+           PLAYER INFORMATION
+        ========================================= */
+
+        .player-name {
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .player-team {
+            color: #888888;
+            margin-bottom: 15px;
+        }
+
+        .player-game {
+            display: inline-block;
+            background-color: #00e5ff;
+            color: #000000;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .player-detail {
+            color: #cccccc;
+            margin-bottom: 10px;
+        }
+
+        .player-detail i {
+            color: #00e5ff;
+            width: 22px;
+        }
+
+
+        /* =========================================
+           PLAYER STATS
+        ========================================= */
+
+        .player-stats {
+            border-top: 1px solid #29293a;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #888888;
+        }
+
+
+        /* =========================================
+           ACHIEVEMENT
+        ========================================= */
+
+        .achievement-box {
+            background-color: #10101b;
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 15px;
+            color: #dddddd;
+        }
+
+        .achievement-box i {
+            color: #00e5ff;
+            margin-right: 8px;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .players-header {
+                padding: 70px 0 40px;
+            }
+
+            .players-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .player-profile-image {
+                height: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION BAR
+========================= -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-controller"></i>
+            NexArena
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="games.html">
+                            Games
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="players.html">
+                            Players
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">
+                            Teams
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tournaments.html">
+                            Tournaments
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="schedule.html">
+                            Schedule
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">
+                            Register
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     PAGE HEADER
+========================= -->
+<section class="players-header">
+
+    <div class="container">
+
+        <h1>
+            <span>Players</span>
+        </h1>
+
+        <p>
+            Meet the players who compete across different games
+            and represent the competitive spirit of NexArena.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SEARCH
+========================= -->
+<section>
+
+    <div class="container">
+
+        <div class="player-search">
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-dark border-secondary text-info">
+                    <i class="bi bi-search"></i>
+                </span>
+
+                <input
+                    type="text"
+                    id="playerSearch"
+                    class="form-control"
+                    placeholder="Search player, team, game or country..."
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PLAYER LIST
+========================= -->
+<section class="section-padding pt-0">
+
+    <div class="container">
+
+        <div class="row g-4" id="playerContainer">
+
+
+            <!-- =====================================================
+                 1. ANDERS VEJR GANG
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="anders vejrgang rblz gaming ea sports fc denmark"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/vejrgang.png"
+                        alt="Player Anders Vejrgang"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            Anders Vejrgang
+                        </div>
+
+                        <div class="player-team">
+                            Team Falcons
+                        </div>
+
+                        <span class="player-game">
+                            EA Sports FC
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Attacker
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: EA Sports FC
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: Denmark
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">42</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">15</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">8</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            FC Pro World Champion 2024
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 2. DONK
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="donk team spirit cs2 counter strike russia"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/donk.png"
+                        alt="Player donk"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            donk
+                        </div>
+
+                        <div class="player-team">
+                            Team Spirit
+                        </div>
+
+                        <span class="player-game">
+                            CS2
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Rifler / Entry
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: CS2
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: Russia
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">38</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">14</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            Perfect World Shanghai Major 2024 Champion & MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 3. DRALII
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="dralii samy hajji team falcons rocket league morocco canada"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/dralii.png"
+                        alt="Player dralii"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            dralii
+                        </div>
+
+                        <div class="player-team">
+                            Team Falcons
+                        </div>
+
+                        <span class="player-game">
+                            Rocket League
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Player
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-lightning-charge"></i>
+                            Game: Rocket League
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: Morocco / Canada
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">35</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">5</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            RLCS Birmingham Major 2025 MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 4. FLY
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="fly peng yunfei wolves honor of kings china"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/fly.png"
+                        alt="Player Fly"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            Fly
+                        </div>
+
+                        <div class="player-team">
+                            Wolves
+                        </div>
+
+                        <span class="player-game">
+                            Honor of Kings
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Tank / Fighter
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-phone"></i>
+                            Game: Honor of Kings
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: China
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">41</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">16</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">8</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            8 x KPL Champion
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 5. HIMASS
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="himass anyone legend ag al pubg vietnam"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/himass.png"
+                        alt="Player Himass"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            Himass
+                        </div>
+
+                        <div class="player-team">
+                            Anyone's Legend
+                        </div>
+
+                        <span class="player-game">
+                            PUBG
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Fragger
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: PUBG
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: Vietnam
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">36</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">13</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">7</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            PUBG Nations Cup 2025 MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 6. MIDONE
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="midone yeik nai zheng mouz dota dota 2 malaysia"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/midone.png"
+                        alt="Player MidOne"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            MidOne
+                        </div>
+
+                        <div class="player-team">
+                            MOUZ
+                        </div>
+
+                        <span class="player-game">
+                            DOTA 2
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Mid / Carry
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: DOTA 2
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: Malaysia
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">40</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">15</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">9</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            PGL Wallachia Season 6 Champion 2025
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 7. N0TAIL
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="notail n0tail johan sundstein og dota dota 2 denmark"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/notail.webp"
+                        alt="Player N0tail"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            N0tail
+                        </div>
+
+                        <div class="player-team">
+                            OG
+                        </div>
+
+                        <span class="player-game">
+                            DOTA 2
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Support
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: DOTA 2
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: Denmark
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">45</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">18</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            2 x The International Champion
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 8. RONG
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="rong qingrong huang yaoqin jd gaming honor of kings china"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/rong.png"
+                        alt="Player Rong"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            Rong
+                        </div>
+
+                        <div class="player-team">
+                            JD Gaming
+                        </div>
+
+                        <span class="player-game">
+                            Honor of Kings
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Mage
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-phone"></i>
+                            Game: Honor of Kings
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: China
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">34</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">11</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            HOK International Championship 2022 Champion
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 9. TEKKZ
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="tekkz donovan hunt rblz gaming ea sports fc england united kingdom"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/Tekkz.png"
+                        alt="Player Tekkz"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            Tekkz
+                        </div>
+
+                        <div class="player-team">
+                            RBLZ Gaming
+                        </div>
+
+                        <span class="player-game">
+                            EA Sports FC
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Attacker
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: EA Sports FC
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: England
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">44</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">17</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">10</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            5 x FUT Champions Cup Winner
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 10. TGLTN
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="tgltn james giezen team falcons pubg australia"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/tgltn.png"
+                        alt="Player TGLTN"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            TGLTN
+                        </div>
+
+                        <div class="player-team">
+                            Team Falcons
+                        </div>
+
+                        <span class="player-game">
+                            PUBG
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Fragger
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: PUBG
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: Australia
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">39</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">14</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">7</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            PUBG Global Series 2 2023 MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 11. VATIRA
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="vatira axel touret karmine corp rocket league france"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/vatira.png"
+                        alt="Player Vatira"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            Vatira
+                        </div>
+
+                        <div class="player-team">
+                            Karmine Corp
+                        </div>
+
+                        <span class="player-game">
+                            Rocket League
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Player
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-lightning-charge"></i>
+                            Game: Rocket League
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: France
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">43</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">16</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">8</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            RLCS Paris Major 2026 Champion & MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 12. XMPL
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="xmpl artem adarkin twisted minds pubg russia"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/xmpl.png"
+                        alt="Player xmpl"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            xmpl
+                        </div>
+
+                        <div class="player-team">
+                            Twisted Minds
+                        </div>
+
+                        <span class="player-game">
+                            PUBG
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Fragger
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: PUBG
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: Russia
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">37</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">13</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">6</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            4 x PUBG Global Series MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 13. YINUO
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="yinuo yi nuo ag super play honor of kings china"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/yinuo.png"
+                        alt="Player YiNuo"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            YiNuo
+                        </div>
+
+                        <div class="player-team">
+                            AG
+                        </div>
+
+                        <span class="player-game">
+                            Honor of Kings
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Marksman / Carry
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-phone"></i>
+                            Game: Honor of Kings
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: China
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">41</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">15</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">8</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            King Pro League Grand Finals 2025 Champion & Finals MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 14. ZEN
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="zen alexis bernier team vitality rocket league france"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/zen.png"
+                        alt="Player zen"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            zen
+                        </div>
+
+                        <div class="player-team">
+                            Team Vitality
+                        </div>
+
+                        <span class="player-game">
+                            Rocket League
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Player
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-lightning-charge"></i>
+                            Game: Rocket League
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: France
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">36</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">14</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">7</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            Rocket League World Champion 2023 & MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 15. ZMJJKK
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="zmjjkk edward gaming edg valorant china"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/kangkang1.webp"
+                        alt="Player zmjjKK"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            zmjjKK
+                        </div>
+
+                        <div class="player-team">
+                            EDward Gaming
+                        </div>
+
+                        <span class="player-game">
+                            Valorant
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: Duelist
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: Valorant
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: China
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">40</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">16</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">7</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            VALORANT Champions 2024 Champion & MVP
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 16. ZYWOO
+            ====================================================== -->
+
+            <div
+                class="col-md-6 col-lg-4 player-item"
+                data-search="zywoo mathieu herbraut team vitality cs2 counter strike france"
+            >
+
+                <div class="player-profile-card">
+
+                    <img
+                        src="images/zywoo.png"
+                        alt="Player ZywOo"
+                        class="player-profile-image"
+                    >
+
+                    <div class="player-profile-content">
+
+                        <div class="player-name">
+                            ZywOo
+                        </div>
+
+                        <div class="player-team">
+                            Team Vitality
+                        </div>
+
+                        <span class="player-game">
+                            CS2
+                        </span>
+
+                        <p class="player-detail">
+                            <i class="bi bi-person-badge"></i>
+                            Role: AWPer
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-controller"></i>
+                            Game: CS2
+                        </p>
+
+                        <p class="player-detail">
+                            <i class="bi bi-globe"></i>
+                            Country: France
+                        </p>
+
+                        <div class="player-stats">
+
+                            <div class="row">
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">46</span>
+                                    <span class="stat-label">Wins</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">19</span>
+                                    <span class="stat-label">MVP</span>
+                                </div>
+
+                                <div class="col-4 stat-box">
+                                    <span class="stat-number">11</span>
+                                    <span class="stat-label">Titles</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="achievement-box">
+                            <i class="bi bi-trophy"></i>
+                            4 x HLTV Player of the Year
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     JOIN CTA
+========================= -->
+<section class="section-padding">
+
+    <div class="container">
+
+        <div class="cta text-center">
+
+            <i class="bi bi-controller fs-1 text-info"></i>
+
+            <h2 class="mt-3">
+                Ready to Join NexArena?
+            </h2>
+
+            <p class="text-secondary">
+                Think you have what it takes to compete?
+                Join NexArena and become part of our gaming community.
+            </p>
+
+            <a
+                href="registration.html"
+                class="btn btn-main btn-lg"
+            >
+                Join NexArena
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+
+    <div class="container text-center">
+
+        <h5 class="text-white">
+            <i class="bi bi-controller"></i>
+            NexArena
+        </h5>
+
+        <p class="mt-3">
+            Play. Compete. Connect.
+        </p>
+
+        <div class="mb-3">
+
+            <a href="#">
+                <i class="bi bi-instagram"></i>
+                Instagram
+            </a>
+
+            <a href="#">
+                <i class="bi bi-discord"></i>
+                Discord
+            </a>
+
+            <a href="#">
+                <i class="bi bi-youtube"></i>
+                YouTube
+            </a>
+
+        </div>
+
+        <p class="mb-0">
+            &copy; 2026 NexArena. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     BOOTSTRAP JS
+========================= -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- =========================
+     PLAYER SEARCH
+========================= -->
+<script>
+
+    const playerSearch =
+        document.getElementById("playerSearch");
+
+    const playerItems =
+        document.querySelectorAll(".player-item");
+
+
+    playerSearch.addEventListener(
+        "input",
+        function () {
+
+            const searchTerm =
+                this.value.toLowerCase().trim();
+
+
+            playerItems.forEach(function (player) {
+
+                const searchData =
+                    player.dataset.search.toLowerCase();
+
+
+                if (
+                    searchTerm === "" ||
+                    searchData.includes(searchTerm)
+                ) {
+
+                    player.style.display = "";
+
+                } else {
+
+                    player.style.display = "none";
+
+                }
+
+            });
+
+        }
+    );
+
+</script>
+
+
+</body>
+</html>
