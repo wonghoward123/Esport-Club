@@ -2,164 +2,484 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Games | NexArena</title>
+    <title>NexArena | Games</title>
 
-    <!-- Bootstrap CSS -->
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================== -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
+
+    <!-- =========================
+         BOOTSTRAP ICONS
+    ========================== -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Shared CSS -->
+
+    <!-- =========================
+         SHARED CSS
+    ========================== -->
+
     <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+        /* =========================================
+           LOGIN / REGISTER NAVIGATION
+        ========================================= */
+
+        .nav-auth {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-left: 60px;
+
+        }
+
+
+        .nav-login,
+        .nav-register {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 75px;
+
+            height: 38px;
+
+            padding: 0 16px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        /* =========================================
+           LOGIN BUTTON
+        ========================================= */
+
+        .nav-login {
+
+            background-color: #00e5ff;
+
+            color: #000000;
+
+            border: 1px solid #00e5ff;
+
+        }
+
+
+        .nav-login:hover {
+
+            background-color: #00b8cc;
+
+            border-color: #00b8cc;
+
+            color: #000000;
+
+        }
+
+
+        /* =========================================
+           REGISTER BUTTON
+        ========================================= */
+
+        .nav-register {
+
+            background-color: #3a3a46;
+
+            color: #ffffff;
+
+            border: 1px solid #555563;
+
+        }
+
+
+        .nav-register:hover {
+
+            background-color: #50505d;
+
+            border-color: #666675;
+
+            color: #ffffff;
+
+        }
+
+
+        /* =========================================
+           CLICKABLE GAME CARDS
+        ========================================= */
+
+        .game-card-link {
+
+            display: block;
+
+            height: 100%;
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        .game-card-link:hover {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        .game-card-link .custom-card {
+
+            height: 100%;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================================
+           FOOTER LINKS
+        ========================================= */
+
+        footer a {
+
+            color: #bbbbbb;
+
+            text-decoration: none;
+
+            margin: 0 8px;
+
+            transition: 0.3s;
+
+        }
+
+
+        footer a:hover {
+
+            color: #00e5ff;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 991px) {
+
+            .nav-auth {
+
+                margin-left: 0;
+
+                margin-top: 15px;
+
+                padding-bottom: 10px;
+
+            }
+
+
+            .nav-login,
+            .nav-register {
+
+                width: 100%;
+
+            }
+
+        }
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         NAVIGATION BAR
-    ========================= -->
+
+    <!-- =====================================================
+     NAVIGATION BAR
+====================================================== -->
+
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
         <div class="container">
 
+
+            <!-- BRAND -->
+
             <a class="navbar-brand" href="index.html">
+
                 <i class="bi bi-controller"></i>
+
                 NexArena
+
             </a>
+
+
+
+            <!-- MOBILE BUTTON -->
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
                 aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
+
+
+
+            <!-- NAVIGATION -->
 
             <div class="collapse navbar-collapse" id="mainNavbar">
 
+
                 <ul class="navbar-nav ms-auto">
 
+
+                    <!-- HOME -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="index.html">
                             Home
                         </a>
+
                     </li>
 
+
+                    <!-- ABOUT -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="about.html">
                             About
                         </a>
+
                     </li>
 
+
+                    <!-- GAMES -->
+
                     <li class="nav-item">
+
                         <a class="nav-link active" href="games.html">
                             Games
                         </a>
+
                     </li>
 
+
+                    <!-- PLAYERS -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="players.html">
                             Players
                         </a>
+
                     </li>
 
+
+                    <!-- TEAMS -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="teams.html">
                             Teams
                         </a>
+
                     </li>
 
+
+                    <!-- TOURNAMENTS -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="tournaments.html">
                             Tournaments
                         </a>
+
                     </li>
 
+
+                    <!-- SCHEDULE -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="schedule.html">
                             Schedule
                         </a>
+
                     </li>
 
 
+                    <!-- FAQ -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="faq.html">
                             FAQ
                         </a>
+
                     </li>
 
+
+                    <!-- CONTACT -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="contact.html">
                             Contact
                         </a>
+
                     </li>
+
 
                 </ul>
 
+
+
+                <!-- LOGIN / REGISTER -->
+
                 <div class="nav-auth">
+
+
+                    <!-- LOGIN -->
 
                     <a href="login.html" class="nav-login">
                         Login
                     </a>
 
+
+                    <!-- REGISTER -->
+
                     <a href="registration.html" class="nav-register">
                         Register
                     </a>
 
+
                 </div>
 
+
             </div>
+
         </div>
+
     </nav>
 
 
-    <!-- =========================
-         PAGE INTRODUCTION
-    ========================= -->
+
+    <!-- =====================================================
+     PAGE INTRODUCTION
+====================================================== -->
+
     <section class="py-5 text-center">
 
         <div class="container">
 
+
             <h1 class="display-4 fw-bold">
-                Our <span style="color: #00e5ff;">Games</span>
+
+                Our
+
+                <span style="color: #00e5ff;">
+
+                    Games
+
+                </span>
+
             </h1>
 
+
             <p class="lead text-secondary mx-auto" style="max-width: 750px;">
+
                 Explore the games supported by our E-Sports Club.
                 Discover different genres and find the games you enjoy.
+
             </p>
+
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         GAME FILTER
-    ========================= -->
+
+    <!-- =====================================================
+     GAME FILTER
+====================================================== -->
+
     <section class="pb-4">
 
         <div class="container">
 
+
             <div class="text-center">
+
 
                 <div class="btn-group flex-wrap" role="group" aria-label="Game filters">
 
+
+                    <!-- ALL GAMES -->
+
                     <button type="button" class="btn btn-main filter-btn" data-filter="all">
+
                         All Games
+
                     </button>
+
+
+                    <!-- FPS -->
 
                     <button type="button" class="btn btn-outline-light filter-btn" data-filter="fps">
+
                         FPS
+
                     </button>
+
+
+                    <!-- MOBA -->
 
                     <button type="button" class="btn btn-outline-light filter-btn" data-filter="moba">
+
                         MOBA
+
                     </button>
 
+
+                    <!-- SPORTS -->
+
                     <button type="button" class="btn btn-outline-light filter-btn" data-filter="sports">
+
                         Sports
+
                     </button>
+
 
                 </div>
 
@@ -170,292 +490,524 @@
     </section>
 
 
-    <!-- =========================
-         GAME CARDS
-    ========================= -->
+
+    <!-- =====================================================
+     GAME CARDS
+     
+     Alphabetical order:
+     Counter-Strike 2
+     DOTA 2
+     EA Sports FC
+     Honor of Kings
+     PUBG
+     Rocket League
+     Valorant
+====================================================== -->
+
     <section class="section-padding pt-4">
 
         <div class="container">
 
+
             <div class="row g-4" id="gameContainer">
 
 
-                <!-- =========================
-                     1. VALORANT
-                ========================= -->
+                <!-- =================================================
+                 1. COUNTER-STRIKE 2
+            ================================================== -->
+
                 <div class="col-md-6 col-lg-4 game-item" data-category="fps">
 
-                    <div class="custom-card text-center">
+                    <a href="gameDetails.html?game=counter-strike-2" class="game-card-link">
 
-                        <div class="p-4">
+                        <div class="custom-card text-center">
 
-                            <img src="images/valorantLogo.png" alt="Valorant logo" class="game-logo">
 
-                            <h3 class="mt-3">
-                                Valorant
-                            </h3>
+                            <div class="p-4">
 
-                            <span class="badge badge-custom mb-3">
-                                FPS
-                            </span>
 
-                            <p class="text-secondary">
-                                A tactical first-person shooter with unique agents,
-                                special abilities and stylized cartoon-inspired visual design.
-                            </p>
+                                <img src="images/csLogo.jpg" alt="Counter-Strike 2 logo" class="game-logo">
 
-                            <p>
-                                <strong>Game Type:</strong> 5v5
-                            </p>
 
-                            <p>
-                                <strong>Club Status:</strong>
-                                Supported
-                            </p>
+                                <h3 class="mt-3 text-white">
+
+                                    Counter-Strike 2
+
+                                </h3>
+
+
+                                <span class="badge badge-custom mb-3">
+
+                                    FPS
+
+                                </span>
+
+
+                                <p class="text-secondary">
+
+                                    A tactical first-person shooter focused
+                                    on gunplay, strategy and realistic gameplay
+                                    mechanics.
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Game Type:
+                                    </strong>
+
+                                    5v5
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Club Status:
+                                    </strong>
+
+                                    Supported
+
+                                </p>
+
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
                 </div>
 
 
-                <!-- =========================
-                     2. COUNTER-STRIKE 2
-                ========================= -->
-                <div class="col-md-6 col-lg-4 game-item" data-category="fps">
 
-                    <div class="custom-card text-center">
+                <!-- =================================================
+                 2. DOTA 2
+            ================================================== -->
 
-                        <div class="p-4">
-
-                            <img src="images/csLogo.jpg" alt="Counter-Strike 2 logo" class="game-logo">
-
-                            <h3 class="mt-3">
-                                Counter-Strike 2
-                            </h3>
-
-                            <span class="badge badge-custom mb-3">
-                                FPS
-                            </span>
-
-                            <p class="text-secondary">
-                                A tactical first-person shooter focused on gunplay, strategy and realistic gameplay
-                                mechanics.
-                            </p>
-
-                            <p>
-                                <strong>Game Type:</strong> 5v5
-                            </p>
-
-                            <p>
-                                <strong>Club Status:</strong>
-                                Supported
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =========================
-                     3. PUBG
-                ========================= -->
-                <div class="col-md-6 col-lg-4 game-item" data-category="fps">
-
-                    <div class="custom-card text-center">
-
-                        <div class="p-4">
-
-                            <img src="images/pubgLogo.jpg" alt="PUBG logo" class="game-logo">
-
-                            <h3 class="mt-3">
-                                PUBG
-                            </h3>
-
-                            <span class="badge badge-custom mb-3">
-                                FPS / TPS
-                            </span>
-
-                            <p class="text-secondary">
-                                A competitive battle royale game focused
-                                on survival, strategy and teamwork.
-                            </p>
-
-                            <p>
-                                <strong>Game Type:</strong> Battle Royale
-                            </p>
-
-                            <p>
-                                <strong>Club Status:</strong>
-                                Supported
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =========================
-                     4. HONOR OF KINGS
-                ========================= -->
                 <div class="col-md-6 col-lg-4 game-item" data-category="moba">
 
-                    <div class="custom-card text-center">
+                    <a href="gameDetails.html?game=dota-2" class="game-card-link">
 
-                        <div class="p-4">
+                        <div class="custom-card text-center">
 
-                            <img src="images/hokLogo.png" alt="Honor of Kings logo" class="game-logo">
 
-                            <h3 class="mt-3">
-                                Honor of Kings
-                            </h3>
+                            <div class="p-4">
 
-                            <span class="badge badge-custom mb-3">
-                                MOBA
-                            </span>
 
-                            <p class="text-secondary">
-                                A mobile multiplayer online battle arena game focused on teamwork,
-                                unique heroes and fast-paced matches
-                            </p>
+                                <img src="images/dotaLogo.jpg" alt="DOTA 2 logo" class="game-logo">
 
-                            <p>
-                                <strong>Game Type:</strong> 5v5
-                            </p>
 
-                            <p>
-                                <strong>Club Status:</strong>
-                                Supported
-                            </p>
+                                <h3 class="mt-3 text-white">
+
+                                    DOTA 2
+
+                                </h3>
+
+
+                                <span class="badge badge-custom mb-3">
+
+                                    MOBA
+
+                                </span>
+
+
+                                <p class="text-secondary">
+
+                                    A multiplayer online battle arena game
+                                    focused on strategic teamwork, complex
+                                    gameplay mechanics and competitive matches.
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Game Type:
+                                    </strong>
+
+                                    5v5
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Club Status:
+                                    </strong>
+
+                                    Supported
+
+                                </p>
+
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
                 </div>
 
 
-                <!-- =========================
-                     5. DOTA 2
-                ========================= -->
+
+                <!-- =================================================
+                 3. EA SPORTS FC
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 game-item" data-category="sports">
+
+                    <a href="gameDetails.html?game=ea-sports-fc" class="game-card-link">
+
+                        <div class="custom-card text-center">
+
+
+                            <div class="p-4">
+
+
+                                <img src="images/eaLogo.webp" alt="EA Sports FC logo" class="game-logo">
+
+
+                                <h3 class="mt-3 text-white">
+
+                                    EA Sports FC
+
+                                </h3>
+
+
+                                <span class="badge badge-custom mb-3">
+
+                                    SPORTS
+
+                                </span>
+
+
+                                <p class="text-secondary">
+
+                                    A football simulation game featuring
+                                    competitive matches and team-based gameplay.
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Game Type:
+                                    </strong>
+
+                                    1v1
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Club Status:
+                                    </strong>
+
+                                    Supported
+
+                                </p>
+
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 4. HONOR OF KINGS
+            ================================================== -->
+
                 <div class="col-md-6 col-lg-4 game-item" data-category="moba">
 
-                    <div class="custom-card text-center">
+                    <a href="gameDetails.html?game=honor-of-kings" class="game-card-link">
 
-                        <div class="p-4">
+                        <div class="custom-card text-center">
 
-                            <img src="images/dotaLogo.jpg" alt="Dota logo" class="game-logo">
 
-                            <h3 class="mt-3">
-                                DOTA 2
-                            </h3>
+                            <div class="p-4">
 
-                            <span class="badge badge-custom mb-3">
-                                MOBA
-                            </span>
 
-                            <p class="text-secondary">
-                                A multiplayer online battle arena game focused on strategic teamwork,
-                                complex gameplay mechanics and competitive matches.
-                            </p>
+                                <img src="images/hokLogo.png" alt="Honor of Kings logo" class="game-logo">
 
-                            <p>
-                                <strong>Game Type:</strong> 5v5
-                            </p>
 
-                            <p>
-                                <strong>Club Status:</strong>
-                                Supported
-                            </p>
+                                <h3 class="mt-3 text-white">
+
+                                    Honor of Kings
+
+                                </h3>
+
+
+                                <span class="badge badge-custom mb-3">
+
+                                    MOBA
+
+                                </span>
+
+
+                                <p class="text-secondary">
+
+                                    A mobile multiplayer online battle arena
+                                    game focused on teamwork, unique heroes
+                                    and fast-paced matches.
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Game Type:
+                                    </strong>
+
+                                    5v5
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Club Status:
+                                    </strong>
+
+                                    Supported
+
+                                </p>
+
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
                 </div>
 
 
-                <!-- =========================
-                     6. EA SPORTS FC
-                ========================= -->
-                <div class="col-md-6 col-lg-4 game-item" data-category="sports">
 
-                    <div class="custom-card text-center">
+                <!-- =================================================
+                 5. PUBG
+            ================================================== -->
 
-                        <div class="p-4">
+                <div class="col-md-6 col-lg-4 game-item" data-category="fps">
 
-                            <img src="images/eaLogo.webp" alt="EA Sports FC Logo" class="game-logo">
+                    <a href="gameDetails.html?game=pubg" class="game-card-link">
 
-                            <h3 class="mt-3">
-                                EA Sports FC
-                            </h3>
+                        <div class="custom-card text-center">
 
-                            <span class="badge badge-custom mb-3">
-                                SPORTS
-                            </span>
 
-                            <p class="text-secondary">
-                                A football simulation game featuring
-                                competitive matches and team-based gameplay.
-                            </p>
+                            <div class="p-4">
 
-                            <p>
-                                <strong>Game Type:</strong> 1v1
-                            </p>
 
-                            <p>
-                                <strong>Club Status:</strong>
-                                Supported
-                            </p>
+                                <img src="images/pubgLogo.jpg" alt="PUBG logo" class="game-logo">
+
+
+                                <h3 class="mt-3 text-white">
+
+                                    PUBG
+
+                                </h3>
+
+
+                                <span class="badge badge-custom mb-3">
+
+                                    FPS / TPS
+
+                                </span>
+
+
+                                <p class="text-secondary">
+
+                                    A competitive battle royale game focused
+                                    on survival, strategy and teamwork.
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Game Type:
+                                    </strong>
+
+                                    Battle Royale
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Club Status:
+                                    </strong>
+
+                                    Supported
+
+                                </p>
+
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
 
                 </div>
 
 
-                <!-- =========================
-                     7. ROCKET LEAGUE
-                ========================= -->
+
+                <!-- =================================================
+                 6. ROCKET LEAGUE
+            ================================================== -->
+
                 <div class="col-md-6 col-lg-4 game-item" data-category="sports">
 
-                    <div class="custom-card text-center">
+                    <a href="gameDetails.html?game=rocket-league" class="game-card-link">
 
-                        <div class="p-4">
+                        <div class="custom-card text-center">
 
-                            <img src="images/rocketLogo.jfif" alt="Rocket League logo" class="game-logo">
 
-                            <h3 class="mt-3">
-                                Rocket League
-                            </h3>
+                            <div class="p-4">
 
-                            <span class="badge badge-custom mb-3">
-                                SPORTS
-                            </span>
 
-                            <p class="text-secondary">
-                                A fast-paced competitive game combining
-                                football and rocket-powered cars.
-                            </p>
+                                <img src="images/rocketLogo.jfif" alt="Rocket League logo" class="game-logo">
 
-                            <p>
-                                <strong>Game Type:</strong> 3v3
-                            </p>
 
-                            <p>
-                                <strong>Club Status:</strong>
-                                Supported
-                            </p>
+                                <h3 class="mt-3 text-white">
+
+                                    Rocket League
+
+                                </h3>
+
+
+                                <span class="badge badge-custom mb-3">
+
+                                    SPORTS
+
+                                </span>
+
+
+                                <p class="text-secondary">
+
+                                    A fast-paced competitive game combining
+                                    football and rocket-powered cars.
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Game Type:
+                                    </strong>
+
+                                    3v3
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Club Status:
+                                    </strong>
+
+                                    Supported
+
+                                </p>
+
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                 7. VALORANT
+            ================================================== -->
+
+                <div class="col-md-6 col-lg-4 game-item" data-category="fps">
+
+                    <a href="gameDetails.html?game=valorant" class="game-card-link">
+
+                        <div class="custom-card text-center">
+
+
+                            <div class="p-4">
+
+
+                                <img src="images/valorantLogo.png" alt="Valorant logo" class="game-logo">
+
+
+                                <h3 class="mt-3 text-white">
+
+                                    Valorant
+
+                                </h3>
+
+
+                                <span class="badge badge-custom mb-3">
+
+                                    FPS
+
+                                </span>
+
+
+                                <p class="text-secondary">
+
+                                    A tactical first-person shooter
+                                    with unique agents, special abilities
+                                    and stylized cartoon-inspired visual design.
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Game Type:
+                                    </strong>
+
+                                    5v5
+
+                                </p>
+
+
+                                <p class="text-white">
+
+                                    <strong>
+                                        Club Status:
+                                    </strong>
+
+                                    Supported
+
+                                </p>
+
+
+                            </div>
+
+                        </div>
+
+                    </a>
 
                 </div>
 
@@ -467,29 +1019,43 @@
     </section>
 
 
-    <!-- =========================
-         JOIN CLUB CTA
-    ========================= -->
+
+    <!-- =====================================================
+     JOIN CLUB CTA
+====================================================== -->
+
     <section class="section-padding">
 
         <div class="container">
 
+
             <div class="cta text-center">
+
 
                 <i class="bi bi-controller fs-1 text-info"></i>
 
+
                 <h2 class="mt-3">
+
                     Want to Compete?
+
                 </h2>
 
+
                 <p class="text-secondary">
-                    Choose your favourite game and join our E-Sports Club
-                    community today.
+
+                    Choose your favourite game and join our
+                    E-Sports Club community today.
+
                 </p>
 
+
                 <a href="registration.html" class="btn btn-main btn-lg">
+
                     Join the Club
+
                 </a>
+
 
             </div>
 
@@ -498,13 +1064,15 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
      FOOTER
-========================= -->
+====================================================== -->
 
     <footer>
 
         <div class="container text-center">
+
 
             <h5 class="text-white">
 
@@ -522,32 +1090,43 @@
             </p>
 
 
-            <!-- SOCIAL MEDIA LINKS -->
+            <!-- SOCIAL MEDIA -->
 
             <div class="mb-3">
 
-                <!-- Instagram -->
+
+                <!-- INSTAGRAM -->
 
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+
                     <i class="bi bi-instagram"></i>
+
                     Instagram
+
                 </a>
 
 
-                <!-- Discord -->
+                <!-- DISCORD -->
 
                 <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">
+
                     <i class="bi bi-discord"></i>
+
                     Discord
+
                 </a>
 
 
-                <!-- YouTube -->
+                <!-- YOUTUBE -->
 
                 <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+
                     <i class="bi bi-youtube"></i>
+
                     YouTube
+
                 </a>
+
 
             </div>
 
@@ -565,71 +1144,115 @@
     </footer>
 
 
-    <!-- Bootstrap JS -->
+
+    <!-- =====================================================
+     BOOTSTRAP JAVASCRIPT
+====================================================== -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <!-- =========================
-         GAME FILTER JAVASCRIPT
-    ========================= -->
+
+    <!-- =====================================================
+     GAME FILTER JAVASCRIPT
+====================================================== -->
+
     <script>
 
         const filterButtons =
             document.querySelectorAll(".filter-btn");
 
+
         const gameItems =
             document.querySelectorAll(".game-item");
 
 
-        filterButtons.forEach(function (button) {
+        filterButtons.forEach(
+            function (button) {
 
-            button.addEventListener("click", function () {
-
-                const selectedFilter =
-                    this.getAttribute("data-filter");
-
-
-                // Change button appearance
-
-                filterButtons.forEach(function (btn) {
-
-                    btn.classList.remove("btn-main");
-                    btn.classList.add("btn-outline-light");
-
-                });
-
-                this.classList.remove("btn-outline-light");
-                this.classList.add("btn-main");
+                button.addEventListener(
+                    "click",
+                    function () {
 
 
-                // Filter games
-
-                gameItems.forEach(function (game) {
-
-                    const category =
-                        game.getAttribute("data-category");
+                        const selectedFilter =
+                            this.getAttribute(
+                                "data-filter"
+                            );
 
 
-                    if (
-                        selectedFilter === "all" ||
-                        category === selectedFilter
-                    ) {
+                        /* =====================================
+                           UPDATE BUTTON APPEARANCE
+                        ===================================== */
 
-                        game.style.display = "";
+                        filterButtons.forEach(
+                            function (btn) {
 
-                    } else {
+                                btn.classList.remove(
+                                    "btn-main"
+                                );
 
-                        game.style.display = "none";
+                                btn.classList.add(
+                                    "btn-outline-light"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.remove(
+                            "btn-outline-light"
+                        );
+
+
+                        this.classList.add(
+                            "btn-main"
+                        );
+
+
+                        /* =====================================
+                           FILTER GAMES
+                        ===================================== */
+
+                        gameItems.forEach(
+                            function (game) {
+
+
+                                const category =
+                                    game.getAttribute(
+                                        "data-category"
+                                    );
+
+
+                                if (
+                                    selectedFilter === "all"
+                                    ||
+                                    category === selectedFilter
+                                ) {
+
+                                    game.style.display =
+                                        "";
+
+                                }
+
+                                else {
+
+                                    game.style.display =
+                                        "none";
+
+                                }
+
+                            }
+                        );
 
                     }
+                );
 
-                });
-
-            });
-
-        });
+            }
+        );
 
     </script>
+
 
 </body>
 
