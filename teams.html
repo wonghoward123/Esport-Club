@@ -5,7 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Team Rankings | NexArena</title>
 
@@ -14,21 +17,30 @@
          BOOTSTRAP CSS
     ========================= -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
 
     <!-- =========================
          BOOTSTRAP ICONS
     ========================= -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
 
 
     <!-- =========================
          SHARED CSS
     ========================= -->
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
 
     <!-- =========================
@@ -36,13 +48,17 @@
     ========================= -->
 
     <style>
+
         /* =========================================
            TEAM PAGE
         ========================================= */
 
         .team-page {
+
             background-color: #0b0b14;
+
             color: #ffffff;
+
         }
 
 
@@ -51,51 +67,78 @@
         ========================================= */
 
         .team-page .form-control {
+
             background-color: #0f0f19;
+
             color: #ffffff;
+
             border: 1px solid #3a3a4c;
+
             min-height: 48px;
+
             border-radius: 8px;
+
         }
 
 
         .team-page .form-control::placeholder {
+
             color: #77778a;
+
         }
 
 
         .team-page .form-control:focus {
+
             background-color: #0f0f19;
+
             color: #ffffff;
+
             border-color: #00e5ff;
 
             box-shadow:
-                0 0 0 0.2rem rgba(0, 229, 255, 0.15);
+                0 0 0 0.2rem
+                rgba(0, 229, 255, 0.15);
+
         }
 
 
         .team-page .form-select {
+
             background-color: #0f0f19;
+
             color: #ffffff;
+
             border: 1px solid #3a3a4c;
+
             min-height: 48px;
+
             border-radius: 8px;
+
         }
 
 
         .team-page .form-select:focus {
+
             background-color: #0f0f19;
+
             color: #ffffff;
+
             border-color: #00e5ff;
 
             box-shadow:
-                0 0 0 0.2rem rgba(0, 229, 255, 0.15);
+                0 0 0 0.2rem
+                rgba(0, 229, 255, 0.15);
+
         }
 
 
         .team-page .form-select option {
+
             background-color: #0f0f19;
+
             color: #ffffff;
+
         }
 
 
@@ -104,6 +147,7 @@
         ========================================= */
 
         .team-ranking-card {
+
             background-color: #151522;
 
             border: 1px solid #29293a;
@@ -113,24 +157,31 @@
             overflow: hidden;
 
             transition: 0.3s;
+
         }
 
 
         .team-ranking-card:hover {
+
             border-color: #00e5ff;
 
             box-shadow:
-                0 10px 30px rgba(0, 229, 255, 0.08);
+                0 10px 30px
+                rgba(0, 229, 255, 0.08);
+
         }
 
 
         .team-ranking-table {
+
             margin-bottom: 0;
+
         }
 
 
         .team-ranking-table th,
         .team-ranking-table td {
+
             background-color: #151522;
 
             color: #ffffff;
@@ -138,10 +189,12 @@
             border-color: #29293a;
 
             vertical-align: middle;
+
         }
 
 
         .team-ranking-table thead th {
+
             color: #bbbbbb;
 
             font-size: 0.85rem;
@@ -151,18 +204,23 @@
             letter-spacing: 0.5px;
 
             font-weight: 600;
+
         }
 
 
         .team-ranking-table tbody tr {
+
             transition: 0.2s;
+
         }
 
 
         .team-ranking-table tbody tr:hover td {
+
             background-color: #1c1c2b;
 
             color: #ffffff;
+
         }
 
 
@@ -171,7 +229,9 @@
         ========================================= */
 
         .rank-number {
+
             width: 45px;
+
             height: 45px;
 
             border-radius: 50%;
@@ -179,6 +239,7 @@
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             background-color: #0f0f19;
@@ -188,27 +249,40 @@
             color: #ffffff;
 
             font-weight: bold;
+
         }
 
 
         .rank-number.first {
+
             background-color: #00e5ff;
+
             color: #000000;
+
             border-color: #00e5ff;
+
         }
 
 
         .rank-number.second {
+
             background-color: #c0c0c0;
+
             color: #000000;
+
             border-color: #c0c0c0;
+
         }
 
 
         .rank-number.third {
+
             background-color: #cd7f32;
+
             color: #000000;
+
             border-color: #cd7f32;
+
         }
 
 
@@ -217,14 +291,22 @@
         ========================================= */
 
         .team-name {
+
             font-weight: bold;
+
             color: #ffffff;
+
+            font-size: 1rem;
+
         }
 
 
         .team-game {
+
             color: #bbbbbb;
+
             font-size: 0.85rem;
+
         }
 
 
@@ -233,11 +315,13 @@
         ========================================= */
 
         .team-points {
+
             color: #00e5ff;
 
             font-size: 1.05rem;
 
             font-weight: bold;
+
         }
 
 
@@ -246,20 +330,25 @@
         ========================================= */
 
         .win-rate {
+
             min-width: 110px;
+
         }
 
 
         .win-rate-text {
+
             color: #bbbbbb;
 
             font-size: 0.85rem;
 
             margin-bottom: 5px;
+
         }
 
 
         .win-rate-bar {
+
             height: 6px;
 
             background-color: #29293a;
@@ -267,15 +356,41 @@
             border-radius: 10px;
 
             overflow: hidden;
+
         }
 
 
         .win-rate-fill {
+
             height: 100%;
 
             background-color: #00e5ff;
 
             border-radius: 10px;
+
+        }
+
+
+        /* =========================================
+           GAME BADGE
+        ========================================= */
+
+        .team-game-badge {
+
+            display: inline-block;
+
+            background-color: #00e5ff;
+
+            color: #000000;
+
+            padding: 6px 10px;
+
+            border-radius: 5px;
+
+            font-size: 0.72rem;
+
+            font-weight: bold;
+
         }
 
 
@@ -284,6 +399,7 @@
         ========================================= */
 
         .status-badge {
+
             display: inline-block;
 
             padding: 6px 10px;
@@ -293,24 +409,34 @@
             font-size: 0.75rem;
 
             font-weight: bold;
+
         }
 
 
         .status-top {
+
             background-color: #00e5ff;
+
             color: #000000;
+
         }
 
 
         .status-competitive {
+
             background-color: #198754;
+
             color: #ffffff;
+
         }
 
 
         .status-developing {
+
             background-color: #ffc107;
+
             color: #000000;
+
         }
 
 
@@ -319,6 +445,7 @@
         ========================================= */
 
         .ranking-stat-card {
+
             background-color: #151522;
 
             border: 1px solid #29293a;
@@ -330,38 +457,47 @@
             height: 100%;
 
             transition: 0.3s;
+
         }
 
 
         .ranking-stat-card:hover {
+
             border-color: #00e5ff;
 
             transform: translateY(-4px);
+
         }
 
 
         .ranking-stat-icon {
+
             color: #00e5ff;
 
             font-size: 1.8rem;
 
             margin-bottom: 10px;
+
         }
 
 
         .ranking-stat-number {
+
             color: #ffffff;
 
             font-size: 1.7rem;
 
             font-weight: bold;
+
         }
 
 
         .ranking-stat-label {
+
             color: #bbbbbb;
 
             font-size: 0.9rem;
+
         }
 
 
@@ -370,16 +506,20 @@
         ========================================= */
 
         .api-status {
+
             font-size: 0.85rem;
 
             color: #bbbbbb;
+
         }
 
 
         .api-status-dot {
+
             display: inline-block;
 
             width: 8px;
+
             height: 8px;
 
             border-radius: 50%;
@@ -387,6 +527,7 @@
             background-color: #00e5ff;
 
             margin-right: 7px;
+
         }
 
 
@@ -395,6 +536,7 @@
         ========================================= */
 
         .no-results {
+
             background-color: #151522;
 
             border: 1px solid #29293a;
@@ -404,25 +546,47 @@
             padding: 50px;
 
             text-align: center;
+
         }
 
 
         .no-results i {
+
             color: #00e5ff;
 
             font-size: 3rem;
+
         }
 
 
         .no-results h4 {
+
             color: #ffffff;
 
             margin-top: 15px;
+
         }
 
 
         .no-results p {
+
             color: #bbbbbb;
+
+        }
+
+
+        /* =========================================
+           TEAM MEMBERS
+        ========================================= */
+
+        .team-members {
+
+            color: #888888;
+
+            font-size: 0.82rem;
+
+            margin-top: 5px;
+
         }
 
 
@@ -433,15 +597,20 @@
         @media (max-width: 768px) {
 
             .team-ranking-table {
-                min-width: 850px;
+
+                min-width: 900px;
+
             }
 
 
             .ranking-stat-card {
+
                 text-align: center;
+
             }
 
         }
+
     </style>
 
 </head>
@@ -451,495 +620,616 @@
 <body class="team-page">
 
 
-    <!-- =========================
-         NAVIGATION BAR
-    ========================= -->
+<!-- =========================
+     NAVIGATION BAR
+========================= -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 
-        <div class="container">
-
-
-            <!-- BRAND -->
-
-            <a class="navbar-brand" href="index.html">
-
-                <i class="bi bi-controller"></i>
-
-                NexArena
-
-            </a>
+    <div class="container">
 
 
-            <!-- MOBILE NAVIGATION BUTTON -->
+        <!-- BRAND -->
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
 
-                <span class="navbar-toggler-icon"></span>
+            <i class="bi bi-controller"></i>
 
-            </button>
+            NexArena
+
+        </a>
 
 
-            <!-- NAVIGATION LINKS -->
+        <!-- MOBILE NAVIGATION BUTTON -->
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
 
-                <ul class="navbar-nav ms-auto">
+            <span class="navbar-toggler-icon"></span>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            Home
-                        </a>
-                    </li>
+        </button>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">
-                            About
-                        </a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="games.html">
-                            Games
-                        </a>
-                    </li>
+        <!-- NAVIGATION LINKS -->
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="players.html">
-                            Players
-                        </a>
-                    </li>
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="teams.html">
-                            Teams
-                        </a>
-                    </li>
+            <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="tournaments.html">
-                            Tournaments
-                        </a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="schedule.html">
-                            Schedule
-                        </a>
-                    </li>
+                <li class="nav-item">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="faq.html">
-                            FAQ
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-                <div class="nav-auth">
-
-                    <a href="login.html" class="nav-login">
-                        Login
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
                     </a>
 
-                    <a href="registration.html" class="nav-register">
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="games.html"
+                    >
+                        Games
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="tournaments.html"
+                    >
+                        Tournaments
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="teams.html"
+                    >
+                        Teams
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="players.html"
+                    >
+                        Players
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="schedule.html"
+                    >
+                        Schedule
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="registration.html"
+                    >
                         Register
                     </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     PAGE HEADER
+========================= -->
+
+<section class="schedule-header">
+
+    <div class="container text-center">
+
+
+        <h1>
+
+            Team <span>Rankings</span>
+
+        </h1>
+
+
+        <p>
+
+            Explore the competitive standings of teams
+            represented across NexArena players and games.
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+
+        <!-- =========================
+             SUMMARY STATISTICS
+        ========================= -->
+
+        <div class="row g-4 mb-5">
+
+
+            <!-- TOTAL TEAMS -->
+
+            <div class="col-md-4">
+
+                <div class="ranking-stat-card">
+
+
+                    <i
+                        class="bi bi-people ranking-stat-icon"
+                    ></i>
+
+
+                    <div
+                        class="ranking-stat-number"
+                        id="totalTeams"
+                    >
+                        0
+                    </div>
+
+
+                    <div class="ranking-stat-label">
+
+                        Ranked Teams
+
+                    </div>
+
 
                 </div>
 
             </div>
 
+
+
+            <!-- TOTAL GAMES -->
+
+            <div class="col-md-4">
+
+                <div class="ranking-stat-card">
+
+
+                    <i
+                        class="bi bi-controller ranking-stat-icon"
+                    ></i>
+
+
+                    <div
+                        class="ranking-stat-number"
+                        id="totalGames"
+                    >
+                        0
+                    </div>
+
+
+                    <div class="ranking-stat-label">
+
+                        Games Represented
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TOP TEAM -->
+
+            <div class="col-md-4">
+
+                <div class="ranking-stat-card">
+
+
+                    <i
+                        class="bi bi-trophy ranking-stat-icon"
+                    ></i>
+
+
+                    <div
+                        class="ranking-stat-number"
+                        id="topTeam"
+                    >
+                        -
+                    </div>
+
+
+                    <div class="ranking-stat-label">
+
+                        Current #1 Team
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
         </div>
 
-    </nav>
+
+
+        <!-- =========================
+             FILTER AREA
+        ========================= -->
+
+        <div class="schedule-filter">
+
+
+            <div class="row g-4 align-items-end">
+
+
+                <!-- GAME FILTER -->
+
+                <div class="col-lg-4">
+
+                    <label
+                        for="gameFilter"
+                        class="form-label"
+                    >
+
+                        <i class="bi bi-controller"></i>
+
+                        Filter by Game
+
+                    </label>
+
+
+                    <select
+                        id="gameFilter"
+                        class="form-select"
+                    >
+
+                        <option value="all">
+                            All Games
+                        </option>
+
+                        <option value="Valorant">
+                            Valorant
+                        </option>
+
+                        <option value="Counter-Strike 2">
+                            Counter-Strike 2
+                        </option>
+
+                        <option value="PUBG">
+                            PUBG
+                        </option>
+
+                        <option value="Honor of Kings">
+                            Honor of Kings
+                        </option>
+
+                        <option value="DOTA 2">
+                            DOTA 2
+                        </option>
+
+                        <option value="EA Sports FC">
+                            EA Sports FC
+                        </option>
+
+                        <option value="Rocket League">
+                            Rocket League
+                        </option>
+
+                    </select>
+
+                </div>
 
 
 
-    <!-- =========================
-         PAGE HEADER
-    ========================= -->
+                <!-- SEARCH TEAM -->
 
-    <section class="schedule-header">
+                <div class="col-lg-5">
 
-        <div class="container text-center">
+                    <label
+                        for="teamSearch"
+                        class="form-label"
+                    >
+
+                        <i class="bi bi-search"></i>
+
+                        Search Team
+
+                    </label>
 
 
-            <h1>
+                    <div class="input-group">
 
-                Team <span>Rankings</span>
 
-            </h1>
+                        <input
+                            type="text"
+                            id="teamSearch"
+                            class="form-control"
+                            placeholder="Search team, player or game..."
+                        >
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-info"
+                            id="clearSearch"
+                        >
+
+                            <i class="bi bi-x-lg"></i>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SORT -->
+
+                <div class="col-lg-3">
+
+                    <label
+                        for="sortFilter"
+                        class="form-label"
+                    >
+
+                        <i class="bi bi-sort-down"></i>
+
+                        Sort By
+
+                    </label>
+
+
+                    <select
+                        id="sortFilter"
+                        class="form-select"
+                    >
+
+                        <option value="points">
+                            Ranking Points
+                        </option>
+
+                        <option value="wins">
+                            Most Wins
+                        </option>
+
+                        <option value="winrate">
+                            Win Rate
+                        </option>
+
+                        <option value="losses">
+                            Fewest Losses
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="mt-3 api-status">
+
+                <span class="api-status-dot"></span>
+
+                Team ranking data is connected
+                to NexArena player team information.
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             TEAM RANKING TABLE
+        ========================= -->
+
+        <div
+            class="team-ranking-card"
+            id="rankingCard"
+        >
+
+
+            <div class="table-responsive">
+
+
+                <table
+                    class="table team-ranking-table table-hover"
+                >
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Rank
+                            </th>
+
+                            <th>
+                                Team
+                            </th>
+
+                            <th>
+                                Game
+                            </th>
+
+                            <th>
+                                Players
+                            </th>
+
+                            <th>
+                                Wins
+                            </th>
+
+                            <th>
+                                Losses
+                            </th>
+
+                            <th>
+                                Win Rate
+                            </th>
+
+                            <th>
+                                Points
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="teamTableBody"
+                    >
+
+                        <!-- JavaScript -->
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             NO RESULTS
+        ========================= -->
+
+        <div
+            id="noResults"
+            class="no-results mt-4"
+            style="display:none;"
+        >
+
+
+            <i class="bi bi-search"></i>
+
+
+            <h4>
+                No Teams Found
+            </h4>
 
 
             <p>
-
-                Explore the latest team standings,
-                wins, losses and competitive performance
-                across NexArena games.
-
+                Try another team, player or game.
             </p>
 
 
         </div>
 
-    </section>
 
+    </div>
 
+</section>
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================= -->
 
-    <section class="section-padding">
 
-        <div class="container">
-
-
-            <!-- =========================
-                 SUMMARY STATISTICS
-            ========================= -->
-
-            <div class="row g-4 mb-5">
-
-
-                <!-- TOTAL TEAMS -->
-
-                <div class="col-md-4">
-
-                    <div class="ranking-stat-card">
-
-                        <i class="bi bi-people ranking-stat-icon"></i>
-
-
-                        <div class="ranking-stat-number" id="totalTeams">
-                            0
-                        </div>
-
-
-                        <div class="ranking-stat-label">
-                            Ranked Teams
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- TOTAL GAMES -->
-
-                <div class="col-md-4">
-
-                    <div class="ranking-stat-card">
-
-                        <i class="bi bi-controller ranking-stat-icon"></i>
-
-
-                        <div class="ranking-stat-number" id="totalGames">
-                            0
-                        </div>
-
-
-                        <div class="ranking-stat-label">
-                            Games Represented
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- TOP TEAM -->
-
-                <div class="col-md-4">
-
-                    <div class="ranking-stat-card">
-
-                        <i class="bi bi-trophy ranking-stat-icon"></i>
-
-
-                        <div class="ranking-stat-number" id="topTeam">
-                            -
-                        </div>
-
-
-                        <div class="ranking-stat-label">
-                            Current #1 Team
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =========================
-                 FILTER AREA
-            ========================= -->
-
-            <div class="schedule-filter">
-
-
-                <div class="row g-4 align-items-end">
-
-
-                    <!-- GAME FILTER -->
-
-                    <div class="col-lg-4">
-
-                        <label for="gameFilter" class="form-label">
-
-                            <i class="bi bi-controller"></i>
-
-                            Filter by Game
-
-                        </label>
-
-
-                        <select id="gameFilter" class="form-select">
-
-                            <option value="all">
-                                All Games
-                            </option>
-
-                            <option value="Valorant">
-                                Valorant
-                            </option>
-
-                            <option value="Counter-Strike 2">
-                                Counter-Strike 2
-                            </option>
-
-                            <option value="PUBG">
-                                PUBG
-                            </option>
-
-                            <option value="Honor of Kings">
-                                Honor of Kings
-                            </option>
-
-                            <option value="DOTA 2">
-                                DOTA 2
-                            </option>
-
-                            <option value="EA Sports FC">
-                                EA Sports FC
-                            </option>
-
-                            <option value="Rocket League">
-                                Rocket League
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-
-                    <!-- SEARCH TEAM -->
-
-                    <div class="col-lg-5">
-
-                        <label for="teamSearch" class="form-label">
-
-                            <i class="bi bi-search"></i>
-
-                            Search Team
-
-                        </label>
-
-
-                        <div class="input-group">
-
-
-                            <input type="text" id="teamSearch" class="form-control" placeholder="Search team, game...">
-
-
-                            <button type="button" class="btn btn-outline-info" id="clearSearch">
-
-                                <i class="bi bi-x-lg"></i>
-
-                            </button>
-
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- SORT -->
-
-                    <div class="col-lg-3">
-
-                        <label for="sortFilter" class="form-label">
-
-                            <i class="bi bi-sort-down"></i>
-
-                            Sort By
-
-                        </label>
-
-
-                        <select id="sortFilter" class="form-select">
-
-                            <option value="points">
-                                Ranking Points
-                            </option>
-
-                            <option value="wins">
-                                Most Wins
-                            </option>
-
-                            <option value="winrate">
-                                Win Rate
-                            </option>
-
-                            <option value="losses">
-                                Fewest Losses
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- API STATUS -->
-
-                <div class="mt-3 api-status">
-
-                    <span class="api-status-dot"></span>
-
-                    Team ranking data loaded with
-                    REST API support.
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =========================
-                 RANKING TABLE
-            ========================= -->
-
-            <div class="team-ranking-card" id="rankingCard">
-
-
-                <div class="table-responsive">
-
-
-                    <table class="table team-ranking-table table-hover">
-
-
-                        <thead>
-
-                            <tr>
-
-                                <th>
-                                    Rank
-                                </th>
-
-                                <th>
-                                    Team
-                                </th>
-
-                                <th>
-                                    Game
-                                </th>
-
-                                <th>
-                                    Wins
-                                </th>
-
-                                <th>
-                                    Losses
-                                </th>
-
-                                <th>
-                                    Win Rate
-                                </th>
-
-                                <th>
-                                    Points
-                                </th>
-
-                                <th>
-                                    Status
-                                </th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody id="teamTableBody">
-
-                            <!-- JavaScript will insert rows -->
-
-                        </tbody>
-
-
-                    </table>
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =========================
-                 NO RESULTS
-            ========================= -->
-
-            <div id="noResults" class="no-results mt-4" style="display:none;">
-
-                <i class="bi bi-search"></i>
-
-
-                <h4>
-                    No Teams Found
-                </h4>
-
-
-                <p>
-                    Try another team name or game filter.
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
+<!-- =========================
      FOOTER
 ========================= -->
 
 <footer>
 
     <div class="container text-center">
+
 
         <h5 class="text-white">
 
@@ -957,44 +1247,35 @@
         </p>
 
 
-        <!-- SOCIAL MEDIA LINKS -->
-
         <div class="mb-3">
 
-            <!-- Instagram -->
 
-            <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <a href="#">
+
                 <i class="bi bi-instagram"></i>
+
                 Instagram
+
             </a>
 
 
-            <!-- Discord -->
+            <a href="#">
 
-            <a
-                href="https://discord.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
                 <i class="bi bi-discord"></i>
+
                 Discord
+
             </a>
 
 
-            <!-- YouTube -->
+            <a href="#">
 
-            <a
-                href="https://www.youtube.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
                 <i class="bi bi-youtube"></i>
+
                 YouTube
+
             </a>
+
 
         </div>
 
@@ -1013,928 +1294,1073 @@
 
 
 
-    <!-- =========================
-         JQUERY
-    ========================= -->
+<!-- =========================
+     JQUERY
+========================= -->
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+></script>
 
 
 
-    <!-- =========================
-         BOOTSTRAP JS
-    ========================= -->
+<!-- =========================
+     BOOTSTRAP JS
+========================= -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
 
 
 
-    <!-- =========================
-         TEAM RANKING JAVASCRIPT
-    ========================= -->
+<!-- =========================
+     TEAM RANKING JAVASCRIPT
+========================= -->
 
-    <script>
+<script>
 
 
-        /* =========================================
-           REST API
-        ========================================= */
+    /* =========================================
+       TEAM DATA
+       
+       Team names are taken from the player page
+       so the website stays consistent.
+    ========================================= */
 
-        const API_URL =
-            "https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Esports";
+    const teams = [
 
 
+        {
+            name:
+                "Team Falcons",
 
-        /* =========================================
-           FALLBACK TEAM DATA
-        ========================================= */
+            game:
+                "EA Sports FC",
 
-        const fallbackTeams = [
+            players:
+                "Anders Vejrgang, TGLTN",
 
-            {
-                name:
-                    "Cyber Titans",
+            wins:
+                18,
 
-                game:
-                    "Valorant",
+            losses:
+                4,
 
-                wins:
-                    18,
+            points:
+                920
 
-                losses:
-                    4,
+        },
 
-                points:
-                    920
-            },
 
+        {
+            name:
+                "Team Vitality",
 
-            {
-                name:
-                    "Nova Warriors",
+            game:
+                "CS2 / Rocket League",
 
-                game:
-                    "Counter-Strike 2",
+            players:
+                "ZywOo, zen",
 
-                wins:
-                    17,
+            wins:
+                17,
 
-                losses:
-                    5,
+            losses:
+                5,
 
-                points:
-                    890
-            },
+            points:
+                895
 
+        },
 
-            {
-                name:
-                    "Shadow Reapers",
 
-                game:
-                    "PUBG",
+        {
+            name:
+                "Team Spirit",
 
-                wins:
-                    16,
+            game:
+                "CS2",
 
-                losses:
-                    6,
+            players:
+                "donk",
 
-                points:
-                    855
-            },
+            wins:
+                16,
 
+            losses:
+                5,
 
-            {
-                name:
-                    "Digital Dragons",
+            points:
+                875
 
-                game:
-                    "DOTA 2",
+        },
 
-                wins:
-                    15,
 
-                losses:
-                    7,
+        {
+            name:
+                "Karmine Corp",
 
-                points:
-                    820
-            },
+            game:
+                "Rocket League",
 
+            players:
+                "Vatira",
 
-            {
-                name:
-                    "Phoenix Core",
+            wins:
+                16,
 
-                game:
-                    "Honor of Kings",
+            losses:
+                6,
 
-                wins:
-                    14,
+            points:
+                850
 
-                losses:
-                    7,
+        },
 
-                points:
-                    795
-            },
 
+        {
+            name:
+                "OG",
 
-            {
-                name:
-                    "Elite Strikers",
+            game:
+                "DOTA 2",
 
-                game:
-                    "EA Sports FC",
+            players:
+                "N0tail",
 
-                wins:
-                    13,
+            wins:
+                15,
 
-                losses:
-                    8,
+            losses:
+                7,
 
-                points:
-                    760
-            },
+            points:
+                830
 
+        },
 
-            {
-                name:
-                    "Rocket Legion",
 
-                game:
-                    "Rocket League",
+        {
+            name:
+                "Wolves",
 
-                wins:
-                    13,
+            game:
+                "Honor of Kings",
 
-                losses:
-                    9,
+            players:
+                "Fly",
 
-                points:
-                    740
-            },
+            wins:
+                14,
 
+            losses:
+                7,
 
-            {
-                name:
-                    "Neon Ravens",
+            points:
+                810
 
-                game:
-                    "Valorant",
+        },
 
-                wins:
-                    12,
 
-                losses:
-                    9,
+        {
+            name:
+                "JD Gaming",
 
-                points:
-                    715
-            },
+            game:
+                "Honor of Kings",
 
+            players:
+                "Rong",
 
-            {
-                name:
-                    "Iron Wolves",
+            wins:
+                14,
 
-                game:
-                    "Counter-Strike 2",
+            losses:
+                8,
 
-                wins:
-                    11,
+            points:
+                790
 
-                losses:
-                    10,
+        },
 
-                points:
-                    690
-            },
 
+        {
+            name:
+                "Anyone's Legend",
 
-            {
-                name:
-                    "Storm Breakers",
+            game:
+                "PUBG",
 
-                game:
-                    "PUBG",
+            players:
+                "Himass",
 
-                wins:
-                    10,
+            wins:
+                13,
 
-                losses:
-                    11,
+            losses:
+                8,
 
-                points:
-                    660
-            }
+            points:
+                765
 
-        ];
+        },
 
 
+        {
+            name:
+                "RBLZ Gaming",
 
-        /* =========================================
-           TEAM DATA
-        ========================================= */
+            game:
+                "EA Sports FC",
 
-        let teams = [];
+            players:
+                "Tekkz",
 
+            wins:
+                13,
 
+            losses:
+                9,
 
-        /* =========================================
-           LOAD TEAM DATA
-        ========================================= */
+            points:
+                750
 
-        function loadTeams() {
+        },
 
 
-            /*
-                Use a REST API request to satisfy
-                the API requirement.
+        {
+            name:
+                "EDward Gaming",
 
-                If the API cannot provide suitable
-                esports rankings, the page uses the
-                local ranking dataset.
-            */
+            game:
+                "Valorant",
 
-            $.ajax({
+            players:
+                "zmjjKK",
 
-                url:
-                    API_URL,
+            wins:
+                12,
 
-                method:
-                    "GET",
+            losses:
+                9,
 
-                timeout:
-                    5000,
+            points:
+                730
 
-                success:
-                    function (response) {
+        },
 
 
-                        console.log(
-                            "REST API response:",
-                            response
-                        );
+        {
+            name:
+                "AG",
 
+            game:
+                "Honor of Kings",
 
-                        /*
-                            The API is successfully
-                            reached, but our ranking
-                            system uses the custom
-                            competition data below.
-                        */
+            players:
+                "YiNuo",
 
-                        teams =
-                            fallbackTeams;
+            wins:
+                12,
 
+            losses:
+                9,
 
-                        renderTeams();
+            points:
+                710
 
-                    },
+        },
 
-                error:
-                    function (error) {
 
+        {
+            name:
+                "MOUZ",
 
-                        console.log(
-                            "REST API unavailable. Using local team ranking data."
-                        );
+            game:
+                "DOTA 2",
 
+            players:
+                "MidOne",
 
-                        teams =
-                            fallbackTeams;
+            wins:
+                11,
 
+            losses:
+                10,
 
-                        renderTeams();
+            points:
+                690
 
-                    }
+        },
 
-            });
+
+        {
+            name:
+                "Twisted Minds",
+
+            game:
+                "PUBG",
+
+            players:
+                "xmpl",
+
+            wins:
+                10,
+
+            losses:
+                11,
+
+            points:
+                665
+
+        }
+
+    ];
+
+
+
+    /* =========================================
+       WIN RATE
+    ========================================= */
+
+    function getWinRate(team) {
+
+
+        const totalGames =
+            team.wins +
+            team.losses;
+
+
+        if (
+            totalGames === 0
+        ) {
+
+            return 0;
 
         }
 
 
+        return Math.round(
 
-        /* =========================================
-           CALCULATE WIN RATE
-        ========================================= */
+            (
+                team.wins /
+                totalGames
+            ) * 100
 
-        function getWinRate(team) {
+        );
 
-
-            const totalGames =
-                team.wins +
-                team.losses;
-
-
-            if (totalGames === 0) {
-
-                return 0;
-
-            }
-
-
-            return Math.round(
-
-                (
-                    team.wins /
-                    totalGames
-                ) * 100
-
-            );
-
-        }
+    }
 
 
 
-        /* =========================================
-           GET STATUS
-        ========================================= */
+    /* =========================================
+       STATUS
+    ========================================= */
 
-        function getStatus(team) {
-
-
-            if (team.points >= 850) {
-
-                return {
-
-                    text:
-                        "Top Contender",
-
-                    class:
-                        "status-top"
-
-                };
-
-            }
+    function getStatus(team) {
 
 
-            if (team.points >= 700) {
-
-                return {
-
-                    text:
-                        "Competitive",
-
-                    class:
-                        "status-competitive"
-
-                };
-
-            }
-
+        if (
+            team.points >= 850
+        ) {
 
             return {
 
                 text:
-                    "Developing",
+                    "Top Contender",
 
                 class:
-                    "status-developing"
+                    "status-top"
 
             };
 
         }
 
 
+        if (
+            team.points >= 700
+        ) {
 
-        /* =========================================
-           SORT TEAMS
-        ========================================= */
+            return {
 
-        function sortTeams(teamList) {
+                text:
+                    "Competitive",
 
+                class:
+                    "status-competitive"
 
-            const sortType =
-                $("#sortFilter").val();
+            };
 
-
-            return teamList.sort(
-                function (a, b) {
-
-
-                    if (
-                        sortType ===
-                        "wins"
-                    ) {
-
-                        return (
-                            b.wins -
-                            a.wins
-                        );
-
-                    }
+        }
 
 
-                    if (
-                        sortType ===
-                        "winrate"
-                    ) {
+        return {
 
-                        return (
-                            getWinRate(b) -
-                            getWinRate(a)
-                        );
+            text:
+                "Developing",
 
-                    }
+            class:
+                "status-developing"
+
+        };
+
+    }
 
 
-                    if (
-                        sortType ===
-                        "losses"
-                    ) {
 
-                        return (
-                            a.losses -
-                            b.losses
-                        );
+    /* =========================================
+       SORT
+    ========================================= */
 
-                    }
+    function sortTeams(
+        teamList
+    ) {
 
+
+        const sortType =
+            $("#sortFilter").val();
+
+
+        return teamList.sort(
+            function(a, b) {
+
+
+                if (
+                    sortType ===
+                    "wins"
+                ) {
 
                     return (
-                        b.points -
-                        a.points
+                        b.wins -
+                        a.wins
                     );
 
                 }
-            );
-
-        }
 
 
+                if (
+                    sortType ===
+                    "winrate"
+                ) {
 
-        /* =========================================
-           FILTER TEAMS
-        ========================================= */
-
-        function getFilteredTeams() {
-
-
-            const selectedGame =
-                $("#gameFilter").val();
-
-
-            const searchText =
-                $("#teamSearch")
-                    .val()
-                    .toLowerCase()
-                    .trim();
-
-
-            let filteredTeams =
-                [...teams];
-
-
-            /* GAME FILTER */
-
-            if (
-                selectedGame !==
-                "all"
-            ) {
-
-                filteredTeams =
-                    filteredTeams.filter(
-                        function (team) {
-
-                            return (
-                                team.game ===
-                                selectedGame
-                            );
-
-                        }
+                    return (
+                        getWinRate(b) -
+                        getWinRate(a)
                     );
 
-            }
+                }
 
 
-            /* SEARCH */
+                if (
+                    sortType ===
+                    "losses"
+                ) {
 
-            if (
-                searchText !== ""
-            ) {
-
-                filteredTeams =
-                    filteredTeams.filter(
-                        function (team) {
-
-
-                            const teamName =
-                                team.name
-                                    .toLowerCase();
-
-
-                            const gameName =
-                                team.game
-                                    .toLowerCase();
-
-
-                            return (
-                                teamName.includes(
-                                    searchText
-                                ) ||
-                                gameName.includes(
-                                    searchText
-                                )
-                            );
-
-                        }
+                    return (
+                        a.losses -
+                        b.losses
                     );
 
-            }
+                }
 
 
-            return sortTeams(
-                filteredTeams
-            );
-
-        }
-
-
-
-        /* =========================================
-           RENDER TEAM TABLE
-        ========================================= */
-
-        function renderTeams() {
-
-
-            const filteredTeams =
-                getFilteredTeams();
-
-
-            const tableBody =
-                $("#teamTableBody");
-
-
-            tableBody.empty();
-
-
-
-            /* NO RESULTS */
-
-            if (
-                filteredTeams.length === 0
-            ) {
-
-                $("#rankingCard")
-                    .hide();
-
-
-                $("#noResults")
-                    .show();
-
-
-                updateSummary(
-                    filteredTeams
+                return (
+                    b.points -
+                    a.points
                 );
 
-
-                return;
-
             }
+        );
 
+    }
+
+
+
+    /* =========================================
+       FILTER
+    ========================================= */
+
+    function getFilteredTeams() {
+
+
+        const selectedGame =
+            $("#gameFilter").val();
+
+
+        const searchText =
+            $("#teamSearch")
+            .val()
+            .toLowerCase()
+            .trim();
+
+
+        let filteredTeams =
+            [...teams];
+
+
+        /* GAME FILTER */
+
+        if (
+            selectedGame !==
+            "all"
+        ) {
+
+            filteredTeams =
+                filteredTeams.filter(
+                    function(team) {
+
+                        return team.game
+                            .toLowerCase()
+                            .includes(
+                                selectedGame
+                                .toLowerCase()
+                            );
+
+                    }
+                );
+
+        }
+
+
+        /* SEARCH */
+
+        if (
+            searchText !== ""
+        ) {
+
+            filteredTeams =
+                filteredTeams.filter(
+                    function(team) {
+
+
+                        const teamName =
+                            team.name
+                            .toLowerCase();
+
+
+                        const gameName =
+                            team.game
+                            .toLowerCase();
+
+
+                        const playerNames =
+                            team.players
+                            .toLowerCase();
+
+
+                        return (
+
+                            teamName.includes(
+                                searchText
+                            ) ||
+
+                            gameName.includes(
+                                searchText
+                            ) ||
+
+                            playerNames.includes(
+                                searchText
+                            )
+
+                        );
+
+                    }
+                );
+
+        }
+
+
+        return sortTeams(
+            filteredTeams
+        );
+
+    }
+
+
+
+    /* =========================================
+       RENDER TEAMS
+    ========================================= */
+
+    function renderTeams() {
+
+
+        const filteredTeams =
+            getFilteredTeams();
+
+
+        const tableBody =
+            $("#teamTableBody");
+
+
+        tableBody.empty();
+
+
+
+        /* NO RESULTS */
+
+        if (
+            filteredTeams.length === 0
+        ) {
 
             $("#rankingCard")
-                .show();
-
-
-            $("#noResults")
                 .hide();
 
 
-
-            /* CREATE ROWS */
-
-            $.each(
-                filteredTeams,
-                function (index, team) {
-
-
-                    const rank =
-                        index + 1;
-
-
-                    const winRate =
-                        getWinRate(team);
-
-
-                    const status =
-                        getStatus(team);
-
-
-
-                    let rankClass =
-                        "";
-
-
-                    if (rank === 1) {
-
-                        rankClass =
-                            "first";
-
-                    }
-
-                    else if (rank === 2) {
-
-                        rankClass =
-                            "second";
-
-                    }
-
-                    else if (rank === 3) {
-
-                        rankClass =
-                            "third";
-
-                    }
-
-
-
-                    const row = `
-
-                        <tr>
-
-                            <td>
-
-                                <span
-                                    class="
-                                        rank-number
-                                        ${rankClass}
-                                    "
-                                >
-
-                                    ${rank}
-
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <div
-                                    class="team-name"
-                                >
-                                    ${team.name}
-                                </div>
-
-                            </td>
-
-
-                            <td>
-
-                                <span
-                                    class="badge-custom"
-                                >
-
-                                    ${team.game}
-
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <strong>
-                                    ${team.wins}
-                                </strong>
-
-                            </td>
-
-
-                            <td>
-
-                                ${team.losses}
-
-                            </td>
-
-
-                            <td>
-
-                                <div
-                                    class="win-rate"
-                                >
-
-                                    <div
-                                        class="win-rate-text"
-                                    >
-
-                                        ${winRate}%
-
-                                    </div>
-
-
-                                    <div
-                                        class="win-rate-bar"
-                                    >
-
-                                        <div
-                                            class="win-rate-fill"
-                                            style="
-                                                width:
-                                                ${winRate}%;
-                                            "
-                                        ></div>
-
-                                    </div>
-
-                                </div>
-
-                            </td>
-
-
-                            <td>
-
-                                <span
-                                    class="team-points"
-                                >
-
-                                    ${team.points}
-
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <span
-                                    class="
-                                        status-badge
-                                        ${status.class}
-                                    "
-                                >
-
-                                    ${status.text}
-
-                                </span>
-
-                            </td>
-
-                        </tr>
-
-                    `;
-
-
-                    tableBody.append(
-                        row
-                    );
-
-                }
-            );
-
+            $("#noResults")
+                .show();
 
 
             updateSummary(
                 filteredTeams
             );
 
+
+            return;
+
         }
 
 
-
-        /* =========================================
-           UPDATE SUMMARY
-        ========================================= */
-
-        function updateSummary(
-            currentTeams
-        ) {
+        $("#rankingCard")
+            .show();
 
 
-            $("#totalTeams")
-                .text(
-                    currentTeams.length
+        $("#noResults")
+            .hide();
+
+
+
+        /* CREATE ROWS */
+
+        $.each(
+
+            filteredTeams,
+
+            function(index, team) {
+
+
+                const rank =
+                    index + 1;
+
+
+                const winRate =
+                    getWinRate(team);
+
+
+                const status =
+                    getStatus(team);
+
+
+                let rankClass =
+                    "";
+
+
+                if (
+                    rank === 1
+                ) {
+
+                    rankClass =
+                        "first";
+
+                }
+
+
+                else if (
+                    rank === 2
+                ) {
+
+                    rankClass =
+                        "second";
+
+                }
+
+
+                else if (
+                    rank === 3
+                ) {
+
+                    rankClass =
+                        "third";
+
+                }
+
+
+
+                const row = `
+
+                    <tr>
+
+
+                        <!-- RANK -->
+
+                        <td>
+
+                            <span
+                                class="
+                                    rank-number
+                                    ${rankClass}
+                                "
+                            >
+
+                                ${rank}
+
+                            </span>
+
+                        </td>
+
+
+
+                        <!-- TEAM -->
+
+                        <td>
+
+                            <div
+                                class="team-name"
+                            >
+
+                                ${team.name}
+
+                            </div>
+
+
+                            <div
+                                class="team-members"
+                            >
+
+                                <i
+                                    class="
+                                        bi
+                                        bi-person
+                                    "
+                                ></i>
+
+                                ${team.players}
+
+                            </div>
+
+                        </td>
+
+
+
+                        <!-- GAME -->
+
+                        <td>
+
+                            <span
+                                class="
+                                    team-game-badge
+                                "
+                            >
+
+                                ${team.game}
+
+                            </span>
+
+                        </td>
+
+
+
+                        <!-- PLAYERS -->
+
+                        <td>
+
+                            <span
+                                class="team-members"
+                            >
+
+                                ${team.players}
+
+                            </span>
+
+                        </td>
+
+
+
+                        <!-- WINS -->
+
+                        <td>
+
+                            <strong>
+
+                                ${team.wins}
+
+                            </strong>
+
+                        </td>
+
+
+
+                        <!-- LOSSES -->
+
+                        <td>
+
+                            ${team.losses}
+
+                        </td>
+
+
+
+                        <!-- WIN RATE -->
+
+                        <td>
+
+                            <div
+                                class="win-rate"
+                            >
+
+
+                                <div
+                                    class="
+                                        win-rate-text
+                                    "
+                                >
+
+                                    ${winRate}%
+
+                                </div>
+
+
+                                <div
+                                    class="
+                                        win-rate-bar
+                                    "
+                                >
+
+                                    <div
+                                        class="
+                                            win-rate-fill
+                                        "
+                                        style="
+                                            width:
+                                            ${winRate}%;
+                                        "
+                                    ></div>
+
+                                </div>
+
+
+                            </div>
+
+                        </td>
+
+
+
+                        <!-- POINTS -->
+
+                        <td>
+
+                            <span
+                                class="team-points"
+                            >
+
+                                ${team.points}
+
+                            </span>
+
+                        </td>
+
+
+
+                        <!-- STATUS -->
+
+                        <td>
+
+                            <span
+                                class="
+                                    status-badge
+                                    ${status.class}
+                                "
+                            >
+
+                                ${status.text}
+
+                            </span>
+
+                        </td>
+
+
+                    </tr>
+
+                `;
+
+
+                tableBody.append(
+                    row
                 );
 
+            }
 
-            const uniqueGames =
-                new Set(
-                    currentTeams.map(
-                        function (team) {
+        );
 
-                            return team.game;
+
+
+        updateSummary(
+            filteredTeams
+        );
+
+    }
+
+
+
+    /* =========================================
+       UPDATE SUMMARY
+    ========================================= */
+
+    function updateSummary(
+        currentTeams
+    ) {
+
+
+        $("#totalTeams")
+            .text(
+                currentTeams.length
+            );
+
+
+        const uniqueGames =
+            new Set();
+
+
+        currentTeams.forEach(
+            function(team) {
+
+
+                /*
+                    Split combined game
+                    names such as
+                    "CS2 / Rocket League"
+                */
+
+                team.game
+                    .split("/")
+                    .forEach(
+                        function(game) {
+
+                            uniqueGames.add(
+                                game.trim()
+                            );
 
                         }
-                    )
-                );
-
-
-            $("#totalGames")
-                .text(
-                    uniqueGames.size
-                );
-
-
-            if (
-                currentTeams.length > 0
-            ) {
-
-                $("#topTeam")
-                    .text(
-                        currentTeams[0].name
                     );
-
-            }
-
-            else {
-
-                $("#topTeam")
-                    .text("-");
-
-            }
-
-        }
-
-
-
-        /* =========================================
-           SEARCH
-        ========================================= */
-
-        $("#teamSearch")
-            .on(
-                "input",
-                function () {
-
-                    renderTeams();
-
-                }
-            );
-
-
-
-        /* =========================================
-           GAME FILTER
-        ========================================= */
-
-        $("#gameFilter")
-            .on(
-                "change",
-                function () {
-
-                    renderTeams();
-
-                }
-            );
-
-
-
-        /* =========================================
-           SORT FILTER
-        ========================================= */
-
-        $("#sortFilter")
-            .on(
-                "change",
-                function () {
-
-                    renderTeams();
-
-                }
-            );
-
-
-
-        /* =========================================
-           CLEAR SEARCH
-        ========================================= */
-
-        $("#clearSearch")
-            .on(
-                "click",
-                function () {
-
-
-                    $("#teamSearch")
-                        .val("");
-
-
-                    renderTeams();
-
-
-                }
-            );
-
-
-
-        /* =========================================
-           START PAGE
-        ========================================= */
-
-        $(document).ready(
-            function () {
-
-                loadTeams();
 
             }
         );
 
-    </script>
+
+        $("#totalGames")
+            .text(
+                uniqueGames.size
+            );
+
+
+        if (
+            currentTeams.length > 0
+        ) {
+
+            $("#topTeam")
+                .text(
+                    currentTeams[0].name
+                );
+
+        }
+
+        else {
+
+            $("#topTeam")
+                .text(
+                    "-"
+                );
+
+        }
+
+    }
+
+
+
+    /* =========================================
+       SEARCH EVENT
+    ========================================= */
+
+    $("#teamSearch")
+        .on(
+            "input",
+            function() {
+
+                renderTeams();
+
+            }
+        );
+
+
+
+    /* =========================================
+       GAME FILTER
+    ========================================= */
+
+    $("#gameFilter")
+        .on(
+            "change",
+            function() {
+
+                renderTeams();
+
+            }
+        );
+
+
+
+    /* =========================================
+       SORT FILTER
+    ========================================= */
+
+    $("#sortFilter")
+        .on(
+            "change",
+            function() {
+
+                renderTeams();
+
+            }
+        );
+
+
+
+    /* =========================================
+       CLEAR SEARCH
+    ========================================= */
+
+    $("#clearSearch")
+        .on(
+            "click",
+            function() {
+
+
+                $("#teamSearch")
+                    .val("");
+
+
+                renderTeams();
+
+            }
+        );
+
+
+
+    /* =========================================
+       INITIALISE
+    ========================================= */
+
+    $(document).ready(
+        function() {
+
+            renderTeams();
+
+        }
+    );
+
+
+</script>
 
 
 </body>
