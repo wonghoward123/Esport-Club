@@ -1,0 +1,2370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NexArena | Game Details</title>
+
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================
+         BOOTSTRAP ICONS
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- =========================
+         SHARED CSS
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <style>
+
+        /* =========================================
+           LOGIN / REGISTER
+        ========================================= */
+
+        .nav-auth {
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 60px;
+
+        }
+
+
+        .nav-login,
+        .nav-register {
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 75px;
+            height: 38px;
+
+            padding: 0 16px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        /* LOGIN */
+
+        .nav-login {
+
+            background-color: #00e5ff;
+            color: #000000;
+
+            border: 1px solid #00e5ff;
+
+        }
+
+
+        .nav-login:hover {
+
+            background-color: #00b8cc;
+            border-color: #00b8cc;
+
+            color: #000000;
+
+        }
+
+
+        /* REGISTER */
+
+        .nav-register {
+
+            background-color: #3a3a46;
+            color: #ffffff;
+
+            border: 1px solid #555563;
+
+        }
+
+
+        .nav-register:hover {
+
+            background-color: #50505d;
+            border-color: #666675;
+
+            color: #ffffff;
+
+        }
+
+
+        /* =========================================
+           GAME HEADER
+        ========================================= */
+
+        .game-header {
+
+            padding: 90px 0 50px;
+
+            text-align: center;
+
+        }
+
+
+        .game-header h1 {
+
+            font-size: 3.5rem;
+
+            font-weight: 800;
+
+            margin: 0;
+
+        }
+
+
+        .game-header h1 span {
+
+            color: #00e5ff;
+
+        }
+
+
+        /* =========================================
+           GAME OVERVIEW
+        ========================================= */
+
+        .game-overview-card {
+
+            background-color: #151522;
+
+            border: 1px solid #29293a;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            height: 100%;
+
+        }
+
+
+        .game-logo-large {
+
+            width: 100%;
+
+            max-width: 360px;
+
+            height: 300px;
+
+            object-fit: contain;
+
+            display: block;
+
+            margin: 0 auto;
+
+        }
+
+
+        .game-info-row {
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid #29293a;
+
+        }
+
+
+        .game-info-row:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .game-info-label {
+
+            color: #888888;
+
+            font-size: 0.85rem;
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .game-info-value {
+
+            color: #ffffff;
+
+            font-size: 1.05rem;
+
+            font-weight: 600;
+
+        }
+
+
+        /* =========================================
+           DETAILS SECTION
+        ========================================= */
+
+        .details-section {
+
+            margin-top: 20px;
+
+        }
+
+
+        .details-description {
+
+            max-width: 800px;
+
+            margin: 12px auto 35px;
+
+            text-align: center;
+
+            color: #999999;
+
+            line-height: 1.7;
+
+            font-size: 1rem;
+
+        }
+
+
+        .data-loading {
+
+            display: none;
+
+            text-align: center;
+
+            color: #999999;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .data-error {
+
+            display: none;
+
+            background-color: #151522;
+
+            border: 1px solid #6c3030;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            color: #ff8f8f;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        /* =========================================
+           IMAGE CARDS
+        ========================================= */
+
+        .detail-card {
+
+            background-color: #151522;
+
+            border: 1px solid #29293a;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            height: 100%;
+
+            transition: 0.3s;
+
+        }
+
+
+        .detail-card:hover {
+
+            transform: translateY(-6px);
+
+            border-color: #00e5ff;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0, 229, 255, 0.08);
+
+        }
+
+
+        .detail-image {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: contain;
+
+            display: block;
+
+            background-color: #10101b;
+
+            padding: 15px;
+
+        }
+
+
+        .detail-content {
+
+            padding: 20px;
+
+            text-align: center;
+
+        }
+
+
+        .detail-content h5 {
+
+            color: #ffffff;
+
+            margin: 0;
+
+        }
+
+
+        /* =========================================
+           TEXT ONLY CARDS
+        ========================================= */
+
+        .text-only-card {
+
+            min-height: 180px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 25px;
+
+            text-align: center;
+
+        }
+
+
+        .text-only-card i {
+
+            color: #00e5ff;
+
+            font-size: 2rem;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .text-only-card h5 {
+
+            color: #ffffff;
+
+            margin: 0;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer a {
+
+            color: #bbbbbb;
+
+            text-decoration: none;
+
+            margin: 0 8px;
+
+            transition: 0.3s;
+
+        }
+
+
+        footer a:hover {
+
+            color: #00e5ff;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 991px) {
+
+            .nav-auth {
+
+                margin-left: 0;
+
+                margin-top: 15px;
+
+                padding-bottom: 10px;
+
+            }
+
+
+            .nav-login,
+            .nav-register {
+
+                width: 100%;
+
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .game-header {
+
+                padding: 70px 0 40px;
+
+            }
+
+
+            .game-header h1 {
+
+                font-size: 2.5rem;
+
+            }
+
+
+            .game-logo-large {
+
+                height: 240px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION BAR
+====================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+
+        <!-- BRAND -->
+
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+
+            <i class="bi bi-controller"></i>
+
+            NexArena
+
+        </a>
+
+
+        <!-- MOBILE NAVIGATION -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- NAVIGATION MENU -->
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <!-- HOME -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+
+                </li>
+
+
+                <!-- ABOUT -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+
+                </li>
+
+
+                <!-- GAMES -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="games.html"
+                    >
+                        Games
+                    </a>
+
+                </li>
+
+
+                <!-- PLAYERS -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="players.html"
+                    >
+                        Players
+                    </a>
+
+                </li>
+
+
+                <!-- TEAMS -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="teams.html"
+                    >
+                        Teams
+                    </a>
+
+                </li>
+
+
+                <!-- TOURNAMENTS -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="tournaments.html"
+                    >
+                        Tournaments
+                    </a>
+
+                </li>
+
+
+                <!-- SCHEDULE -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="schedule.html"
+                    >
+                        Schedule
+                    </a>
+
+                </li>
+
+
+                <!-- FAQ -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="faq.html"
+                    >
+                        FAQ
+                    </a>
+
+                </li>
+
+
+                <!-- CONTACT -->
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+            <!-- LOGIN / REGISTER -->
+
+            <div class="nav-auth">
+
+
+                <a
+                    href="login.html"
+                    class="nav-login"
+                >
+
+                    Login
+
+                </a>
+
+
+                <a
+                    href="registration.html"
+                    class="nav-register"
+                >
+
+                    Register
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     GAME HEADER
+====================================================== -->
+
+<section class="game-header">
+
+    <div class="container">
+
+
+        <!-- ONLY GAME NAME HERE -->
+
+        <h1 id="gameTitle">
+
+            Loading
+            <span>
+                Game
+            </span>
+
+        </h1>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GAME OVERVIEW
+====================================================== -->
+
+<section class="section-padding pt-3">
+
+    <div class="container">
+
+
+        <div class="row g-4">
+
+
+            <!-- GAME IMAGE -->
+
+            <div class="col-lg-6">
+
+                <div
+                    class="game-overview-card text-center"
+                >
+
+
+                    <img
+                        id="gameLogo"
+                        src=""
+                        alt="Game logo"
+                        class="game-logo-large"
+                    >
+
+
+                </div>
+
+            </div>
+
+
+            <!-- GAME INFORMATION -->
+
+            <div class="col-lg-6">
+
+                <div class="game-overview-card">
+
+
+                    <h2 class="mb-4">
+
+                        Game
+
+                        <span style="color:#00e5ff;">
+
+                            Information
+
+                        </span>
+
+                    </h2>
+
+
+                    <!-- GAME NAME -->
+
+                    <div class="game-info-row">
+
+                        <div class="game-info-label">
+
+                            Game Name
+
+                        </div>
+
+
+                        <div
+                            id="gameName"
+                            class="game-info-value"
+                        >
+
+                            Loading...
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DEVELOPER -->
+
+                    <div class="game-info-row">
+
+                        <div class="game-info-label">
+
+                            Developer
+
+                        </div>
+
+
+                        <div
+                            id="gameDeveloper"
+                            class="game-info-value"
+                        >
+
+                            Loading...
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GAME TYPE -->
+
+                    <div class="game-info-row">
+
+                        <div class="game-info-label">
+
+                            Game Type
+
+                        </div>
+
+
+                        <div
+                            id="gameType"
+                            class="game-info-value"
+                        >
+
+                            Loading...
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AVAILABLE ON -->
+
+                    <div class="game-info-row">
+
+                        <div class="game-info-label">
+
+                            Available On
+
+                        </div>
+
+
+                        <div
+                            id="gamePlatforms"
+                            class="game-info-value"
+                        >
+
+                            Loading...
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DETAILS SECTION
+====================================================== -->
+
+<section
+    id="detailsSection"
+    class="section-padding details-section"
+    style="display:none;"
+>
+
+    <div class="container">
+
+
+        <h2
+            id="detailsTitle"
+            class="section-title"
+        >
+
+            Game
+
+            <span>
+                Details
+            </span>
+
+        </h2>
+
+
+        <!-- EXPLORE TEXT IS NOW ONLY HERE -->
+
+        <p
+            id="detailsDescription"
+            class="details-description"
+        ></p>
+
+
+        <!-- LOADING -->
+
+        <div
+            id="dataLoading"
+            class="data-loading"
+        >
+
+            <span
+                class="spinner-border spinner-border-sm text-info"
+                role="status"
+                aria-hidden="true"
+            ></span>
+
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div
+            id="dataError"
+            class="data-error"
+        ></div>
+
+
+        <!-- CARDS -->
+
+        <div
+            id="detailsContainer"
+            class="row g-4"
+        ></div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BACK TO GAMES
+====================================================== -->
+
+<section class="section-padding pt-0">
+
+    <div class="container text-center">
+
+
+        <a
+            href="games.html"
+            class="btn btn-outline-light"
+        >
+
+            <i class="bi bi-arrow-left"></i>
+
+            Back to Games
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="container text-center">
+
+
+        <h5 class="text-white">
+
+            <i class="bi bi-controller"></i>
+
+            NexArena
+
+        </h5>
+
+
+        <p class="mt-3">
+
+            Play. Compete. Connect.
+
+        </p>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div class="mb-3">
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-instagram"></i>
+
+                Instagram
+
+            </a>
+
+
+            <!-- DISCORD -->
+
+            <a
+                href="https://discord.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-discord"></i>
+
+                Discord
+
+            </a>
+
+
+            <!-- YOUTUBE -->
+
+            <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-youtube"></i>
+
+                YouTube
+
+            </a>
+
+
+        </div>
+
+
+        <p class="mb-0">
+
+            &copy; 2026 NexArena.
+            All Rights Reserved.
+
+        </p>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JQUERY
+====================================================== -->
+
+<script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+></script>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+====================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+
+<!-- =====================================================
+     MAIN JAVASCRIPT
+====================================================== -->
+
+<script>
+
+$(document).ready(function () {
+
+
+    /* =========================================
+       READ GAME FROM URL
+    ========================================= */
+
+    const urlParams =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const selectedGame =
+        urlParams.get("game");
+
+
+    /* =========================================
+       GAME INFORMATION
+    ========================================= */
+
+    const games = {
+
+        "valorant": {
+
+            name: "Valorant",
+
+            developer: "Riot Games",
+
+            type: "5v5 Tactical FPS",
+
+            platforms:
+                "PC / Play Station / Xbox",
+
+            logo:
+                "images/valorantLogo.png",
+
+            exploreText:
+                "Explore 10 Valorant agents."
+
+        },
+
+
+        "counter-strike-2": {
+
+            name: "Counter-Strike 2",
+
+            developer: "Valve",
+
+            type: "5v5 Tactical FPS",
+
+            platforms:
+                "PC",
+
+            logo:
+                "images/csLogo.jpg",
+
+            exploreText:
+                "Explore 10 Counter-Strike 2 weapons."
+
+        },
+
+
+        "pubg": {
+
+            name: "PUBG",
+
+            developer: "KRAFTON",
+
+            type: "Battle Royale",
+
+            platforms:
+                "PC / Mobile Device / Play Station / Xbox",
+
+            logo:
+                "images/pubgLogo.jpg",
+
+            exploreText:
+                "Explore 10 PUBG guns."
+
+        },
+
+
+        "honor-of-kings": {
+
+            name: "Honor of Kings",
+
+            developer: "TiMi Studio Group",
+
+            type: "5v5 MOBA",
+
+            platforms:
+                "Mobile Device",
+
+            logo:
+                "images/hokLogo.png",
+
+            exploreText:
+                "Explore 10 Honor of Kings heroes."
+
+        },
+
+
+        "dota-2": {
+
+            name: "DOTA 2",
+
+            developer: "Valve",
+
+            type: "5v5 MOBA",
+
+            platforms:
+                "PC",
+
+            logo:
+                "images/dotaLogo.jpg",
+
+            exploreText:
+                "Explore 10 DOTA 2 heroes."
+
+        },
+
+
+        "ea-sports-fc": {
+
+            name: "EA Sports FC",
+
+            developer: "EA Sports",
+
+            type: "1v1 Sports",
+
+            platforms:
+                "PC / Play Station / Xbox / Nintendo",
+
+            logo:
+                "images/eaLogo.webp",
+
+            exploreText:
+                "Explore 10 football players."
+
+        },
+
+
+        "rocket-league": {
+
+            name: "Rocket League",
+
+            developer: "Psyonix",
+
+            type: "3v3 Sports",
+
+            platforms:
+                "PC / Play Station / Xbox / Nintendo",
+
+            logo:
+                "images/rocketLogo.jfif",
+
+            exploreText:
+                "Explore 10 Rocket League cars."
+
+        }
+
+    };
+
+
+    /* =========================================
+       CHECK GAME
+    ========================================= */
+
+    if (
+        !selectedGame ||
+        !games[selectedGame]
+    ) {
+
+        $("#gameTitle")
+            .html(
+                'Game <span>Not Found</span>'
+            );
+
+
+        $("#gameLogo")
+            .hide();
+
+
+        $("#gameName")
+            .text("Not Found");
+
+
+        $("#gameDeveloper")
+            .text("-");
+
+
+        $("#gameType")
+            .text("-");
+
+
+        $("#gamePlatforms")
+            .text("-");
+
+
+        return;
+
+    }
+
+
+    const game =
+        games[selectedGame];
+
+
+    /* =========================================
+       MAIN GAME INFORMATION
+    ========================================= */
+
+    $("#gameTitle")
+        .text(
+            game.name
+        );
+
+
+    $("#gameLogo")
+        .attr(
+            "src",
+            game.logo
+        )
+        .attr(
+            "alt",
+            game.name + " logo"
+        );
+
+
+    $("#gameName")
+        .text(
+            game.name
+        );
+
+
+    $("#gameDeveloper")
+        .text(
+            game.developer
+        );
+
+
+    $("#gameType")
+        .text(
+            game.type
+        );
+
+
+    $("#gamePlatforms")
+        .text(
+            game.platforms
+        );
+
+
+    /* =========================================
+       LOAD DETAILS
+    ========================================= */
+
+    if (
+        selectedGame === "valorant"
+    ) {
+
+        loadValorantAgents(
+            game.exploreText
+        );
+
+    }
+
+
+    else if (
+        selectedGame === "counter-strike-2"
+    ) {
+
+        loadCS2Weapons(
+            game.exploreText
+        );
+
+    }
+
+
+    else if (
+        selectedGame === "pubg"
+    ) {
+
+        loadPUBG(
+            game.exploreText
+        );
+
+    }
+
+
+    else if (
+        selectedGame === "honor-of-kings"
+    ) {
+
+        loadHonorOfKings(
+            game.exploreText
+        );
+
+    }
+
+
+    else if (
+        selectedGame === "dota-2"
+    ) {
+
+        loadDota2(
+            game.exploreText
+        );
+
+    }
+
+
+    else if (
+        selectedGame === "ea-sports-fc"
+    ) {
+
+        loadEASportsFC(
+            game.exploreText
+        );
+
+    }
+
+
+    else if (
+        selectedGame === "rocket-league"
+    ) {
+
+        loadRocketLeague(
+            game.exploreText
+        );
+
+    }
+
+});
+
+
+
+/* =====================================================
+   PREPARE DETAILS
+====================================================== */
+
+function prepareDetails(
+    title,
+    exploreText
+) {
+
+
+    $("#detailsSection")
+        .show();
+
+
+    $("#detailsTitle")
+        .html(
+            title
+        );
+
+
+    /*
+     * THIS IS NOW THE ONLY PLACE
+     * WHERE THE EXPLORE TEXT APPEARS.
+     */
+
+    $("#detailsDescription")
+        .text(
+            exploreText
+        );
+
+
+    $("#dataLoading")
+        .hide();
+
+
+    $("#dataError")
+        .hide();
+
+
+    $("#detailsContainer")
+        .empty();
+
+}
+
+
+
+/* =====================================================
+   1. VALORANT API
+====================================================== */
+
+function loadValorantAgents(
+    exploreText
+) {
+
+
+    prepareDetails(
+
+        'Valorant <span>Agents</span>',
+
+        exploreText
+
+    );
+
+
+    $("#dataLoading")
+        .show();
+
+
+    const apiUrl =
+        "https://valorant-api.com/v1/agents?isPlayableCharacter=true";
+
+
+    $.getJSON(apiUrl)
+
+        .done(function (response) {
+
+
+            $("#dataLoading")
+                .hide();
+
+
+            if (
+                !response ||
+                !Array.isArray(response.data)
+            ) {
+
+                $("#dataError")
+                    .text(
+                        "Unable to process Valorant data."
+                    )
+                    .show();
+
+                return;
+
+            }
+
+
+            /* RANDOM 10 */
+
+            const selected =
+                [...response.data]
+                    .sort(
+                        function () {
+
+                            return Math.random() - 0.5;
+
+                        }
+                    )
+                    .slice(
+                        0,
+                        10
+                    );
+
+
+            /* ALPHABETICAL */
+
+            selected.sort(
+                function (a, b) {
+
+                    return a.displayName
+                        .localeCompare(
+                            b.displayName
+                        );
+
+                }
+            );
+
+
+            selected.forEach(
+                function (agent) {
+
+
+                    const name =
+                        agent.displayName ||
+                        "Unknown Agent";
+
+
+                    const image =
+                        agent.displayIcon ||
+                        "";
+
+
+                    const card = `
+
+                        <div
+                            class="
+                                col-md-6
+                                col-lg-3
+                            "
+                        >
+
+                            <div
+                                class="detail-card"
+                            >
+
+                                <img
+                                    src="${image}"
+                                    alt="${name}"
+                                    class="detail-image"
+                                    loading="lazy"
+                                >
+
+
+                                <div
+                                    class="detail-content"
+                                >
+
+                                    <h5>
+                                        ${name}
+                                    </h5>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    `;
+
+
+                    $("#detailsContainer")
+                        .append(
+                            card
+                        );
+
+                }
+            );
+
+        })
+
+
+        .fail(function () {
+
+
+            $("#dataLoading")
+                .hide();
+
+
+            $("#dataError")
+                .text(
+                    "Unable to retrieve Valorant data."
+                )
+                .show();
+
+        });
+
+}
+
+
+
+/* =====================================================
+   2. CS2 WEAPON API
+====================================================== */
+
+function loadCS2Weapons(
+    exploreText
+) {
+
+
+    prepareDetails(
+
+        'Counter-Strike 2 <span>Weapons</span>',
+
+        exploreText
+
+    );
+
+
+    $("#dataLoading")
+        .show();
+
+
+    const apiUrl =
+        "https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/base_weapons.json";
+
+
+    const famousWeapons = [
+
+        "AK-47",
+
+        "AWP",
+
+        "Desert Eagle",
+
+        "Glock-18",
+
+        "M4A1-S",
+
+        "M4A4",
+
+        "MP9",
+
+        "P90",
+
+        "UMP-45",
+
+        "USP-S"
+
+    ];
+
+
+    $.getJSON(apiUrl)
+
+        .done(function (response) {
+
+
+            $("#dataLoading")
+                .hide();
+
+
+            if (
+                !Array.isArray(response)
+            ) {
+
+                $("#dataError")
+                    .text(
+                        "Unable to process Counter-Strike 2 weapon data."
+                    )
+                    .show();
+
+                return;
+
+            }
+
+
+            const weapons =
+                response.filter(
+                    function (weapon) {
+
+
+                        if (
+                            !weapon ||
+                            !weapon.name
+                        ) {
+
+                            return false;
+
+                        }
+
+
+                        return famousWeapons
+                            .some(
+                                function (wanted) {
+
+                                    return (
+                                        weapon.name
+                                            .toLowerCase()
+                                            ===
+                                        wanted
+                                            .toLowerCase()
+                                    );
+
+                                }
+                            );
+
+                    }
+                );
+
+
+            weapons.sort(
+                function (a, b) {
+
+                    return a.name
+                        .localeCompare(
+                            b.name
+                        );
+
+                }
+            );
+
+
+            const finalWeapons =
+                weapons.slice(
+                    0,
+                    10
+                );
+
+
+            finalWeapons.forEach(
+                function (weapon) {
+
+
+                    const name =
+                        weapon.name;
+
+
+                    const image =
+                        weapon.image;
+
+
+                    const card = `
+
+                        <div
+                            class="
+                                col-md-6
+                                col-lg-3
+                            "
+                        >
+
+                            <div
+                                class="detail-card"
+                            >
+
+                                <img
+                                    src="${image}"
+                                    alt="${name}"
+                                    class="detail-image"
+                                    loading="lazy"
+                                >
+
+
+                                <div
+                                    class="detail-content"
+                                >
+
+                                    <h5>
+                                        ${name}
+                                    </h5>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    `;
+
+
+                    $("#detailsContainer")
+                        .append(
+                            card
+                        );
+
+                }
+            );
+
+
+            if (
+                finalWeapons.length === 0
+            ) {
+
+                $("#dataError")
+                    .text(
+                        "No requested CS2 weapons were found."
+                    )
+                    .show();
+
+            }
+
+        })
+
+
+        .fail(function () {
+
+
+            $("#dataLoading")
+                .hide();
+
+
+            $("#dataError")
+                .text(
+                    "Unable to retrieve Counter-Strike 2 weapon data."
+                )
+                .show();
+
+        });
+
+}
+
+
+
+/* =====================================================
+   3. PUBG
+====================================================== */
+
+function loadPUBG(
+    exploreText
+) {
+
+
+    prepareDetails(
+
+        'PUBG <span>Guns</span>',
+
+        exploreText
+
+    );
+
+
+    const guns = [
+
+        "AKM",
+
+        "AWM",
+
+        "Beryl M762",
+
+        "Groza",
+
+        "Kar98k",
+
+        "M416",
+
+        "Mini14",
+
+        "S12K",
+
+        "UMP45",
+
+        "Vector"
+
+    ];
+
+
+    guns.sort(
+        function (a, b) {
+
+            return a.localeCompare(b);
+
+        }
+    );
+
+
+    guns.forEach(
+        function (gun) {
+
+
+            const card = `
+
+                <div
+                    class="
+                        col-md-6
+                        col-lg-3
+                    "
+                >
+
+                    <div
+                        class="
+                            detail-card
+                            text-only-card
+                        "
+                    >
+
+                        <i class="bi bi-crosshair"></i>
+
+
+                        <h5>
+                            ${gun}
+                        </h5>
+
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            $("#detailsContainer")
+                .append(card);
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   4. HONOR OF KINGS
+====================================================== */
+
+function loadHonorOfKings(
+    exploreText
+) {
+
+
+    prepareDetails(
+
+        'Honor of Kings <span>Heroes</span>',
+
+        exploreText
+
+    );
+
+
+    const heroes = [
+
+        "Angela",
+
+        "Diao Chan",
+
+        "Li Bai",
+
+        "Luban No.7",
+
+        "Mai Shiranui",
+
+        "Marco Polo",
+
+        "Milady",
+
+        "Nakoruru",
+
+        "Yao",
+
+        "Zhang Fei"
+
+    ];
+
+
+    heroes.sort(
+        function (a, b) {
+
+            return a.localeCompare(b);
+
+        }
+    );
+
+
+    heroes.forEach(
+        function (hero) {
+
+
+            const card = `
+
+                <div
+                    class="
+                        col-md-6
+                        col-lg-3
+                    "
+                >
+
+                    <div
+                        class="
+                            detail-card
+                            text-only-card
+                        "
+                    >
+
+                        <i class="bi bi-person-badge"></i>
+
+
+                        <h5>
+                            ${hero}
+                        </h5>
+
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            $("#detailsContainer")
+                .append(card);
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   5. DOTA 2
+====================================================== */
+
+function loadDota2(
+    exploreText
+) {
+
+
+    prepareDetails(
+
+        'DOTA 2 <span>Heroes</span>',
+
+        exploreText
+
+    );
+
+
+    const heroes = [
+
+        "Anti-Mage",
+
+        "Axe",
+
+        "Crystal Maiden",
+
+        "Juggernaut",
+
+        "Lina",
+
+        "Pudge",
+
+        "Shadow Fiend",
+
+        "Sniper",
+
+        "Sven",
+
+        "Wraith King"
+
+    ];
+
+
+    heroes.sort(
+        function (a, b) {
+
+            return a.localeCompare(b);
+
+        }
+    );
+
+
+    heroes.forEach(
+        function (hero) {
+
+
+            const card = `
+
+                <div
+                    class="
+                        col-md-6
+                        col-lg-3
+                    "
+                >
+
+                    <div
+                        class="
+                            detail-card
+                            text-only-card
+                        "
+                    >
+
+                        <i class="bi bi-person-badge"></i>
+
+
+                        <h5>
+                            ${hero}
+                        </h5>
+
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            $("#detailsContainer")
+                .append(card);
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   6. EA SPORTS FC
+====================================================== */
+
+function loadEASportsFC(
+    exploreText
+) {
+
+
+    prepareDetails(
+
+        'EA Sports FC <span>Players</span>',
+
+        exploreText
+
+    );
+
+
+    const players = [
+
+        "Bukayo Saka",
+
+        "Erling Haaland",
+
+        "Harry Kane",
+
+        "Jude Bellingham",
+
+        "Kevin De Bruyne",
+
+        "Kylian Mbappe",
+
+        "Mohamed Salah",
+
+        "Ousmane Dembele",
+
+        "Robert Lewandowski",
+
+        "Vini Jr."
+
+    ];
+
+
+    players.sort(
+        function (a, b) {
+
+            return a.localeCompare(b);
+
+        }
+    );
+
+
+    players.forEach(
+        function (player) {
+
+
+            const card = `
+
+                <div
+                    class="
+                        col-md-6
+                        col-lg-3
+                    "
+                >
+
+                    <div
+                        class="
+                            detail-card
+                            text-only-card
+                        "
+                    >
+
+                        <i class="bi bi-person-fill"></i>
+
+
+                        <h5>
+                            ${player}
+                        </h5>
+
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            $("#detailsContainer")
+                .append(card);
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   7. ROCKET LEAGUE
+====================================================== */
+
+function loadRocketLeague(
+    exploreText
+) {
+
+
+    prepareDetails(
+
+        'Rocket League <span>Cars</span>',
+
+        exploreText
+
+    );
+
+
+    const cars = [
+
+        "Batmobile",
+
+        "Breakout",
+
+        "Dominus",
+
+        "Dominus GT",
+
+        "Endo",
+
+        "Fennec",
+
+        "Mantis",
+
+        "Merc",
+
+        "Octane",
+
+        "Takumi"
+
+    ];
+
+
+    cars.sort(
+        function (a, b) {
+
+            return a.localeCompare(b);
+
+        }
+    );
+
+
+    cars.forEach(
+        function (car) {
+
+
+            const card = `
+
+                <div
+                    class="
+                        col-md-6
+                        col-lg-3
+                    "
+                >
+
+                    <div
+                        class="
+                            detail-card
+                            text-only-card
+                        "
+                    >
+
+                        <i class="bi bi-car-front-fill"></i>
+
+
+                        <h5>
+                            ${car}
+                        </h5>
+
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            $("#detailsContainer")
+                .append(card);
+
+        }
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
