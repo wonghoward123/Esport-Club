@@ -2,40 +2,55 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NexArena | faq</title>
+    <title>NexArena | FAQ</title>
 
-    <!-- Bootstrap CSS -->
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================== -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
+
+    <!-- =========================
+         BOOTSTRAP ICONS
+    ========================== -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Shared CSS -->
+
+    <!-- =========================
+         SHARED CSS
+    ========================== -->
+
     <link rel="stylesheet" href="css/style.css">
+
 
     <style>
         /* =========================================
-           CONTACT PAGE
+           FAQ PAGE
         ========================================= */
 
-        .contact-header {
+        .faq-header {
             padding: 90px 0 60px;
             text-align: center;
         }
 
-        .contact-header h1 {
+        .faq-header h1 {
             font-size: 3.5rem;
             font-weight: 800;
         }
 
-        .contact-header h1 span {
+        .faq-header h1 span {
             color: #00e5ff;
         }
 
-        .contact-header p {
+        .faq-header p {
             max-width: 750px;
             margin: 20px auto 0;
             color: #bbbbbb;
@@ -44,143 +59,196 @@
 
 
         /* =========================================
-           CONTACT INFORMATION
+           LOGIN / REGISTER NAVIGATION
         ========================================= */
 
-        .contact-info-card {
-            background-color: #151522;
-            border: 1px solid #29293a;
-            border-radius: 18px;
-            padding: 30px;
-            height: 100%;
-            transition: 0.3s;
-        }
-
-        .contact-info-card:hover {
-            border-color: #00e5ff;
-            transform: translateY(-5px);
-        }
-
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .contact-info-icon {
-            width: 45px;
-            height: 45px;
-            min-width: 45px;
-
+        .nav-auth {
             display: flex;
             align-items: center;
-            justify-content: center;
-
-            background-color: #00e5ff;
-            color: #000000;
-
-            border-radius: 10px;
-
-            font-size: 1.2rem;
+            gap: 10px;
+            margin-left: 60px;
         }
 
-        .contact-info-item h5 {
-            margin-bottom: 5px;
-            color: #ffffff;
-        }
-
-        .contact-info-item p {
-            margin: 0;
-            color: #aaaaaa;
-        }
-
-
-        /* =========================================
-           CONTACT FORM
-        ========================================= */
-
-        .contact-form-card {
-            background-color: #151522;
-            border: 1px solid #29293a;
-            border-radius: 18px;
-            padding: 30px;
-        }
-
-        .contact-form-card .form-label {
-            color: #dddddd;
-            font-weight: 600;
-        }
-
-        .contact-form-card .form-control,
-        .contact-form-card .form-select {
-            background-color: #0f0f19;
-            color: #ffffff;
-            border: 1px solid #3a3a4c;
-            min-height: 48px;
-            border-radius: 8px;
-        }
-
-        .contact-form-card textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .contact-form-card .form-control::placeholder {
-            color: #777777;
-        }
-
-        .contact-form-card .form-control:focus,
-        .contact-form-card .form-select:focus {
-            background-color: #0f0f19;
-            color: #ffffff;
-            border-color: #00e5ff;
-            box-shadow: 0 0 0 0.2rem rgba(0, 229, 255, 0.15);
-        }
-
-
-        /* =========================================
-           SOCIAL MEDIA
-        ========================================= */
-
-        .social-links {
-            margin-top: 30px;
-            padding-top: 25px;
-            border-top: 1px solid #29293a;
-        }
-
-        .social-links a {
+        .nav-login,
+        .nav-register {
             display: inline-flex;
             align-items: center;
             justify-content: center;
 
-            width: 42px;
-            height: 42px;
+            min-width: 75px;
+            height: 38px;
 
-            margin-right: 8px;
+            padding: 0 16px;
 
-            border: 1px solid #3a3a4c;
-            border-radius: 10px;
+            border-radius: 6px;
 
-            color: #ffffff;
             text-decoration: none;
+
+            font-size: 0.9rem;
+            font-weight: 600;
 
             transition: 0.3s;
         }
 
-        .social-links a:hover {
+
+        /* Login */
+
+        .nav-login {
             background-color: #00e5ff;
-            border-color: #00e5ff;
+            color: #000000;
+            border: 1px solid #00e5ff;
+        }
+
+        .nav-login:hover {
+            background-color: #00b8cc;
+            border-color: #00b8cc;
             color: #000000;
         }
 
 
+        /* Register */
+
+        .nav-register {
+            background-color: #3a3a46;
+            color: #ffffff;
+            border: 1px solid #555563;
+        }
+
+        .nav-register:hover {
+            background-color: #50505d;
+            border-color: #666675;
+            color: #ffffff;
+        }
+
+
         /* =========================================
-           FORM MESSAGE
+           FAQ CONTAINER
         ========================================= */
 
-        #formMessage {
-            display: none;
+        .faq-container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           FAQ ITEM
+        ========================================= */
+
+        .accordion-item {
+            background-color: #151522 !important;
+            border: 1px solid #29293a !important;
+            border-radius: 12px !important;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+
+        /* =========================================
+           FAQ BUTTON
+        ========================================= */
+
+        .accordion-button {
+            background-color: #151522 !important;
+            color: #ffffff !important;
+
+            font-size: 1.05rem;
+            font-weight: 600;
+
+            padding: 20px 22px;
+
+            box-shadow: none !important;
+        }
+
+        .accordion-button:hover {
+            color: #00e5ff !important;
+        }
+
+
+        /* Open FAQ */
+
+        .accordion-button:not(.collapsed) {
+            color: #00e5ff !important;
+            background-color: #181829 !important;
+        }
+
+
+        /* Bootstrap arrow */
+
+        .accordion-button::after {
+            filter: invert(1);
+        }
+
+
+        /* =========================================
+           FAQ CONTENT
+        ========================================= */
+
+        .accordion-body {
+            background-color: #10101b;
+            color: #aaaaaa;
+
+            padding: 20px 22px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           FAQ ICON
+        ========================================= */
+
+        .faq-icon {
+            color: #00e5ff;
+            margin-right: 12px;
+        }
+
+
+        /* =========================================
+           CATEGORY LABEL
+        ========================================= */
+
+        .faq-category {
+            display: inline-block;
+
+            background-color: #00e5ff;
+            color: #000000;
+
+            padding: 6px 12px;
+
+            border-radius: 6px;
+
+            font-size: 0.75rem;
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+           CONTACT CTA
+        ========================================= */
+
+        .faq-contact-box {
+            background-color: #151522;
+
+            border: 1px solid #29293a;
+
+            border-radius: 18px;
+
+            padding: 40px 30px;
+
+            text-align: center;
+        }
+
+        .faq-contact-box h2 {
+            font-weight: bold;
+        }
+
+        .faq-contact-box p {
+            color: #aaaaaa;
+            max-width: 650px;
+            margin: 15px auto 25px;
         }
 
 
@@ -188,14 +256,34 @@
            MOBILE
         ========================================= */
 
+        @media (max-width: 991px) {
+
+            .nav-auth {
+                margin-left: 0;
+                margin-top: 15px;
+                padding-bottom: 10px;
+            }
+
+            .nav-login,
+            .nav-register {
+                width: 100%;
+            }
+
+        }
+
+
         @media (max-width: 768px) {
 
-            .contact-header {
+            .faq-header {
                 padding: 70px 0 40px;
             }
 
-            .contact-header h1 {
+            .faq-header h1 {
                 font-size: 2.5rem;
+            }
+
+            .accordion-button {
+                font-size: 0.95rem;
             }
 
         }
@@ -203,86 +291,151 @@
 
 </head>
 
+
 <body>
 
 
-    <!-- =========================
+    <!-- =====================================================
      NAVIGATION BAR
-========================= -->
+====================================================== -->
+
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 
         <div class="container">
 
+
+            <!-- LOGO -->
+
             <a class="navbar-brand" href="index.html">
+
                 <i class="bi bi-controller"></i>
+
                 NexArena
+
             </a>
+
+
+            <!-- MOBILE MENU -->
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
                 aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
+
+
+            <!-- NAVIGATION -->
 
             <div class="collapse navbar-collapse" id="mainNavbar">
 
+
                 <ul class="navbar-nav ms-auto">
 
+
+                    <!-- HOME -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="index.html">
                             Home
                         </a>
+
                     </li>
 
+
+                    <!-- ABOUT -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="about.html">
                             About
                         </a>
+
                     </li>
 
+
+                    <!-- GAMES -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="games.html">
                             Games
                         </a>
+
                     </li>
 
+
+                    <!-- PLAYERS -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="players.html">
                             Players
                         </a>
+
                     </li>
 
+
+                    <!-- TEAMS -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="teams.html">
                             Teams
                         </a>
+
                     </li>
 
+
+                    <!-- TOURNAMENTS -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="tournaments.html">
                             Tournaments
                         </a>
+
                     </li>
 
+
+                    <!-- SCHEDULE -->
+
                     <li class="nav-item">
+
                         <a class="nav-link" href="schedule.html">
                             Schedule
                         </a>
+
                     </li>
 
 
+                    <!-- FAQ -->
+
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">
+
+                        <a class="nav-link active" href="faq.html">
                             FAQ
                         </a>
+
                     </li>
+
+
+                    <!-- CONTACT -->
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">
+
+                        <a class="nav-link" href="contact.html">
                             Contact
                         </a>
+
                     </li>
 
+
                 </ul>
+
+
+                <!-- LOGIN / REGISTER -->
 
                 <div class="nav-auth">
 
@@ -296,6 +449,7 @@
 
                 </div>
 
+
             </div>
 
         </div>
@@ -303,20 +457,31 @@
     </nav>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
      PAGE HEADER
-========================= -->
-    <section class="contact-header">
+====================================================== -->
+
+    <section class="faq-header">
 
         <div class="container">
 
             <h1>
-                Contact <span>Us</span>
+
+                Frequently Asked
+                <span>
+                    Questions
+                </span>
+
             </h1>
 
+
             <p>
-                Have a question, suggestion or partnership idea?
-                Get in touch with the NexArena team and we will be happy to hear from you.
+
+                Find answers to common questions about
+                NexArena, tournaments, registration and
+                our esports community.
+
             </p>
 
         </div>
@@ -324,144 +489,54 @@
     </section>
 
 
-    <!-- =========================
-     CONTACT CONTENT
-========================= -->
+
+    <!-- =====================================================
+     FAQ SECTION
+====================================================== -->
+
     <section class="section-padding pt-3">
 
-        <div class="container">
-
-            <div class="row g-4">
+        <div class="container faq-container">
 
 
-                <!-- =========================
-                 CONTACT INFORMATION
-            ========================= -->
-                <div class="col-lg-5">
+            <!-- =========================
+             GENERAL
+        ========================== -->
 
-                    <div class="contact-info-card">
-
-                        <h2 class="mb-4">
-                            Get in Touch
-                        </h2>
-
-                        <p class="text-secondary">
-                            Whether you want to join NexArena, ask about tournaments,
-                            or collaborate with us, feel free to contact our team.
-                        </p>
+            <span class="faq-category">
+                GENERAL
+            </span>
 
 
-                        <!-- Email -->
-                        <div class="contact-info-item">
-
-                            <div class="contact-info-icon">
-                                <i class="bi bi-envelope"></i>
-                            </div>
-
-                            <div>
-
-                                <h5>
-                                    Email
-                                </h5>
-
-                                <p>
-                                    nexarena@email.com
-                                </p>
-
-                            </div>
-
-                        </div>
+            <div class="accordion" id="generalFaq">
 
 
-                        <!-- Location -->
-                        <div class="contact-info-item">
+                <!-- FAQ 1 -->
 
-                            <div class="contact-info-icon">
-                                <i class="bi bi-geo-alt"></i>
-                            </div>
+                <div class="accordion-item">
 
-                            <div>
+                    <h2 class="accordion-header">
 
-                                <h5>
-                                    Location
-                                </h5>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
 
-                                <p>
-                                    University Campus
-                                </p>
+                            <i class="bi bi-question-circle faq-icon"></i>
 
-                            </div>
+                            What is NexArena?
 
-                        </div>
+                        </button>
+
+                    </h2>
 
 
-                        <!-- Phone -->
-                        <div class="contact-info-item">
+                    <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#generalFaq">
 
-                            <div class="contact-info-icon">
-                                <i class="bi bi-telephone"></i>
-                            </div>
+                        <div class="accordion-body">
 
-                            <div>
-
-                                <h5>
-                                    Phone
-                                </h5>
-
-                                <p>
-                                    +60 12-345 6789
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Opening Hours -->
-                        <div class="contact-info-item">
-
-                            <div class="contact-info-icon">
-                                <i class="bi bi-clock"></i>
-                            </div>
-
-                            <div>
-
-                                <h5>
-                                    Club Hours
-                                </h5>
-
-                                <p>
-                                    Monday – Friday<br>
-                                    5:00 PM – 10:00 PM
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Social Media -->
-                        <div class="social-links">
-
-                            <h5 class="mb-3">
-                                Follow NexArena
-                            </h5>
-
-                            <a href="#" aria-label="Instagram">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-
-                            <a href="#" aria-label="Discord">
-                                <i class="bi bi-discord"></i>
-                            </a>
-
-                            <a href="#" aria-label="YouTube">
-                                <i class="bi bi-youtube"></i>
-                            </a>
-
-                            <a href="#" aria-label="Facebook">
-                                <i class="bi bi-facebook"></i>
-                            </a>
+                            NexArena is an esports community that
+                            connects gamers, players and teams.
+                            We organise tournaments, training sessions,
+                            gaming events and other competitive activities.
 
                         </div>
 
@@ -470,196 +545,431 @@
                 </div>
 
 
-                <!-- =========================
-                 CONTACT FORM
-            ========================= -->
-                <div class="col-lg-7">
+                <!-- FAQ 2 -->
 
-                    <div class="contact-form-card">
+                <div class="accordion-item">
 
-                        <h2 class="mb-4">
-                            Send Us a Message
-                        </h2>
+                    <h2 class="accordion-header">
 
-                        <form id="contactForm" novalidate>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
 
+                            <i class="bi bi-question-circle faq-icon"></i>
 
-                            <!-- Name -->
-                            <div class="mb-3">
+                            Who can join NexArena?
 
-                                <label for="name" class="form-label">
-                                    Full Name
-                                </label>
+                        </button>
 
-                                <input type="text" id="name" class="form-control" placeholder="Enter your name"
-                                    required>
-
-                                <div class="invalid-feedback">
-                                    Please enter your name.
-                                </div>
-
-                            </div>
+                    </h2>
 
 
-                            <!-- Email -->
-                            <div class="mb-3">
+                    <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#generalFaq">
 
-                                <label for="email" class="form-label">
-                                    Email Address
-                                </label>
+                        <div class="accordion-body">
 
-                                <input type="email" id="email" class="form-control" placeholder="example@email.com"
-                                    required>
+                            Students, gamers and esports enthusiasts
+                            who are interested in competitive gaming
+                            can join the NexArena community.
 
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address.
-                                </div>
-
-                            </div>
-
-
-                            <!-- Student ID -->
-                            <div class="mb-3">
-
-                                <label for="studentId" class="form-label">
-                                    Student ID
-                                </label>
-
-                                <input type="text" id="studentId" class="form-control"
-                                    placeholder="Enter your student ID" required>
-
-                                <div class="invalid-feedback">
-                                    Please enter your student ID.
-                                </div>
-
-                            </div>
-
-
-                            <!-- Game -->
-                            <div class="mb-3">
-
-                                <label for="game" class="form-label">
-                                    Game Preference
-                                </label>
-
-                                <select id="game" class="form-select" required>
-
-                                    <option value="">
-                                        Select a game
-                                    </option>
-
-                                    <option value="Valorant">
-                                        Valorant
-                                    </option>
-
-                                    <option value="Counter-Strike 2">
-                                        Counter-Strike 2
-                                    </option>
-
-                                    <option value="PUBG">
-                                        PUBG
-                                    </option>
-
-                                    <option value="Honor of Kings">
-                                        Honor of Kings
-                                    </option>
-
-                                    <option value="DOTA 2">
-                                        DOTA 2
-                                    </option>
-
-                                    <option value="EA Sports FC">
-                                        EA Sports FC
-                                    </option>
-
-                                    <option value="Rocket League">
-                                        Rocket League
-                                    </option>
-
-                                </select>
-
-                                <div class="invalid-feedback">
-                                    Please select your preferred game.
-                                </div>
-
-                            </div>
-
-
-                            <!-- Subject -->
-                            <div class="mb-3">
-
-                                <label for="subject" class="form-label">
-                                    Subject
-                                </label>
-
-                                <select id="subject" class="form-select" required>
-
-                                    <option value="">
-                                        Select a subject
-                                    </option>
-
-                                    <option value="Membership">
-                                        Membership
-                                    </option>
-
-                                    <option value="Tournament">
-                                        Tournament
-                                    </option>
-
-                                    <option value="Partnership">
-                                        Partnership
-                                    </option>
-
-                                    <option value="General Question">
-                                        General Question
-                                    </option>
-
-                                    <option value="Feedback">
-                                        Feedback
-                                    </option>
-
-                                </select>
-
-                                <div class="invalid-feedback">
-                                    Please select a subject.
-                                </div>
-
-                            </div>
-
-
-                            <!-- Message -->
-                            <div class="mb-4">
-
-                                <label for="message" class="form-label">
-                                    Message
-                                </label>
-
-                                <textarea id="message" class="form-control" placeholder="Write your message here..."
-                                    required></textarea>
-
-                                <div class="invalid-feedback">
-                                    Please enter your message.
-                                </div>
-
-                            </div>
-
-
-                            <!-- Success Message -->
-                            <div id="formMessage" class="alert alert-success" role="alert">
-                                <i class="bi bi-check-circle"></i>
-                                Your message has been submitted successfully!
-                            </div>
-
-
-                            <!-- Submit -->
-                            <button type="submit" class="btn btn-main btn-lg w-100">
-                                <i class="bi bi-send"></i>
-                                Send Message
-                            </button>
-
-                        </form>
+                        </div>
 
                     </div>
+
+                </div>
+
+
+                <!-- FAQ 3 -->
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+
+                            <i class="bi bi-question-circle faq-icon"></i>
+
+                            Is NexArena free to join?
+
+                        </button>
+
+                    </h2>
+
+
+                    <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#generalFaq">
+
+                        <div class="accordion-body">
+
+                            Yes. You can create a NexArena account
+                            through the registration page and become
+                            part of the community.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+             ACCOUNT & LOGIN
+        ========================== -->
+
+            <div class="mt-5">
+
+                <span class="faq-category">
+                    ACCOUNT & LOGIN
+                </span>
+
+
+                <div class="accordion" id="accountFaq">
+
+
+                    <!-- FAQ 4 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">
+
+                                <i class="bi bi-person-circle faq-icon"></i>
+
+                                How do I create a NexArena account?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#accountFaq">
+
+                            <div class="accordion-body">
+
+                                Click the Register button in the
+                                navigation bar, complete the registration
+                                form and submit it. After successful
+                                registration, you can use your username
+                                and password to log in.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 5 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqFive" aria-expanded="false" aria-controls="faqFive">
+
+                                <i class="bi bi-lock faq-icon"></i>
+
+                                Can I log in without registering?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#accountFaq">
+
+                            <div class="accordion-body">
+
+                                No. You must register an account first.
+                                The login system checks whether the
+                                username and password belong to a
+                                registered NexArena account.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 6 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqSix" aria-expanded="false" aria-controls="faqSix">
+
+                                <i class="bi bi-key faq-icon"></i>
+
+                                What happens if I enter the wrong password?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#accountFaq">
+
+                            <div class="accordion-body">
+
+                                Login will be rejected and an error
+                                message will tell you that the username
+                                or password is incorrect.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+             TOURNAMENTS
+        ========================== -->
+
+            <div class="mt-5">
+
+                <span class="faq-category">
+                    TOURNAMENTS
+                </span>
+
+
+                <div class="accordion" id="tournamentFaq">
+
+
+                    <!-- FAQ 7 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqSeven" aria-expanded="false" aria-controls="faqSeven">
+
+                                <i class="bi bi-trophy faq-icon"></i>
+
+                                What games are supported?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqSeven" class="accordion-collapse collapse" data-bs-parent="#tournamentFaq">
+
+                            <div class="accordion-body">
+
+                                NexArena currently supports games such
+                                as Valorant, Counter-Strike 2, PUBG,
+                                Honor of Kings, DOTA 2, EA Sports FC
+                                and Rocket League.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 8 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqEight" aria-expanded="false" aria-controls="faqEight">
+
+                                <i class="bi bi-calendar-event faq-icon"></i>
+
+                                How can I join a tournament?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqEight" class="accordion-collapse collapse" data-bs-parent="#tournamentFaq">
+
+                            <div class="accordion-body">
+
+                                Visit the Tournaments page and select
+                                an available tournament. Follow the
+                                registration instructions shown for that
+                                event.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 9 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqNine" aria-expanded="false" aria-controls="faqNine">
+
+                                <i class="bi bi-people faq-icon"></i>
+
+                                Can teams participate in tournaments?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqNine" class="accordion-collapse collapse" data-bs-parent="#tournamentFaq">
+
+                            <div class="accordion-body">
+
+                                Yes. NexArena tournaments can support
+                                both individual players and organised
+                                esports teams depending on the event.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+             WEBSITE
+        ========================== -->
+
+            <div class="mt-5">
+
+                <span class="faq-category">
+                    WEBSITE
+                </span>
+
+
+                <div class="accordion" id="websiteFaq">
+
+
+                    <!-- FAQ 10 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqTen" aria-expanded="false" aria-controls="faqTen">
+
+                                <i class="bi bi-globe faq-icon"></i>
+
+                                Where can I find player information?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqTen" class="accordion-collapse collapse" data-bs-parent="#websiteFaq">
+
+                            <div class="accordion-body">
+
+                                Visit the Players page to view featured
+                                players, their games, teams, countries,
+                                achievements and demonstration statistics.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 11 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqEleven" aria-expanded="false" aria-controls="faqEleven">
+
+                                <i class="bi bi-controller faq-icon"></i>
+
+                                Where can I see the supported games?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqEleven" class="accordion-collapse collapse" data-bs-parent="#websiteFaq">
+
+                            <div class="accordion-body">
+
+                                You can visit the Games page to browse
+                                the games supported by NexArena and
+                                filter them by category.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 12 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faqTwelve" aria-expanded="false" aria-controls="faqTwelve">
+
+                                <i class="bi bi-envelope faq-icon"></i>
+
+                                How can I contact NexArena?
+
+                            </button>
+
+                        </h2>
+
+
+                        <div id="faqTwelve" class="accordion-collapse collapse" data-bs-parent="#websiteFaq">
+
+                            <div class="accordion-body">
+
+                                Visit the Contact page to send us a
+                                message or find our contact information
+                                and social media links.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
@@ -670,28 +980,45 @@
     </section>
 
 
-    <!-- =========================
-     JOIN CTA
-========================= -->
+
+    <!-- =====================================================
+     CONTACT CTA
+====================================================== -->
+
     <section class="section-padding">
 
         <div class="container">
 
-            <div class="cta text-center">
+            <div class="faq-contact-box">
 
-                <i class="bi bi-controller fs-1 text-info"></i>
+
+                <i class="bi bi-question-circle text-info" style="font-size: 3rem;"></i>
+
 
                 <h2 class="mt-3">
-                    Ready to Join NexArena?
+
+                    Still Have Questions?
+
                 </h2>
 
-                <p class="text-secondary">
-                    Become part of the community and compete with fellow gamers.
+
+                <p>
+
+                    Can't find the answer you're looking for?
+                    Contact the NexArena team and we'll be happy
+                    to help.
+
                 </p>
 
-                <a href="registration.html" class="btn btn-main btn-lg">
-                    Join NexArena
+
+                <a href="contact.html" class="btn btn-main btn-lg">
+
+                    <i class="bi bi-envelope"></i>
+
+                    Contact Us
+
                 </a>
+
 
             </div>
 
@@ -700,226 +1027,84 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
      FOOTER
-========================= -->
+====================================================== -->
 
-<footer>
+    <footer>
 
-    <div class="container text-center">
-
-        <h5 class="text-white">
-
-            <i class="bi bi-controller"></i>
-
-            NexArena
-
-        </h5>
+        <div class="container text-center">
 
 
-        <p class="mt-3">
+            <h5 class="text-white">
 
-            Play. Compete. Connect.
+                <i class="bi bi-controller"></i>
 
-        </p>
+                NexArena
 
-
-        <!-- SOCIAL MEDIA LINKS -->
-
-        <div class="mb-3">
-
-            <!-- Instagram -->
-
-            <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <i class="bi bi-instagram"></i>
-                Instagram
-            </a>
+            </h5>
 
 
-            <!-- Discord -->
+            <p class="mt-3">
 
-            <a
-                href="https://discord.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <i class="bi bi-discord"></i>
-                Discord
-            </a>
+                Play. Compete. Connect.
+
+            </p>
 
 
-            <!-- YouTube -->
+            <div class="mb-3">
 
-            <a
-                href="https://www.youtube.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <i class="bi bi-youtube"></i>
-                YouTube
-            </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+
+                    <i class="bi bi-instagram"></i>
+
+                    Instagram
+
+                </a>
+
+
+                <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">
+
+                    <i class="bi bi-discord"></i>
+
+                    Discord
+
+                </a>
+
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+
+                    <i class="bi bi-youtube"></i>
+
+                    YouTube
+
+                </a>
+
+
+            </div>
+
+
+            <p class="mb-0">
+
+                &copy; 2026 NexArena.
+                All Rights Reserved.
+
+            </p>
+
 
         </div>
 
-
-        <p class="mb-0">
-
-            &copy; 2026 NexArena.
-            All Rights Reserved.
-
-        </p>
+    </footer>
 
 
-    </div>
 
-</footer>
+    <!-- =====================================================
+     BOOTSTRAP JAVASCRIPT
+====================================================== -->
 
-    
-
-
-    <!-- =========================
-     BOOTSTRAP JS
-========================= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- =========================
-     FORM VALIDATION
-========================= -->
-    <script>
-
-        const contactForm =
-            document.getElementById("contactForm");
-
-        const formMessage =
-            document.getElementById("formMessage");
-
-
-        contactForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-
-                let isValid = true;
-
-
-                const requiredFields =
-                    contactForm.querySelectorAll("[required]");
-
-
-                requiredFields.forEach(function (field) {
-
-                    if (!field.value.trim()) {
-
-                        field.classList.add("is-invalid");
-
-                        isValid = false;
-
-                    } else {
-
-                        field.classList.remove("is-invalid");
-                        field.classList.add("is-valid");
-
-                    }
-
-                });
-
-
-                // Email validation
-
-                const email =
-                    document.getElementById("email");
-
-                const emailPattern =
-                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-                if (
-                    email.value.trim() !== "" &&
-                    !emailPattern.test(email.value)
-                ) {
-
-                    email.classList.add("is-invalid");
-
-                    email.classList.remove("is-valid");
-
-                    isValid = false;
-
-                }
-
-
-                if (isValid) {
-
-                    formMessage.style.display = "block";
-
-                    contactForm.reset();
-
-
-                    requiredFields.forEach(function (field) {
-
-                        field.classList.remove("is-valid");
-
-                    });
-
-
-                    window.scrollTo({
-                        top: formMessage.offsetTop - 100,
-                        behavior: "smooth"
-                    });
-
-                } else {
-
-                    formMessage.style.display = "none";
-
-                }
-
-            }
-        );
-
-
-        // Remove validation warning when user starts typing
-
-        const formFields =
-            contactForm.querySelectorAll("input, select, textarea");
-
-
-        formFields.forEach(function (field) {
-
-            field.addEventListener(
-                "input",
-                function () {
-
-                    if (field.value.trim() !== "") {
-
-                        field.classList.remove("is-invalid");
-
-                    }
-
-                }
-            );
-
-            field.addEventListener(
-                "change",
-                function () {
-
-                    if (field.value.trim() !== "") {
-
-                        field.classList.remove("is-invalid");
-
-                    }
-
-                }
-            );
-
-        });
-
-    </script>
 
 
 </body>
