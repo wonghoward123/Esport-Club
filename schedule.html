@@ -15,7 +15,7 @@
 
     <!-- =========================
          BOOTSTRAP CSS
-    ========================= -->
+    ========================== -->
 
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -25,7 +25,7 @@
 
     <!-- =========================
          BOOTSTRAP ICONS
-    ========================= -->
+    ========================== -->
 
     <link
         rel="stylesheet"
@@ -35,17 +35,13 @@
 
     <!-- =========================
          SHARED CSS
-    ========================= -->
+    ========================== -->
 
     <link
         rel="stylesheet"
         href="css/style.css"
     >
 
-
-    <!-- =========================
-         PAGE-SPECIFIC CSS
-    ========================= -->
 
     <style>
 
@@ -214,7 +210,74 @@
 
 
         /* =========================================
-           EVENT STATUS
+           EVENT TYPE BADGES
+        ========================================= */
+
+        .status-event {
+
+            display: inline-block;
+
+            padding: 6px 10px;
+
+            border-radius: 5px;
+
+            font-size: 0.72rem;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.3px;
+
+        }
+
+
+        /* TOURNAMENT */
+
+        .status-tournament {
+
+            background-color: #22c55e;
+
+            color: #ffffff;
+
+        }
+
+
+        /* TRAINING */
+
+        .status-training {
+
+            background-color: #3b82f6;
+
+            color: #ffffff;
+
+        }
+
+
+        /* COMMUNITY */
+
+        .status-community {
+
+            background-color: #8b5cf6;
+
+            color: #ffffff;
+
+        }
+
+
+        /* WORKSHOP */
+
+        .status-workshop {
+
+            background-color: #f59e0b;
+
+            color: #000000;
+
+        }
+
+
+        /* =========================================
+           LIVE NOW
         ========================================= */
 
         .status-live {
@@ -238,24 +301,9 @@
         }
 
 
-        .status-upcoming {
-
-            display: inline-block;
-
-            background-color: #ffc107;
-
-            color: #000000;
-
-            padding: 6px 10px;
-
-            border-radius: 5px;
-
-            font-size: 0.72rem;
-
-            font-weight: bold;
-
-        }
-
+        /* =========================================
+           ENDED
+        ========================================= */
 
         .status-ended {
 
@@ -279,29 +327,30 @@
         @keyframes livePulse {
 
             0% {
-
                 opacity: 1;
-
             }
 
             50% {
-
                 opacity: 0.65;
-
             }
 
             100% {
-
                 opacity: 1;
-
             }
 
         }
 
 
         /* =========================================
-           LIVE EVENT CARD
+           EVENT CARD
         ========================================= */
+
+        .event-card {
+
+            transition: 0.3s;
+
+        }
+
 
         .event-card.event-live {
 
@@ -313,10 +362,6 @@
 
         }
 
-
-        /* =========================================
-           ENDED EVENT CARD
-        ========================================= */
 
         .event-card.event-ended {
 
@@ -360,2567 +405,553 @@
 </head>
 
 
-
 <body>
 
 
-    <!-- =========================
-         NAVIGATION BAR
-    ========================= -->
+<!-- =====================================================
+     NAVIGATION BAR
+====================================================== -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 
-        <div class="container">
+    <div class="container">
 
 
-            <!-- BRAND -->
-
-            <a
-                class="navbar-brand"
-                href="index.html"
-            >
-
-                <i class="bi bi-controller"></i>
-
-                NexArena
-
-            </a>
-
-
-            <!-- MOBILE BUTTON -->
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-
-            <!-- NAVIGATION LINKS -->
-
-            <div
-                class="collapse navbar-collapse"
-                id="mainNavbar"
-            >
-
-                <ul class="navbar-nav ms-auto">
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="index.html"
-                        >
-                            Home
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="about.html"
-                        >
-                            About
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="games.html"
-                        >
-                            Games
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="players.html"
-                        >
-                            Players
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="teams.html"
-                        >
-                            Teams
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="tournaments.html"
-                        >
-                            Tournaments
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link active"
-                            href="schedule.html"
-                        >
-                            Schedule
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="faq.html"
-                        >
-                            FAQ
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="contact.html"
-                        >
-                            Contact
-                        </a>
-
-                    </li>
-
-
-                </ul>
-
-
-                <!-- AUTH BUTTONS -->
-
-                <div class="nav-auth">
-
-
-                    <a
-                        href="login.html"
-                        class="nav-login"
-                    >
-                        Login
-                    </a>
-
-
-                    <a
-                        href="registration.html"
-                        class="nav-register"
-                    >
-                        Register
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </nav>
-
-
-
-    <!-- =========================
-         PAGE HEADER
-    ========================= -->
-
-    <section class="schedule-header">
-
-        <div class="container text-center">
-
-
-            <h1>
-
-                Event <span>Schedule</span>
-
-            </h1>
-
-
-            <p>
-
-                Stay updated with upcoming tournaments,
-                training sessions, community activities
-                and other NexArena events.
-
-            </p>
-
-
-
-            <!-- =========================
-                 TIME DASHBOARD
-            ========================= -->
-
-            <div class="time-dashboard">
-
-
-                <div class="row g-4 align-items-center">
-
-
-                    <!-- CURRENT TIME -->
-
-                    <div class="col-lg-6 text-lg-start text-center">
-
-
-                        <div class="time-label">
-
-                            Current NexArena Time
-
-                        </div>
-
-
-                        <div
-                            class="live-time"
-                            id="liveTime"
-                        >
-
-                            Loading...
-
-                        </div>
-
-
-                        <div
-                            class="live-date"
-                            id="liveDate"
-                        >
-
-                            Loading...
-
-                        </div>
-
-
-                        <div
-                            class="time-zone"
-                            id="timeZone"
-                        >
-
-                            Asia/Kuala_Lumpur (UTC+08:00)
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <!-- NEXT EVENT -->
-
-                    <div class="col-lg-6">
-
-
-                        <div class="next-event-box text-start">
-
-
-                            <div class="next-event-label">
-
-                                Next Event
-
-                            </div>
-
-
-                            <div
-                                class="next-event-name"
-                                id="nextEventName"
-                            >
-
-                                Searching...
-
-                            </div>
-
-
-                            <div
-                                class="next-event-meta"
-                                id="nextEventDate"
-                            >
-
-                                <i
-                                    class="bi bi-calendar-event"
-                                ></i>
-
-                                Loading...
-
-                            </div>
-
-
-                            <div
-                                class="next-event-meta"
-                                id="nextEventLocation"
-                            >
-
-                                <i
-                                    class="bi bi-geo-alt"
-                                ></i>
-
-                                Loading...
-
-                            </div>
-
-
-                            <div
-                                class="countdown"
-                                id="nextEventCountdown"
-                            >
-
-                                Calculating...
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         FILTER SECTION
-    ========================= -->
-
-    <section class="py-5">
-
-        <div class="container">
-
-
-            <div class="schedule-filter">
-
-
-                <div class="row g-4">
-
-
-                    <!-- GAME FILTER -->
-
-                    <div class="col-md-6">
-
-
-                        <label
-                            for="gameFilter"
-                            class="form-label"
-                        >
-
-                            <i
-                                class="bi bi-controller"
-                            ></i>
-
-                            Filter by Game
-
-                        </label>
-
-
-                        <select
-                            id="gameFilter"
-                            class="form-select"
-                        >
-
-                            <option value="all">
-                                All Games
-                            </option>
-
-                            <option value="valorant">
-                                Valorant
-                            </option>
-
-                            <option value="cs2">
-                                Counter-Strike 2
-                            </option>
-
-                            <option value="pubg">
-                                PUBG
-                            </option>
-
-                            <option value="hok">
-                                Honor of Kings
-                            </option>
-
-                            <option value="dota2">
-                                DOTA 2
-                            </option>
-
-                            <option value="fc">
-                                EA Sports FC
-                            </option>
-
-                            <option value="rocket">
-                                Rocket League
-                            </option>
-
-                            <option value="various">
-                                Various Games
-                            </option>
-
-                        </select>
-
-
-                    </div>
-
-
-
-                    <!-- EVENT TYPE FILTER -->
-
-                    <div class="col-md-6">
-
-
-                        <label
-                            for="typeFilter"
-                            class="form-label"
-                        >
-
-                            <i
-                                class="bi bi-calendar-event"
-                            ></i>
-
-                            Filter by Event Type
-
-                        </label>
-
-
-                        <select
-                            id="typeFilter"
-                            class="form-select"
-                        >
-
-                            <option value="all">
-                                All Events
-                            </option>
-
-                            <option value="tournament">
-                                Tournament
-                            </option>
-
-                            <option value="training">
-                                Training
-                            </option>
-
-                            <option value="community">
-                                Community
-                            </option>
-
-                            <option value="workshop">
-                                Workshop
-                            </option>
-
-                        </select>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =========================
-                 EVENT LIST
-            ========================= -->
-
-            <div
-                class="row g-4"
-                id="eventContainer"
-            >
-
-
-                <!-- =====================================
-                     01 - ROCKET LEAGUE
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-02"
-                    data-start="2026-10-02T15:00:00+08:00"
-                    data-end="2026-10-02T18:00:00+08:00"
-                    data-game="rocket"
-                    data-type="tournament"
-                    data-event-name="Rocket League: Turbo Rush"
-                    data-location="Online"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-
-                                <span class="day">
-                                    02
-                                </span>
-
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    Rocket League:
-                                    Turbo Rush
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i
-                                class="bi bi-lightning-charge"
-                            ></i>
-
-                            Rocket League
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            3:00 PM – 6:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-globe"></i>
-
-                            Online
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            12 Teams
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=rocket-turbo"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     02 - VALORANT TRAINING
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-04"
-                    data-start="2026-10-04T17:00:00+08:00"
-                    data-end="2026-10-04T19:00:00+08:00"
-                    data-game="valorant"
-                    data-type="training"
-                    data-event-name="Valorant: Aim Lab After Dark"
-                    data-location="Gaming Lab"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    04
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    Valorant:
-                                    Aim Lab After Dark
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            Valorant
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            5:00 PM – 7:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Gaming Lab
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            Team Members
-
-                        </p>
-
-
-                        <button
-                            type="button"
-                            class="
-                                btn
-                                btn-outline-light
-                                w-100
-                                mt-3
-                            "
-                            onclick="
-                                showEventDetails(
-                                    'Valorant: Aim Lab After Dark',
-                                    'October 4, 2026',
-                                    'Valorant',
-                                    '5:00 PM – 7:00 PM',
-                                    'Gaming Lab',
-                                    'A focused training session covering aim practice, communication, positioning and team coordination.'
-                                )
-                            "
-                        >
-
-                            View Details
-
-                        </button>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     03 - MIDNIGHT MAYHEM
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-06"
-                    data-start="2026-10-06T19:00:00+08:00"
-                    data-end="2026-10-06T22:00:00+08:00"
-                    data-game="various"
-                    data-type="community"
-                    data-event-name="NexArena Midnight Mayhem"
-                    data-location="Online / Discord"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    06
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    NexArena
-                                    Midnight Mayhem
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            Various Games
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            7:00 PM – 10:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-discord"></i>
-
-                            Online / Discord
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            Open to Members
-
-                        </p>
-
-
-                        <button
-                            type="button"
-                            class="
-                                btn
-                                btn-outline-light
-                                w-100
-                                mt-3
-                            "
-                            onclick="
-                                showEventDetails(
-                                    'NexArena Midnight Mayhem',
-                                    'October 6, 2026',
-                                    'Various Games',
-                                    '7:00 PM – 10:00 PM',
-                                    'Online / Discord',
-                                    'A relaxed community night featuring custom matches, party games, mini challenges and friendly competition.'
-                                )
-                            "
-                        >
-
-                            View Details
-
-                        </button>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     04 - CLUTCH BLUEPRINT
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-08"
-                    data-start="2026-10-08T15:00:00+08:00"
-                    data-end="2026-10-08T17:00:00+08:00"
-                    data-game="various"
-                    data-type="workshop"
-                    data-event-name="The Clutch Blueprint"
-                    data-location="Meeting Room"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    08
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    The Clutch Blueprint
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            Various Games
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            3:00 PM – 5:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Meeting Room
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-person"></i>
-
-                            Open to Members
-
-                        </p>
-
-
-                        <button
-                            type="button"
-                            class="
-                                btn
-                                btn-outline-light
-                                w-100
-                                mt-3
-                            "
-                            onclick="
-                                showEventDetails(
-                                    'The Clutch Blueprint',
-                                    'October 8, 2026',
-                                    'Various Games',
-                                    '3:00 PM – 5:00 PM',
-                                    'Meeting Room',
-                                    'A strategy workshop covering competitive decision-making, communication, teamwork and clutch situations.'
-                                )
-                            "
-                        >
-
-                            View Details
-
-                        </button>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     05 - VALORANT NEON ASCENSION
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-20"
-                    data-start="2026-10-20T14:00:00+08:00"
-                    data-end="2026-10-20T18:00:00+08:00"
-                    data-game="valorant"
-                    data-type="tournament"
-                    data-event-name="Valorant: Neon Ascension"
-                    data-location="Main Arena"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    20
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    Valorant:
-                                    Neon Ascension
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            Valorant
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            2:00 PM – 6:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Main Arena
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            16 Teams
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=valorant-neon"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     06 - CS2 TACTICAL LOCKDOWN
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-22"
-                    data-start="2026-10-22T14:00:00+08:00"
-                    data-end="2026-10-22T18:00:00+08:00"
-                    data-game="cs2"
-                    data-type="tournament"
-                    data-event-name="CS2: Tactical Lockdown"
-                    data-location="Main Arena"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    22
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    CS2:
-                                    Tactical Lockdown
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            Counter-Strike 2
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            2:00 PM – 6:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Main Arena
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            12 Teams
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=cs2-lockdown"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     07 - PUBG LAST SQUAD
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-24"
-                    data-start="2026-10-24T15:00:00+08:00"
-                    data-end="2026-10-24T19:00:00+08:00"
-                    data-game="pubg"
-                    data-type="tournament"
-                    data-event-name="PUBG: Last Squad Standing"
-                    data-location="Online"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    24
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    PUBG:
-                                    Last Squad Standing
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            PUBG
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            3:00 PM – 7:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-globe"></i>
-
-                            Online
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            20 Teams
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=pubg-last-squad"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     08 - HONOR OF KINGS
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-26"
-                    data-start="2026-10-26T14:00:00+08:00"
-                    data-end="2026-10-26T18:00:00+08:00"
-                    data-game="hok"
-                    data-type="tournament"
-                    data-event-name="Honor of Kings: Rise of Champions"
-                    data-location="Online"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    26
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    Honor of Kings:
-                                    Rise of Champions
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-phone"></i>
-
-                            Honor of Kings
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            2:00 PM – 6:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-globe"></i>
-
-                            Online
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            12 Teams
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=hok-rise"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     09 - DOTA 2
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-28"
-                    data-start="2026-10-28T14:00:00+08:00"
-                    data-end="2026-10-28T19:00:00+08:00"
-                    data-game="dota2"
-                    data-type="tournament"
-                    data-event-name="DOTA 2: Battle for the Throne"
-                    data-location="Online"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    28
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    DOTA 2:
-                                    Battle for the Throne
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            DOTA 2
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            2:00 PM – 7:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-globe"></i>
-
-                            Online
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            10 Teams
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=dota2-throne"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     10 - EA FC
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-10-30"
-                    data-start="2026-10-30T15:00:00+08:00"
-                    data-end="2026-10-30T17:00:00+08:00"
-                    data-game="fc"
-                    data-type="tournament"
-                    data-event-name="EA FC: Road to Glory"
-                    data-location="Main Arena"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    30
-                                </span>
-
-                                <span class="month">
-                                    OCT
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    EA FC:
-                                    Road to Glory
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-trophy"></i>
-
-                            EA Sports FC
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            3:00 PM – 5:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Main Arena
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            16 Players
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=fc-road"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     11 - VALO NIGHT
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-11-02"
-                    data-start="2026-11-02T19:00:00+08:00"
-                    data-end="2026-11-02T23:00:00+08:00"
-                    data-game="valorant"
-                    data-type="community"
-                    data-event-name="Valo Night: Neon Rush"
-                    data-location="Gaming Lab"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    02
-                                </span>
-
-                                <span class="month">
-                                    NOV
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    Valo Night:
-                                    Neon Rush
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            Valorant
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            7:00 PM – 11:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Gaming Lab
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            Open to Members
-
-                        </p>
-
-
-                        <button
-                            type="button"
-                            class="
-                                btn
-                                btn-outline-light
-                                w-100
-                                mt-3
-                            "
-                            onclick="
-                                showEventDetails(
-                                    'Valo Night: Neon Rush',
-                                    'November 2, 2026',
-                                    'Valorant',
-                                    '7:00 PM – 11:00 PM',
-                                    'Gaming Lab',
-                                    'A special Valorant community night featuring custom matches, aim challenges and intense team battles.'
-                                )
-                            "
-                        >
-
-                            View Details
-
-                        </button>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     12 - CS2 CLUTCH PROTOCOL
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-11-08"
-                    data-start="2026-11-08T14:00:00+08:00"
-                    data-end="2026-11-08T19:00:00+08:00"
-                    data-game="cs2"
-                    data-type="tournament"
-                    data-event-name="CS2: Clutch Protocol"
-                    data-location="Main Arena"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    08
-                                </span>
-
-                                <span class="month">
-                                    NOV
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    CS2:
-                                    Clutch Protocol
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            Counter-Strike 2
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            2:00 PM – 7:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Main Arena
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            16 Teams
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=cs2-clutch"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     13 - PUBG SURVIVAL PROTOCOL
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-11-14"
-                    data-start="2026-11-14T15:00:00+08:00"
-                    data-end="2026-11-14T20:00:00+08:00"
-                    data-game="pubg"
-                    data-type="tournament"
-                    data-event-name="PUBG: Survival Protocol"
-                    data-location="Online"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    14
-                                </span>
-
-                                <span class="month">
-                                    NOV
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    PUBG:
-                                    Survival Protocol
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            PUBG
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            3:00 PM – 8:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-globe"></i>
-
-                            Online
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-people"></i>
-
-                            20 Teams
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=pubg-survival"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     14 - ALL STAR NIGHT
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-11-21"
-                    data-start="2026-11-21T18:00:00+08:00"
-                    data-end="2026-11-21T22:00:00+08:00"
-                    data-game="various"
-                    data-type="community"
-                    data-event-name="NexArena All-Star Night"
-                    data-location="Main Arena"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    21
-                                </span>
-
-                                <span class="month">
-                                    NOV
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    NexArena
-                                    All-Star Night
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-controller"></i>
-
-                            Various Games
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            6:00 PM – 10:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Main Arena
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-stars"></i>
-
-                            Special Event
-
-                        </p>
-
-
-                        <button
-                            type="button"
-                            class="
-                                btn
-                                btn-outline-light
-                                w-100
-                                mt-3
-                            "
-                            onclick="
-                                showEventDetails(
-                                    'NexArena All-Star Night',
-                                    'November 21, 2026',
-                                    'Various Games',
-                                    '6:00 PM – 10:00 PM',
-                                    'Main Arena',
-                                    'A special night featuring exhibition matches, player showcases, mini-games and community challenges.'
-                                )
-                            "
-                        >
-
-                            View Details
-
-                        </button>
-
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     15 - FINAL STRIKE
-                ====================================== -->
-
-                <div
-                    class="col-md-6 col-lg-4 event-item"
-                    data-date="2026-11-29"
-                    data-start="2026-11-29T14:00:00+08:00"
-                    data-end="2026-11-29T20:00:00+08:00"
-                    data-game="various"
-                    data-type="tournament"
-                    data-event-name="NexArena: Final Strike"
-                    data-location="Main Arena"
-                >
-
-                    <div class="event-card">
-
-
-                        <div
-                            class="
-                                d-flex
-                                align-items-start
-                                gap-3
-                                mb-4
-                            "
-                        >
-
-                            <div class="event-date">
-
-                                <span class="day">
-                                    29
-                                </span>
-
-                                <span class="month">
-                                    NOV
-                                </span>
-
-                            </div>
-
-
-                            <div>
-
-
-                                <span class="event-status">
-
-                                    <span
-                                        class="status-upcoming"
-                                    >
-                                        UPCOMING
-                                    </span>
-
-                                </span>
-
-
-                                <h4
-                                    class="event-title mt-2"
-                                >
-
-                                    NexArena:
-                                    Final Strike
-
-                                </h4>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-trophy"></i>
-
-                            Various Games
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-clock"></i>
-
-                            2:00 PM – 8:00 PM
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Main Arena
-
-                        </p>
-
-
-                        <p class="event-info">
-
-                            <i class="bi bi-stars"></i>
-
-                            Grand Finale
-
-                        </p>
-
-
-                        <a
-                            href="tournament-registration.html?event=final-strike"
-                            class="
-                                btn
-                                btn-main
-                                w-100
-                                mt-3
-                            "
-                        >
-
-                            Register Now
-
-                        </a>
-
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         EVENT DETAILS MODAL
-    ========================= -->
-
-    <div
-        class="modal fade"
-        id="eventDetailsModal"
-        tabindex="-1"
-        aria-labelledby="eventDetailsTitle"
-        aria-hidden="true"
-    >
-
-        <div
-            class="
-                modal-dialog
-                modal-dialog-centered
-            "
+        <a
+            class="navbar-brand"
+            href="index.html"
         >
 
+            <i class="bi bi-controller"></i>
 
-            <div
-                class="modal-content"
-                style="
-                    background-color: #151522;
-                    color: #ffffff;
-                    border: 1px solid #29293a;
-                    border-radius: 15px;
-                "
-            >
+            NexArena
+
+        </a>
 
 
-                <!-- MODAL HEADER -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
 
-                <div class="modal-header">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
 
 
-                    <h5
-                        class="modal-title"
-                        id="eventDetailsTitle"
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="games.html"
+                    >
+                        Games
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="players.html"
+                    >
+                        Players
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="teams.html"
+                    >
+                        Teams
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="tournaments.html"
+                    >
+                        Tournaments
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="schedule.html"
+                    >
+                        Schedule
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="faq.html"
+                    >
+                        FAQ
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+            <div class="nav-auth">
+
+
+                <a
+                    href="login.html"
+                    class="nav-login"
+                >
+                    Login
+                </a>
+
+
+                <a
+                    href="registration.html"
+                    class="nav-register"
+                >
+                    Register
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PAGE HEADER
+====================================================== -->
+
+<section class="schedule-header">
+
+    <div class="container text-center">
+
+
+        <h1>
+
+            Event <span>Schedule</span>
+
+        </h1>
+
+
+        <p>
+
+            Stay updated with upcoming tournaments,
+            training sessions, community activities
+            and other NexArena events.
+
+        </p>
+
+
+        <!-- LIVE TIME DASHBOARD -->
+
+        <div class="time-dashboard">
+
+            <div class="row g-4 align-items-center">
+
+
+                <!-- CURRENT TIME -->
+
+                <div class="col-lg-6 text-lg-start text-center">
+
+
+                    <div class="time-label">
+
+                        Current NexArena Time
+
+                    </div>
+
+
+                    <div
+                        class="live-time"
+                        id="liveTime"
+                    >
+                        Loading...
+                    </div>
+
+
+                    <div
+                        class="live-date"
+                        id="liveDate"
+                    >
+                        Loading...
+                    </div>
+
+
+                    <div
+                        class="time-zone"
+                        id="timeZone"
                     >
 
-                        Event Details
+                        Asia/Kuala_Lumpur
 
-                    </h5>
-
-
-                    <button
-                        type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                    ></button>
+                    </div>
 
 
                 </div>
 
 
 
-                <!-- MODAL BODY -->
+                <!-- NEXT EVENT -->
 
-                <div class="modal-body">
-
-
-                    <p class="event-info">
-
-                        <i class="bi bi-calendar"></i>
-
-                        <strong>Date:</strong>
-
-                        <span
-                            id="eventDetailsDate"
-                        ></span>
-
-                    </p>
+                <div class="col-lg-6">
 
 
-                    <p class="event-info">
+                    <div class="next-event-box text-start">
+
+
+                        <div class="next-event-label">
+
+                            Next Event
+
+                        </div>
+
+
+                        <div
+                            class="next-event-name"
+                            id="nextEventName"
+                        >
+
+                            Searching...
+
+                        </div>
+
+
+                        <div
+                            class="next-event-meta"
+                            id="nextEventDate"
+                        >
+
+                            <i class="bi bi-calendar-event"></i>
+
+                            Loading...
+
+                        </div>
+
+
+                        <div
+                            class="next-event-meta"
+                            id="nextEventLocation"
+                        >
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            Loading...
+
+                        </div>
+
+
+                        <div
+                            class="countdown"
+                            id="nextEventCountdown"
+                        >
+
+                            Calculating...
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FILTER SECTION
+====================================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+
+        <div class="schedule-filter">
+
+
+            <div class="row g-4">
+
+
+                <!-- GAME FILTER -->
+
+                <div class="col-md-6">
+
+
+                    <label
+                        for="gameFilter"
+                        class="form-label"
+                    >
 
                         <i class="bi bi-controller"></i>
 
-                        <strong>Game:</strong>
+                        Filter by Game
 
-                        <span
-                            id="eventDetailsGame"
-                        ></span>
+                    </label>
+
+
+                    <select
+                        id="gameFilter"
+                        class="form-select"
+                    >
+
+                        <option value="all">
+                            All Games
+                        </option>
+
+                        <option value="valorant">
+                            Valorant
+                        </option>
+
+                        <option value="cs2">
+                            Counter-Strike 2
+                        </option>
+
+                        <option value="pubg">
+                            PUBG
+                        </option>
+
+                        <option value="hok">
+                            Honor of Kings
+                        </option>
+
+                        <option value="dota2">
+                            DOTA 2
+                        </option>
+
+                        <option value="fc">
+                            EA Sports FC
+                        </option>
+
+                        <option value="rocket">
+                            Rocket League
+                        </option>
+
+                        <option value="various">
+                            Various Games
+                        </option>
+
+                    </select>
+
+
+                </div>
+
+
+
+                <!-- EVENT TYPE FILTER -->
+
+                <div class="col-md-6">
+
+
+                    <label
+                        for="typeFilter"
+                        class="form-label"
+                    >
+
+                        <i class="bi bi-calendar-event"></i>
+
+                        Filter by Event Type
+
+                    </label>
+
+
+                    <select
+                        id="typeFilter"
+                        class="form-select"
+                    >
+
+                        <option value="all">
+                            All Events
+                        </option>
+
+                        <option value="tournament">
+                            Tournament
+                        </option>
+
+                        <option value="training">
+                            Training
+                        </option>
+
+                        <option value="community">
+                            Community
+                        </option>
+
+                        <option value="workshop">
+                            Workshop
+                        </option>
+
+                    </select>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             EVENT LIST
+        ================================================== -->
+
+        <div
+            class="row g-4"
+            id="eventContainer"
+        >
+
+
+            <!-- 1. ROCKET LEAGUE -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-02"
+                data-start="2026-10-02T15:00:00+08:00"
+                data-end="2026-10-02T18:00:00+08:00"
+                data-game="rocket"
+                data-type="tournament"
+                data-event-name="Rocket League: Turbo Rush"
+                data-location="Online"
+                data-registration="open"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                02
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                Rocket League:
+                                Turbo Rush
+
+                            </h4>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-lightning-charge"></i>
+
+                        Rocket League
 
                     </p>
 
@@ -2929,11 +960,118 @@
 
                         <i class="bi bi-clock"></i>
 
-                        <strong>Time:</strong>
+                        3:00 PM – 6:00 PM
 
-                        <span
-                            id="eventDetailsTime"
-                        ></span>
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-globe"></i>
+
+                        Online
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        12 Teams
+
+                    </p>
+
+
+                    <a
+                        href="tournamentRegistration.html?event=rocket-turbo"
+                        class="btn btn-main w-100 mt-3"
+                    >
+
+                        Register Now
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 2. VALORANT TRAINING -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-04"
+                data-start="2026-10-04T17:00:00+08:00"
+                data-end="2026-10-04T19:00:00+08:00"
+                data-game="valorant"
+                data-type="training"
+                data-event-name="Valorant: Aim Lab After Dark"
+                data-location="Gaming Lab"
+                data-registration="none"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                04
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-training"
+                                >
+                                    TRAINING
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                Valorant:
+                                Aim Lab After Dark
+
+                            </h4>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        Valorant
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        5:00 PM – 7:00 PM
 
                     </p>
 
@@ -2942,789 +1080,2426 @@
 
                         <i class="bi bi-geo-alt"></i>
 
-                        <strong>Venue:</strong>
-
-                        <span
-                            id="eventDetailsVenue"
-                        ></span>
+                        Gaming Lab
 
                     </p>
 
 
-                    <hr
-                        style="
-                            border-color: #29293a;
-                        "
-                    >
+                    <p class="event-info">
 
+                        <i class="bi bi-people"></i>
 
-                    <p
-                        class="event-info"
-                        id="eventDetailsDescription"
-                    ></p>
+                        Team Members
 
-
-                </div>
-
-
-
-                <!-- MODAL FOOTER -->
-
-                <div class="modal-footer">
+                    </p>
 
 
                     <button
                         type="button"
-                        class="btn btn-main"
-                        data-bs-dismiss="modal"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'Valorant: Aim Lab After Dark',
+                                'October 4, 2026',
+                                'Valorant',
+                                '5:00 PM – 7:00 PM',
+                                'Gaming Lab',
+                                'A focused training session covering aim practice, communication, positioning and team coordination.'
+                            )
+                        "
                     >
 
-                        Close
+                        View Details
 
                     </button>
 
 
                 </div>
 
+            </div>
+
+
+
+            <!-- 3. COMMUNITY -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-06"
+                data-start="2026-10-06T19:00:00+08:00"
+                data-end="2026-10-06T22:00:00+08:00"
+                data-game="various"
+                data-type="community"
+                data-event-name="NexArena Midnight Mayhem"
+                data-location="Online / Discord"
+                data-registration="none"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                06
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-community"
+                                >
+                                    COMMUNITY
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                NexArena
+                                Midnight Mayhem
+
+                            </h4>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        Various Games
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        7:00 PM – 10:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-discord"></i>
+
+                        Online / Discord
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        Open to Members
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'NexArena Midnight Mayhem',
+                                'October 6, 2026',
+                                'Various Games',
+                                '7:00 PM – 10:00 PM',
+                                'Online / Discord',
+                                'A relaxed community night featuring custom matches, party games, mini challenges and friendly competition.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
 
             </div>
+
+
+
+            <!-- 4. WORKSHOP -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-08"
+                data-start="2026-10-08T15:00:00+08:00"
+                data-end="2026-10-08T17:00:00+08:00"
+                data-game="various"
+                data-type="workshop"
+                data-event-name="The Clutch Blueprint"
+                data-location="Meeting Room"
+                data-registration="none"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                08
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-workshop"
+                                >
+                                    WORKSHOP
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                The Clutch Blueprint
+
+                            </h4>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        Various Games
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        3:00 PM – 5:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Meeting Room
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-person"></i>
+
+                        Open to Members
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'The Clutch Blueprint',
+                                'October 8, 2026',
+                                'Various Games',
+                                '3:00 PM – 5:00 PM',
+                                'Meeting Room',
+                                'A strategy workshop covering competitive decision-making, communication, teamwork and clutch situations.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 5. VALORANT TOURNAMENT -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-20"
+                data-start="2026-10-20T14:00:00+08:00"
+                data-end="2026-10-20T18:00:00+08:00"
+                data-game="valorant"
+                data-type="tournament"
+                data-event-name="Valorant: Neon Ascension"
+                data-location="Main Arena"
+                data-registration="open"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                20
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                Valorant:
+                                Neon Ascension
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        Valorant
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        2:00 PM – 6:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Main Arena
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        16 Teams
+
+                    </p>
+
+
+                    <a
+                        href="tournamentRegistration.html?event=valorant-neon"
+                        class="btn btn-main w-100 mt-3"
+                    >
+
+                        Register Now
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 6. CS2 TOURNAMENT -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-22"
+                data-start="2026-10-22T14:00:00+08:00"
+                data-end="2026-10-22T18:00:00+08:00"
+                data-game="cs2"
+                data-type="tournament"
+                data-event-name="CS2: Tactical Lockdown"
+                data-location="Main Arena"
+                data-registration="open"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                22
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                CS2:
+                                Tactical Lockdown
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        Counter-Strike 2
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        2:00 PM – 6:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Main Arena
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        12 Teams
+
+                    </p>
+
+
+                    <a
+                        href="tournamentRegistration.html?event=cs2-lockdown"
+                        class="btn btn-main w-100 mt-3"
+                    >
+
+                        Register Now
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 7. PUBG TOURNAMENT -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-24"
+                data-start="2026-10-24T15:00:00+08:00"
+                data-end="2026-10-24T19:00:00+08:00"
+                data-game="pubg"
+                data-type="tournament"
+                data-event-name="PUBG: Last Squad Standing"
+                data-location="Online"
+                data-registration="open"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                24
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                PUBG:
+                                Last Squad Standing
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        PUBG
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        3:00 PM – 7:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-globe"></i>
+
+                        Online
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        20 Teams
+
+                    </p>
+
+
+                    <a
+                        href="tournamentRegistration.html?event=pubg-last-squad"
+                        class="btn btn-main w-100 mt-3"
+                    >
+
+                        Register Now
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 8. HONOR OF KINGS -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-26"
+                data-start="2026-10-26T14:00:00+08:00"
+                data-end="2026-10-26T18:00:00+08:00"
+                data-game="hok"
+                data-type="tournament"
+                data-event-name="Honor of Kings: Rise of Champions"
+                data-location="Online"
+                data-registration="closed"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                26
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                Honor of Kings:
+                                Rise of Champions
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-phone"></i>
+
+                        Honor of Kings
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        2:00 PM – 6:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-globe"></i>
+
+                        Online
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        12 Teams
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'Honor of Kings: Rise of Champions',
+                                'October 26, 2026',
+                                'Honor of Kings',
+                                '2:00 PM – 6:00 PM',
+                                'Online',
+                                'Build the perfect team, master your heroes and fight your way through the competition.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 9. DOTA 2 -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-28"
+                data-start="2026-10-28T14:00:00+08:00"
+                data-end="2026-10-28T19:00:00+08:00"
+                data-game="dota2"
+                data-type="tournament"
+                data-event-name="DOTA 2: Battle for the Throne"
+                data-location="Online"
+                data-registration="closed"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                28
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                DOTA 2:
+                                Battle for the Throne
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        DOTA 2
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        2:00 PM – 7:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-globe"></i>
+
+                        Online
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        10 Teams
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'DOTA 2: Battle for the Throne',
+                                'October 28, 2026',
+                                'DOTA 2',
+                                '2:00 PM – 7:00 PM',
+                                'Online',
+                                'Gather your strongest lineup and fight your way through a strategic DOTA 2 tournament for the ultimate crown.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 10. EA SPORTS FC -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-10-30"
+                data-start="2026-10-30T15:00:00+08:00"
+                data-end="2026-10-30T17:00:00+08:00"
+                data-game="fc"
+                data-type="tournament"
+                data-event-name="EA FC: Road to Glory"
+                data-location="Main Arena"
+                data-registration="closed"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                30
+                            </span>
+
+                            <span class="month">
+                                OCT
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                EA FC:
+                                Road to Glory
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-trophy"></i>
+
+                        EA Sports FC
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        3:00 PM – 5:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Main Arena
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        16 Players
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'EA FC: Road to Glory',
+                                'October 30, 2026',
+                                'EA Sports FC',
+                                '3:00 PM – 5:00 PM',
+                                'Main Arena',
+                                'A competitive football showdown featuring individual players battling through a tournament bracket.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 11. VALORANT COMMUNITY -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-11-02"
+                data-start="2026-11-02T19:00:00+08:00"
+                data-end="2026-11-02T23:00:00+08:00"
+                data-game="valorant"
+                data-type="community"
+                data-event-name="Valo Night: Neon Rush"
+                data-location="Gaming Lab"
+                data-registration="none"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                02
+                            </span>
+
+                            <span class="month">
+                                NOV
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-community"
+                                >
+                                    COMMUNITY
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                Valo Night:
+                                Neon Rush
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        Valorant
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        7:00 PM – 11:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Gaming Lab
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        Open to Members
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'Valo Night: Neon Rush',
+                                'November 2, 2026',
+                                'Valorant',
+                                '7:00 PM – 11:00 PM',
+                                'Gaming Lab',
+                                'A special Valorant community night featuring custom matches, aim challenges and intense team battles.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 12. CS2 CLUTCH -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-11-08"
+                data-start="2026-11-08T14:00:00+08:00"
+                data-end="2026-11-08T19:00:00+08:00"
+                data-game="cs2"
+                data-type="tournament"
+                data-event-name="CS2: Clutch Protocol"
+                data-location="Main Arena"
+                data-registration="open"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                08
+                            </span>
+
+                            <span class="month">
+                                NOV
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                CS2:
+                                Clutch Protocol
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        Counter-Strike 2
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        2:00 PM – 7:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Main Arena
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        16 Teams
+
+                    </p>
+
+
+                    <a
+                        href="tournamentRegistration.html?event=cs2-clutch"
+                        class="btn btn-main w-100 mt-3"
+                    >
+
+                        Register Now
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 13. PUBG SURVIVAL -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-11-14"
+                data-start="2026-11-14T15:00:00+08:00"
+                data-end="2026-11-14T20:00:00+08:00"
+                data-game="pubg"
+                data-type="tournament"
+                data-event-name="PUBG: Survival Protocol"
+                data-location="Online"
+                data-registration="closed"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                14
+                            </span>
+
+                            <span class="month">
+                                NOV
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                PUBG:
+                                Survival Protocol
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        PUBG
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        3:00 PM – 8:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-globe"></i>
+
+                        Online
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-people"></i>
+
+                        20 Teams
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'PUBG: Survival Protocol',
+                                'November 14, 2026',
+                                'PUBG',
+                                '3:00 PM – 8:00 PM',
+                                'Online',
+                                'A high-pressure battle royale event where every decision matters and only one squad survives the final circle.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 14. ALL STAR NIGHT -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-11-21"
+                data-start="2026-11-21T18:00:00+08:00"
+                data-end="2026-11-21T22:00:00+08:00"
+                data-game="various"
+                data-type="community"
+                data-event-name="NexArena All-Star Night"
+                data-location="Main Arena"
+                data-registration="none"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                21
+                            </span>
+
+                            <span class="month">
+                                NOV
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-community"
+                                >
+                                    COMMUNITY
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                NexArena
+                                All-Star Night
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-controller"></i>
+
+                        Various Games
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        6:00 PM – 10:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Main Arena
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-stars"></i>
+
+                        Special Event
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'NexArena All-Star Night',
+                                'November 21, 2026',
+                                'Various Games',
+                                '6:00 PM – 10:00 PM',
+                                'Main Arena',
+                                'A special night featuring exhibition matches, player showcases, mini-games and community challenges.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 15. FINAL STRIKE -->
+
+            <div
+                class="col-md-6 col-lg-4 event-item"
+                data-date="2026-11-29"
+                data-start="2026-11-29T14:00:00+08:00"
+                data-end="2026-11-29T20:00:00+08:00"
+                data-game="various"
+                data-type="tournament"
+                data-event-name="NexArena: Final Strike"
+                data-location="Main Arena"
+                data-registration="closed"
+            >
+
+                <div class="event-card">
+
+
+                    <div class="d-flex align-items-start gap-3 mb-4">
+
+                        <div class="event-date">
+
+                            <span class="day">
+                                29
+                            </span>
+
+                            <span class="month">
+                                NOV
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="event-status">
+
+                                <span
+                                    class="status-event status-tournament"
+                                >
+                                    TOURNAMENT
+                                </span>
+
+                            </span>
+
+
+                            <h4 class="event-title mt-2">
+
+                                NexArena:
+                                Final Strike
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-trophy"></i>
+
+                        Various Games
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-clock"></i>
+
+                        2:00 PM – 8:00 PM
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Main Arena
+
+                    </p>
+
+
+                    <p class="event-info">
+
+                        <i class="bi bi-stars"></i>
+
+                        Grand Finale
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-light w-100 mt-3"
+                        onclick="
+                            showEventDetails(
+                                'NexArena: Final Strike',
+                                'November 29, 2026',
+                                'Various Games',
+                                '2:00 PM – 8:00 PM',
+                                'Main Arena',
+                                'The final major tournament of the schedule, bringing together the best NexArena players for championship competition.'
+                            )
+                        "
+                    >
+
+                        View Details
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
 
         </div>
 
     </div>
 
+</section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
 
-    <footer>
+<!-- =====================================================
+     EVENT DETAILS MODAL
+====================================================== -->
 
-        <div class="container text-center">
+<div
+    class="modal fade"
+    id="eventDetailsModal"
+    tabindex="-1"
+    aria-labelledby="eventDetailsTitle"
+    aria-hidden="true"
+>
 
-
-            <h5 class="text-white">
-
-                <i class="bi bi-controller"></i>
-
-                NexArena
-
-            </h5>
+    <div class="modal-dialog modal-dialog-centered">
 
 
-            <p class="mt-3">
+        <div
+            class="modal-content"
+            style="
+                background-color: #151522;
+                color: #ffffff;
+                border: 1px solid #29293a;
+                border-radius: 15px;
+            "
+        >
 
-                Play. Compete. Connect.
 
-            </p>
-
-
-            <div class="mb-3">
+            <div class="modal-header">
 
 
-                <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <h5
+                    class="modal-title"
+                    id="eventDetailsTitle"
                 >
 
-                    <i class="bi bi-instagram"></i>
+                    Event Details
 
-                    Instagram
-
-                </a>
+                </h5>
 
 
-                <a
-                    href="https://discord.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <i class="bi bi-discord"></i>
-
-                    Discord
-
-                </a>
-
-
-                <a
-                    href="https://www.youtube.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <i class="bi bi-youtube"></i>
-
-                    YouTube
-
-                </a>
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
 
 
             </div>
 
 
-            <p class="mb-0">
+            <div class="modal-body">
 
-                &copy; 2026 NexArena.
-                All Rights Reserved.
 
-            </p>
+                <p class="event-info">
+
+                    <i class="bi bi-calendar"></i>
+
+                    <strong>Date:</strong>
+
+                    <span
+                        id="eventDetailsDate"
+                    ></span>
+
+                </p>
+
+
+                <p class="event-info">
+
+                    <i class="bi bi-controller"></i>
+
+                    <strong>Game:</strong>
+
+                    <span
+                        id="eventDetailsGame"
+                    ></span>
+
+                </p>
+
+
+                <p class="event-info">
+
+                    <i class="bi bi-clock"></i>
+
+                    <strong>Time:</strong>
+
+                    <span
+                        id="eventDetailsTime"
+                    ></span>
+
+                </p>
+
+
+                <p class="event-info">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <strong>Venue:</strong>
+
+                    <span
+                        id="eventDetailsVenue"
+                    ></span>
+
+                </p>
+
+
+                <hr
+                    style="
+                        border-color: #29293a;
+                    "
+                >
+
+
+                <p
+                    class="event-info"
+                    id="eventDetailsDescription"
+                ></p>
+
+
+            </div>
+
+
+            <div class="modal-footer">
+
+
+                <button
+                    type="button"
+                    class="btn btn-main"
+                    data-bs-dismiss="modal"
+                >
+
+                    Close
+
+                </button>
+
+
+            </div>
 
 
         </div>
 
-    </footer>
+    </div>
+
+</div>
 
 
 
-    <!-- =========================
-         BOOTSTRAP JAVASCRIPT
-    ========================= -->
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    ></script>
+<footer>
 
-
-
-    <!-- =========================
-         SCHEDULE JAVASCRIPT
-    ========================= -->
-
-    <script>
+    <div class="container text-center">
 
 
-        /* =========================================
-           CONFIGURATION
-        ========================================= */
+        <h5 class="text-white">
 
-        const TIMEZONE =
-            "Asia/Kuala_Lumpur";
+            <i class="bi bi-controller"></i>
 
+            NexArena
 
-        const TIME_API_URL =
-            "https://www.timeapi.io/api/Time/current/zone?timeZone=Asia/Kuala_Lumpur";
+        </h5>
 
 
-        const MALAYSIA_OFFSET =
-            "+08:00";
+        <p class="mt-3">
+
+            Play. Compete. Connect.
+
+        </p>
 
 
-
-        /* =========================================
-           GET ELEMENTS
-        ========================================= */
-
-        const gameFilter =
-            document.getElementById(
-                "gameFilter"
-            );
+        <div class="mb-3">
 
 
-        const typeFilter =
-            document.getElementById(
-                "typeFilter"
-            );
+            <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-instagram"></i>
+
+                Instagram
+
+            </a>
 
 
-        const eventContainer =
-            document.getElementById(
-                "eventContainer"
-            );
+            <a
+                href="https://discord.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-discord"></i>
+
+                Discord
+
+            </a>
 
 
-        const liveTime =
-            document.getElementById(
-                "liveTime"
-            );
+            <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-youtube"></i>
+
+                YouTube
+
+            </a>
 
 
-        const liveDate =
-            document.getElementById(
-                "liveDate"
-            );
+        </div>
 
 
-        const timeZone =
-            document.getElementById(
-                "timeZone"
-            );
+        <p class="mb-0">
+
+            &copy; 2026 NexArena.
+            All Rights Reserved.
+
+        </p>
 
 
-        const nextEventName =
-            document.getElementById(
-                "nextEventName"
-            );
+    </div>
 
-
-        const nextEventDate =
-            document.getElementById(
-                "nextEventDate"
-            );
-
-
-        const nextEventLocation =
-            document.getElementById(
-                "nextEventLocation"
-            );
-
-
-        const nextEventCountdown =
-            document.getElementById(
-                "nextEventCountdown"
-            );
-
-
-        let eventItems =
-            Array.from(
-                document.querySelectorAll(
-                    ".event-item"
-                )
-            );
-
-
-        let currentApiTime =
-            null;
-
-
-        let apiFetchedAt =
-            null;
-
-
-        let apiAvailable =
-            false;
+</footer>
 
 
 
-        /* =========================================
-           SORT EVENTS
-        ========================================= */
+<!-- =====================================================
+     BOOTSTRAP JS
+====================================================== -->
 
-        function sortEventsByDate() {
-
-
-            eventItems.sort(
-                function(a, b) {
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
 
 
-                    const dateA =
-                        new Date(
-                            a.dataset.start
-                        );
+
+<!-- =====================================================
+     SCHEDULE JAVASCRIPT
+====================================================== -->
+
+<script>
+
+    /* =========================================
+       CONFIGURATION
+    ========================================= */
+
+    const TIMEZONE =
+        "Asia/Kuala_Lumpur";
 
 
-                    const dateB =
-                        new Date(
-                            b.dataset.start
-                        );
+    const TIME_API_URL =
+        "https://www.timeapi.io/api/Time/current/zone?timeZone=Asia/Kuala_Lumpur";
 
 
-                    return dateA - dateB;
-
-                }
-            );
+    const MALAYSIA_OFFSET =
+        "+08:00";
 
 
-            eventItems.forEach(
-                function(event) {
 
-                    eventContainer.appendChild(
-                        event
+    /* =========================================
+       ELEMENTS
+    ========================================= */
+
+    const gameFilter =
+        document.getElementById(
+            "gameFilter"
+        );
+
+
+    const typeFilter =
+        document.getElementById(
+            "typeFilter"
+        );
+
+
+    const eventContainer =
+        document.getElementById(
+            "eventContainer"
+        );
+
+
+    const liveTime =
+        document.getElementById(
+            "liveTime"
+        );
+
+
+    const liveDate =
+        document.getElementById(
+            "liveDate"
+        );
+
+
+    const timeZone =
+        document.getElementById(
+            "timeZone"
+        );
+
+
+    const nextEventName =
+        document.getElementById(
+            "nextEventName"
+        );
+
+
+    const nextEventDate =
+        document.getElementById(
+            "nextEventDate"
+        );
+
+
+    const nextEventLocation =
+        document.getElementById(
+            "nextEventLocation"
+        );
+
+
+    const nextEventCountdown =
+        document.getElementById(
+            "nextEventCountdown"
+        );
+
+
+    let eventItems =
+        Array.from(
+            document.querySelectorAll(
+                ".event-item"
+            )
+        );
+
+
+    let currentApiTime =
+        null;
+
+
+    let apiFetchedAt =
+        null;
+
+
+    let apiAvailable =
+        false;
+
+
+
+    /* =========================================
+       SORT EVENTS
+    ========================================= */
+
+    function sortEventsByDate() {
+
+        eventItems.sort(
+            function (a, b) {
+
+                const dateA =
+                    new Date(
+                        a.dataset.start
                     );
 
+
+                const dateB =
+                    new Date(
+                        b.dataset.start
+                    );
+
+
+                return dateA - dateB;
+
+            }
+        );
+
+
+        eventItems.forEach(
+            function (event) {
+
+                eventContainer.appendChild(
+                    event
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================
+       FILTER EVENTS
+    ========================================= */
+
+    function filterEvents() {
+
+        const selectedGame =
+            gameFilter.value;
+
+
+        const selectedType =
+            typeFilter.value;
+
+
+        eventItems.forEach(
+            function (event) {
+
+                const eventGame =
+                    event.dataset.game;
+
+
+                const eventType =
+                    event.dataset.type;
+
+
+                const gameMatch =
+                    selectedGame === "all" ||
+                    selectedGame === eventGame;
+
+
+                const typeMatch =
+                    selectedType === "all" ||
+                    selectedType === eventType;
+
+
+                if (
+                    gameMatch &&
+                    typeMatch
+                ) {
+
+                    event.style.display = "";
+
                 }
+
+                else {
+
+                    event.style.display = "none";
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================
+       FORMAT DATE
+    ========================================= */
+
+    function formatDate(date) {
+
+        return new Intl.DateTimeFormat(
+            "en-MY",
+            {
+                timeZone: TIMEZONE,
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            }
+        ).format(date);
+
+    }
+
+
+
+    /* =========================================
+       FORMAT TIME
+    ========================================= */
+
+    function formatTime(date) {
+
+        return new Intl.DateTimeFormat(
+            "en-MY",
+            {
+                timeZone: TIMEZONE,
+                hour: "numeric",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: true
+            }
+        ).format(date);
+
+    }
+
+
+
+    /* =========================================
+       FORMAT TIME WITHOUT SECONDS
+    ========================================= */
+
+    function formatTimeWithoutSeconds(date) {
+
+        return new Intl.DateTimeFormat(
+            "en-MY",
+            {
+                timeZone: TIMEZONE,
+                hour: "numeric",
+                minute: "2-digit",
+                hour12: true
+            }
+        ).format(date);
+
+    }
+
+
+
+    /* =========================================
+       GET CURRENT TIME
+    ========================================= */
+
+    function getCurrentTime() {
+
+        if (
+            apiAvailable &&
+            currentApiTime &&
+            apiFetchedAt
+        ) {
+
+            const elapsed =
+                Date.now() -
+                apiFetchedAt;
+
+
+            return new Date(
+                currentApiTime.getTime() +
+                elapsed
             );
 
         }
 
 
+        return new Date();
 
-        /* =========================================
-           FILTER EVENTS
-        ========================================= */
-
-        function filterEvents() {
+    }
 
 
-            const selectedGame =
-                gameFilter.value;
+
+    /* =========================================
+       FETCH TIME API
+    ========================================= */
+
+    async function fetchApiTime() {
+
+        try {
+
+            const response =
+                await fetch(
+                    TIME_API_URL,
+                    {
+                        method: "GET",
+                        cache: "no-store"
+                    }
+                );
 
 
-            const selectedType =
-                typeFilter.value;
+            if (
+                !response.ok
+            ) {
+
+                throw new Error(
+                    "Time API request failed."
+                );
+
+            }
 
 
-            eventItems.forEach(
-                function(event) {
+            const data =
+                await response.json();
 
 
-                    const eventGame =
-                        event.dataset.game;
+            const apiDateString =
+                data.dateTime +
+                MALAYSIA_OFFSET;
 
+
+            const parsedApiDate =
+                new Date(
+                    apiDateString
+                );
+
+
+            if (
+                Number.isNaN(
+                    parsedApiDate.getTime()
+                )
+            ) {
+
+                throw new Error(
+                    "Invalid date returned by API."
+                );
+
+            }
+
+
+            currentApiTime =
+                parsedApiDate;
+
+
+            apiFetchedAt =
+                Date.now();
+
+
+            apiAvailable =
+                true;
+
+
+            updateClock();
+
+        }
+
+        catch (error) {
+
+            console.warn(
+                "Time API unavailable:",
+                error
+            );
+
+
+            apiAvailable =
+                false;
+
+
+            updateClock();
+
+        }
+
+    }
+
+
+
+    /* =========================================
+       UPDATE CLOCK
+    ========================================= */
+
+    function updateClock() {
+
+        const now =
+            getCurrentTime();
+
+
+        liveTime.textContent =
+            formatTime(now);
+
+
+        liveDate.textContent =
+            formatDate(now);
+
+
+        timeZone.textContent =
+            TIMEZONE +
+            " (UTC+08:00)";
+
+
+        updateEventStatuses(
+            now
+        );
+
+
+        updateNextEvent(
+            now
+        );
+
+    }
+
+
+
+    /* =========================================
+       EVENT STATUS
+    ========================================= */
+
+    function updateEventStatuses(now) {
+
+        eventItems.forEach(
+            function(event) {
+
+                const start =
+                    new Date(
+                        event.dataset.start
+                    );
+
+
+                const end =
+                    new Date(
+                        event.dataset.end
+                    );
+
+
+                const statusElement =
+                    event.querySelector(
+                        ".event-status"
+                    );
+
+
+                const eventCard =
+                    event.querySelector(
+                        ".event-card"
+                    );
+
+
+                if (
+                    now >= start &&
+                    now < end
+                ) {
+
+                    statusElement.innerHTML = `
+
+                        <span class="status-live">
+
+                            LIVE NOW
+
+                        </span>
+
+                    `;
+
+
+                    eventCard.classList.add(
+                        "event-live"
+                    );
+
+
+                    eventCard.classList.remove(
+                        "event-ended"
+                    );
+
+                }
+
+
+                else if (
+                    now >= end
+                ) {
+
+                    statusElement.innerHTML = `
+
+                        <span class="status-ended">
+
+                            ENDED
+
+                        </span>
+
+                    `;
+
+
+                    eventCard.classList.add(
+                        "event-ended"
+                    );
+
+
+                    eventCard.classList.remove(
+                        "event-live"
+                    );
+
+                }
+
+
+                else {
 
                     const eventType =
                         event.dataset.type;
 
 
-                    const gameMatch =
-                        selectedGame === "all" ||
-                        selectedGame ===
-                        eventGame;
+                    let badgeClass =
+                        "status-event";
 
 
-                    const typeMatch =
-                        selectedType === "all" ||
-                        selectedType ===
-                        eventType;
+                    let badgeText =
+                        eventType.toUpperCase();
 
 
                     if (
-                        gameMatch &&
-                        typeMatch
+                        eventType === "tournament"
                     ) {
 
-                        event.style.display =
-                            "";
+                        badgeClass +=
+                            " status-tournament";
+
+                        badgeText =
+                            "TOURNAMENT";
 
                     }
 
-                    else {
-
-                        event.style.display =
-                            "none";
-
-                    }
-
-                }
-            );
-
-        }
-
-
-
-        /* =========================================
-           FORMAT DATE
-        ========================================= */
-
-        function formatDate(date) {
-
-
-            return new Intl.DateTimeFormat(
-                "en-MY",
-                {
-                    timeZone: TIMEZONE,
-
-                    weekday: "long",
-
-                    day: "numeric",
-
-                    month: "long",
-
-                    year: "numeric"
-                }
-            ).format(date);
-
-        }
-
-
-
-        /* =========================================
-           FORMAT TIME
-        ========================================= */
-
-        function formatTime(date) {
-
-
-            return new Intl.DateTimeFormat(
-                "en-MY",
-                {
-                    timeZone: TIMEZONE,
-
-                    hour: "numeric",
-
-                    minute: "2-digit",
-
-                    second: "2-digit",
-
-                    hour12: true
-                }
-            ).format(date);
-
-        }
-
-
-
-        /* =========================================
-           FORMAT TIME WITHOUT SECONDS
-        ========================================= */
-
-        function formatTimeWithoutSeconds(date) {
-
-
-            return new Intl.DateTimeFormat(
-                "en-MY",
-                {
-                    timeZone: TIMEZONE,
-
-                    hour: "numeric",
-
-                    minute: "2-digit",
-
-                    hour12: true
-                }
-            ).format(date);
-
-        }
-
-
-
-        /* =========================================
-           GET CURRENT TIME
-        ========================================= */
-
-        function getCurrentTime() {
-
-
-            /*
-                Use the API time as the base.
-            */
-
-            if (
-                apiAvailable &&
-                currentApiTime &&
-                apiFetchedAt
-            ) {
-
-
-                const elapsed =
-                    Date.now() -
-                    apiFetchedAt;
-
-
-                return new Date(
-
-                    currentApiTime.getTime() +
-                    elapsed
-
-                );
-
-            }
-
-
-
-            /*
-                Fallback to browser time.
-                Display formatting still uses
-                Asia/Kuala_Lumpur.
-            */
-
-            return new Date();
-
-        }
-
-
-
-        /* =========================================
-           FETCH TIME API
-        ========================================= */
-
-        async function fetchApiTime() {
-
-
-            try {
-
-
-                const response =
-                    await fetch(
-                        TIME_API_URL,
-                        {
-                            method: "GET",
-
-                            cache: "no-store"
-                        }
-                    );
-
-
-                if (
-                    !response.ok
-                ) {
-
-                    throw new Error(
-                        "Time API request failed."
-                    );
-
-                }
-
-
-                const data =
-                    await response.json();
-
-
-
-                /*
-                    Convert API's local
-                    Malaysia time to an
-                    offset-aware Date.
-                */
-
-                const apiDateString =
-                    data.dateTime +
-                    MALAYSIA_OFFSET;
-
-
-                const parsedDate =
-                    new Date(
-                        apiDateString
-                    );
-
-
-                if (
-                    Number.isNaN(
-                        parsedDate.getTime()
-                    )
-                ) {
-
-                    throw new Error(
-                        "Invalid time received from API."
-                    );
-
-                }
-
-
-                currentApiTime =
-                    parsedDate;
-
-
-                apiFetchedAt =
-                    Date.now();
-
-
-                apiAvailable =
-                    true;
-
-
-                updateClock();
-
-
-            }
-
-            catch (error) {
-
-
-                console.warn(
-                    "Time API unavailable:",
-                    error
-                );
-
-
-                apiAvailable =
-                    false;
-
-
-                updateClock();
-
-            }
-
-        }
-
-
-
-        /* =========================================
-           UPDATE CLOCK
-        ========================================= */
-
-        function updateClock() {
-
-
-            const now =
-                getCurrentTime();
-
-
-            liveTime.textContent =
-                formatTime(now);
-
-
-            liveDate.textContent =
-                formatDate(now);
-
-
-            timeZone.textContent =
-                TIMEZONE +
-                " (UTC+08:00)";
-
-
-            updateEventStatuses(
-                now
-            );
-
-
-            updateNextEvent(
-                now
-            );
-
-        }
-
-
-
-        /* =========================================
-           UPDATE EVENT STATUS
-        ========================================= */
-
-        function updateEventStatuses(now) {
-
-
-            eventItems.forEach(
-                function(event) {
-
-
-                    const start =
-                        new Date(
-                            event.dataset.start
-                        );
-
-
-                    const end =
-                        new Date(
-                            event.dataset.end
-                        );
-
-
-                    const statusElement =
-                        event.querySelector(
-                            ".event-status"
-                        );
-
-
-                    const eventCard =
-                        event.querySelector(
-                            ".event-card"
-                        );
-
-
-
-                    /*
-                        LIVE
-                    */
-
-                    if (
-                        now >= start &&
-                        now < end
-                    ) {
-
-
-                        statusElement.innerHTML = `
-
-                            <span
-                                class="status-live"
-                            >
-
-                                LIVE NOW
-
-                            </span>
-
-                        `;
-
-
-                        eventCard.classList.add(
-                            "event-live"
-                        );
-
-
-                        eventCard.classList.remove(
-                            "event-ended"
-                        );
-
-                    }
-
-
-
-                    /*
-                        ENDED
-                    */
 
                     else if (
-                        now >= end
+                        eventType === "training"
                     ) {
 
+                        badgeClass +=
+                            " status-training";
 
-                        statusElement.innerHTML = `
-
-                            <span
-                                class="status-ended"
-                            >
-
-                                ENDED
-
-                            </span>
-
-                        `;
-
-
-                        eventCard.classList.add(
-                            "event-ended"
-                        );
-
-
-                        eventCard.classList.remove(
-                            "event-live"
-                        );
+                        badgeText =
+                            "TRAINING";
 
                     }
 
 
+                    else if (
+                        eventType === "community"
+                    ) {
 
-                    /*
-                        UPCOMING
-                    */
+                        badgeClass +=
+                            " status-community";
 
-                    else {
-
-
-                        statusElement.innerHTML = `
-
-                            <span
-                                class="status-upcoming"
-                            >
-
-                                UPCOMING
-
-                            </span>
-
-                        `;
-
-
-                        eventCard.classList.remove(
-                            "event-live"
-                        );
-
-
-                        eventCard.classList.remove(
-                            "event-ended"
-                        );
+                        badgeText =
+                            "COMMUNITY";
 
                     }
+
+
+                    else if (
+                        eventType === "workshop"
+                    ) {
+
+                        badgeClass +=
+                            " status-workshop";
+
+                        badgeText =
+                            "WORKSHOP";
+
+                    }
+
+
+                    statusElement.innerHTML = `
+
+                        <span
+                            class="${badgeClass}"
+                        >
+
+                            ${badgeText}
+
+                        </span>
+
+                    `;
+
+
+                    eventCard.classList.remove(
+                        "event-live"
+                    );
+
+
+                    eventCard.classList.remove(
+                        "event-ended"
+                    );
 
                 }
-            );
 
-        }
+            }
+        );
 
-
-
-        /* =========================================
-           FIND NEXT EVENT
-        ========================================= */
-
-        function getNextEvent(now) {
+    }
 
 
-            const upcomingEvents =
-                eventItems
+
+    /* =========================================
+       GET NEXT EVENT
+    ========================================= */
+
+    function getNextEvent(now) {
+
+        const upcomingEvents =
+            eventItems
                 .map(
                     function(event) {
-
 
                         return {
 
@@ -3743,7 +3518,6 @@
                 .filter(
                     function(item) {
 
-
                         return (
                             item.start >
                             now
@@ -3754,7 +3528,6 @@
                 .sort(
                     function(a, b) {
 
-
                         return (
                             a.start -
                             b.start
@@ -3764,358 +3537,328 @@
                 );
 
 
-            if (
-                upcomingEvents.length === 0
-            ) {
+        if (
+            upcomingEvents.length === 0
+        ) {
 
-                return null;
-
-            }
-
-
-            return upcomingEvents[0];
+            return null;
 
         }
 
 
+        return upcomingEvents[0];
 
-        /* =========================================
-           UPDATE NEXT EVENT
-        ========================================= */
-
-        function updateNextEvent(now) {
+    }
 
 
-            const next =
-                getNextEvent(
-                    now
-                );
+
+    /* =========================================
+       UPDATE NEXT EVENT
+    ========================================= */
+
+    function updateNextEvent(now) {
+
+        const next =
+            getNextEvent(now);
 
 
-            if (!next) {
-
-
-                nextEventName.textContent =
-                    "No upcoming events";
-
-
-                nextEventDate.innerHTML = `
-
-                    <i
-                        class="bi bi-calendar-event"
-                    ></i>
-
-                    All scheduled events have ended.
-
-                `;
-
-
-                nextEventLocation.innerHTML = `
-
-                    <i
-                        class="bi bi-info-circle"
-                    ></i>
-
-                    Check back for new events.
-
-                `;
-
-
-                nextEventCountdown.textContent =
-                    "";
-
-
-                return;
-
-            }
-
-
-            const event =
-                next.element;
-
-
-            const start =
-                next.start;
-
-
-            const name =
-                event.dataset.eventName;
-
-
-            const location =
-                event.dataset.location;
-
+        if (!next) {
 
             nextEventName.textContent =
-                name;
+                "No upcoming events";
 
 
-            nextEventDate.innerHTML = `
-
-                <i
-                    class="bi bi-calendar-event"
-                ></i>
-
-                ${formatDate(start)}
-                at
-                ${formatTimeWithoutSeconds(start)}
-
-            `;
+            nextEventDate.innerHTML =
+                `
+                    <i class="bi bi-calendar-event"></i>
+                    All scheduled events have ended.
+                `;
 
 
-            nextEventLocation.innerHTML = `
-
-                <i
-                    class="bi bi-geo-alt"
-                ></i>
-
-                ${location}
-
-            `;
+            nextEventLocation.innerHTML =
+                `
+                    <i class="bi bi-info-circle"></i>
+                    Check back for new events.
+                `;
 
 
             nextEventCountdown.textContent =
-                "Starts in " +
-                formatCountdown(
-                    start - now
-                );
+                "";
+
+
+            return;
 
         }
 
 
+        const event =
+            next.element;
 
-        /* =========================================
-           FORMAT COUNTDOWN
-        ========================================= */
 
-        function formatCountdown(
-            milliseconds
+        const start =
+            next.start;
+
+
+        const name =
+            event.dataset.eventName;
+
+
+        const location =
+            event.dataset.location;
+
+
+        nextEventName.textContent =
+            name;
+
+
+        nextEventDate.innerHTML =
+            `
+                <i class="bi bi-calendar-event"></i>
+                ${formatDate(start)}
+                at
+                ${formatTimeWithoutSeconds(start)}
+            `;
+
+
+        nextEventLocation.innerHTML =
+            `
+                <i class="bi bi-geo-alt"></i>
+                ${location}
+            `;
+
+
+        nextEventCountdown.textContent =
+            "Starts in " +
+            formatCountdown(
+                start - now
+            );
+
+    }
+
+
+
+    /* =========================================
+       COUNTDOWN
+    ========================================= */
+
+    function formatCountdown(
+        milliseconds
+    ) {
+
+        if (
+            milliseconds <= 0
         ) {
 
+            return "Starting now";
 
-            if (
-                milliseconds <= 0
-            ) {
-
-                return "Starting now";
-
-            }
+        }
 
 
-            let totalSeconds =
-                Math.floor(
-                    milliseconds / 1000
-                );
+        let totalSeconds =
+            Math.floor(
+                milliseconds / 1000
+            );
 
 
-            const days =
-                Math.floor(
-                    totalSeconds / 86400
-                );
+        const days =
+            Math.floor(
+                totalSeconds / 86400
+            );
 
 
-            totalSeconds %=
-                86400;
+        totalSeconds %=
+            86400;
 
 
-            const hours =
-                Math.floor(
-                    totalSeconds / 3600
-                );
+        const hours =
+            Math.floor(
+                totalSeconds / 3600
+            );
 
 
-            totalSeconds %=
-                3600;
+        totalSeconds %=
+            3600;
 
 
-            const minutes =
-                Math.floor(
-                    totalSeconds / 60
-                );
+        const minutes =
+            Math.floor(
+                totalSeconds / 60
+            );
 
 
-            const seconds =
-                totalSeconds % 60;
+        const seconds =
+            totalSeconds % 60;
 
 
-
-            if (
-                days > 0
-            ) {
-
-                return (
-
-                    days +
-                    "d " +
-                    hours +
-                    "h " +
-                    minutes +
-                    "m"
-
-                );
-
-            }
-
-
-            if (
-                hours > 0
-            ) {
-
-                return (
-
-                    hours +
-                    "h " +
-                    minutes +
-                    "m " +
-                    seconds +
-                    "s"
-
-                );
-
-            }
-
+        if (
+            days > 0
+        ) {
 
             return (
-
+                days +
+                "d " +
+                hours +
+                "h " +
                 minutes +
-                "m " +
-                seconds +
-                "s"
-
+                "m"
             );
 
         }
 
 
-
-        /* =========================================
-           EVENT DETAILS MODAL
-        ========================================= */
-
-        function showEventDetails(
-            title,
-            date,
-            game,
-            time,
-            venue,
-            description
+        if (
+            hours > 0
         ) {
 
-
-            document.getElementById(
-                "eventDetailsTitle"
-            ).textContent =
-                title;
-
-
-            document.getElementById(
-                "eventDetailsDate"
-            ).textContent =
-                date;
-
-
-            document.getElementById(
-                "eventDetailsGame"
-            ).textContent =
-                game;
-
-
-            document.getElementById(
-                "eventDetailsTime"
-            ).textContent =
-                time;
-
-
-            document.getElementById(
-                "eventDetailsVenue"
-            ).textContent =
-                venue;
-
-
-            document.getElementById(
-                "eventDetailsDescription"
-            ).textContent =
-                description;
-
-
-
-            const modalElement =
-                document.getElementById(
-                    "eventDetailsModal"
-                );
-
-
-            const modal =
-                bootstrap.Modal.getOrCreateInstance(
-                    modalElement
-                );
-
-
-            modal.show();
+            return (
+                hours +
+                "h " +
+                minutes +
+                "m " +
+                seconds +
+                "s"
+            );
 
         }
 
 
-
-        /* =========================================
-           FILTER LISTENERS
-        ========================================= */
-
-        gameFilter.addEventListener(
-            "change",
-            filterEvents
+        return (
+            minutes +
+            "m " +
+            seconds +
+            "s"
         );
 
-
-        typeFilter.addEventListener(
-            "change",
-            filterEvents
-        );
+    }
 
 
 
-        /* =========================================
-           INITIALISE
-        ========================================= */
+    /* =========================================
+       EVENT DETAILS MODAL
+    ========================================= */
 
-        sortEventsByDate();
-
-        filterEvents();
-
-        fetchApiTime();
-
-
-
-        /* =========================================
-           UPDATE EVERY SECOND
-        ========================================= */
-
-        setInterval(
-            function() {
-
-                updateClock();
-
-            },
-            1000
-        );
+    function showEventDetails(
+        title,
+        date,
+        game,
+        time,
+        venue,
+        description
+    ) {
 
 
-
-        /* =========================================
-           REFRESH API EVERY 10 MINUTES
-        ========================================= */
-
-        setInterval(
-            function() {
-
-                fetchApiTime();
-
-            },
-            10 * 60 * 1000
-        );
+        document.getElementById(
+            "eventDetailsTitle"
+        ).textContent =
+            title;
 
 
-    </script>
+        document.getElementById(
+            "eventDetailsDate"
+        ).textContent =
+            date;
+
+
+        document.getElementById(
+            "eventDetailsGame"
+        ).textContent =
+            game;
+
+
+        document.getElementById(
+            "eventDetailsTime"
+        ).textContent =
+            time;
+
+
+        document.getElementById(
+            "eventDetailsVenue"
+        ).textContent =
+            venue;
+
+
+        document.getElementById(
+            "eventDetailsDescription"
+        ).textContent =
+            description;
+
+
+        const modalElement =
+            document.getElementById(
+                "eventDetailsModal"
+            );
+
+
+        const modal =
+            bootstrap.Modal.getOrCreateInstance(
+                modalElement
+            );
+
+
+        modal.show();
+
+    }
+
+
+
+    /* =========================================
+       FILTER LISTENERS
+    ========================================= */
+
+    gameFilter.addEventListener(
+        "change",
+        filterEvents
+    );
+
+
+    typeFilter.addEventListener(
+        "change",
+        filterEvents
+    );
+
+
+
+    /* =========================================
+       INITIALISE
+    ========================================= */
+
+    sortEventsByDate();
+
+    filterEvents();
+
+    fetchApiTime();
+
+
+
+    /* =========================================
+       UPDATE EVERY SECOND
+    ========================================= */
+
+    setInterval(
+        function() {
+
+            updateClock();
+
+        },
+        1000
+    );
+
+
+
+    /* =========================================
+       REFRESH API EVERY 10 MINUTES
+    ========================================= */
+
+    setInterval(
+        function() {
+
+            fetchApiTime();
+
+        },
+        10 * 60 * 1000
+    );
+
+</script>
 
 
 </body>
