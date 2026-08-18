@@ -49,7 +49,6 @@
 
     <style>
 
-
         /* =========================================
            LIVE TIME DASHBOARD
         ========================================= */
@@ -130,43 +129,6 @@
             font-size: 0.85rem;
 
             margin-top: 5px;
-
-        }
-
-
-        .api-indicator {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 7px;
-
-            color: #bbbbbb;
-
-            font-size: 0.78rem;
-
-            margin-top: 10px;
-
-        }
-
-
-        .api-indicator-dot {
-
-            width: 8px;
-
-            height: 8px;
-
-            border-radius: 50%;
-
-            background-color: #00e5ff;
-
-        }
-
-
-        .api-indicator-dot.fallback {
-
-            background-color: #ffc107;
 
         }
 
@@ -252,7 +214,7 @@
 
 
         /* =========================================
-           STATUS BADGES
+           EVENT STATUS
         ========================================= */
 
         .status-live {
@@ -338,15 +300,8 @@
 
 
         /* =========================================
-           EVENT CARD
+           LIVE EVENT CARD
         ========================================= */
-
-        .event-card {
-
-            transition: 0.3s;
-
-        }
-
 
         .event-card.event-live {
 
@@ -358,6 +313,10 @@
 
         }
 
+
+        /* =========================================
+           ENDED EVENT CARD
+        ========================================= */
 
         .event-card.event-ended {
 
@@ -428,7 +387,7 @@
             </a>
 
 
-            <!-- MOBILE NAVIGATION BUTTON -->
+            <!-- MOBILE BUTTON -->
 
             <button
                 class="navbar-toggler"
@@ -566,7 +525,7 @@
                 </ul>
 
 
-                <!-- AUTH LINKS -->
+                <!-- AUTH BUTTONS -->
 
                 <div class="nav-auth">
 
@@ -623,11 +582,13 @@
             </p>
 
 
+
             <!-- =========================
-                 LIVE TIME DASHBOARD
+                 TIME DASHBOARD
             ========================= -->
 
             <div class="time-dashboard">
+
 
                 <div class="row g-4 align-items-center">
 
@@ -648,7 +609,9 @@
                             class="live-time"
                             id="liveTime"
                         >
+
                             Loading...
+
                         </div>
 
 
@@ -656,7 +619,9 @@
                             class="live-date"
                             id="liveDate"
                         >
+
                             Loading...
+
                         </div>
 
 
@@ -664,23 +629,8 @@
                             class="time-zone"
                             id="timeZone"
                         >
-                            Asia/Kuala_Lumpur
-                        </div>
 
-
-                        <div class="api-indicator">
-
-
-                            <span
-                                class="api-indicator-dot"
-                                id="apiIndicatorDot"
-                            ></span>
-
-
-                            <span id="apiStatusText">
-                                Connecting to Time API...
-                            </span>
-
+                            Asia/Kuala_Lumpur (UTC+08:00)
 
                         </div>
 
@@ -708,7 +658,9 @@
                                 class="next-event-name"
                                 id="nextEventName"
                             >
+
                                 Searching...
+
                             </div>
 
 
@@ -716,8 +668,13 @@
                                 class="next-event-meta"
                                 id="nextEventDate"
                             >
-                                <i class="bi bi-calendar-event"></i>
+
+                                <i
+                                    class="bi bi-calendar-event"
+                                ></i>
+
                                 Loading...
+
                             </div>
 
 
@@ -725,8 +682,13 @@
                                 class="next-event-meta"
                                 id="nextEventLocation"
                             >
-                                <i class="bi bi-geo-alt"></i>
+
+                                <i
+                                    class="bi bi-geo-alt"
+                                ></i>
+
                                 Loading...
+
                             </div>
 
 
@@ -734,17 +696,19 @@
                                 class="countdown"
                                 id="nextEventCountdown"
                             >
+
                                 Calculating...
+
                             </div>
 
 
                         </div>
 
-
                     </div>
 
 
                 </div>
+
 
             </div>
 
@@ -780,7 +744,9 @@
                             class="form-label"
                         >
 
-                            <i class="bi bi-controller"></i>
+                            <i
+                                class="bi bi-controller"
+                            ></i>
 
                             Filter by Game
 
@@ -845,7 +811,9 @@
                             class="form-label"
                         >
 
-                            <i class="bi bi-calendar-event"></i>
+                            <i
+                                class="bi bi-calendar-event"
+                            ></i>
 
                             Filter by Event Type
 
@@ -901,8 +869,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 02
-                     ROCKET LEAGUE
+                     01 - ROCKET LEAGUE
                 ====================================== -->
 
                 <div
@@ -928,7 +895,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
 
@@ -948,14 +914,16 @@
                             <div>
 
 
-                                <span
-                                    class="event-status"
-                                >
+                                <span class="event-status">
+
+
                                     <span
                                         class="status-upcoming"
                                     >
                                         UPCOMING
                                     </span>
+
+
                                 </span>
 
 
@@ -1014,7 +982,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=rocket-turbo"
+                            href="tournament-registration.html?event=rocket-turbo"
                             class="
                                 btn
                                 btn-main
@@ -1035,8 +1003,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 04
-                     VALORANT TRAINING
+                     02 - VALORANT TRAINING
                 ====================================== -->
 
                 <div
@@ -1062,7 +1029,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -1077,6 +1043,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -1098,6 +1065,7 @@
 
                                 </h4>
 
+
                             </div>
 
 
@@ -1106,9 +1074,7 @@
 
                         <p class="event-info">
 
-                            <i
-                                class="bi bi-controller"
-                            ></i>
+                            <i class="bi bi-controller"></i>
 
                             Valorant
 
@@ -1174,8 +1140,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 06
-                     COMMUNITY
+                     03 - MIDNIGHT MAYHEM
                 ====================================== -->
 
                 <div
@@ -1201,7 +1166,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -1216,6 +1180,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -1236,6 +1201,7 @@
                                     Midnight Mayhem
 
                                 </h4>
+
 
                             </div>
 
@@ -1311,8 +1277,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 08
-                     WORKSHOP
+                     04 - CLUTCH BLUEPRINT
                 ====================================== -->
 
                 <div
@@ -1338,7 +1303,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -1353,6 +1317,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -1372,6 +1337,7 @@
                                     The Clutch Blueprint
 
                                 </h4>
+
 
                             </div>
 
@@ -1447,8 +1413,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 20
-                     VALORANT
+                     05 - VALORANT NEON ASCENSION
                 ====================================== -->
 
                 <div
@@ -1474,7 +1439,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -1489,6 +1453,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -1509,6 +1474,7 @@
                                     Neon Ascension
 
                                 </h4>
+
 
                             </div>
 
@@ -1553,7 +1519,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=valorant-neon"
+                            href="tournament-registration.html?event=valorant-neon"
                             class="
                                 btn
                                 btn-main
@@ -1574,8 +1540,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 22
-                     CS2
+                     06 - CS2 TACTICAL LOCKDOWN
                 ====================================== -->
 
                 <div
@@ -1601,7 +1566,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -1616,6 +1580,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -1636,6 +1601,7 @@
                                     Tactical Lockdown
 
                                 </h4>
+
 
                             </div>
 
@@ -1680,7 +1646,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=cs2-lockdown"
+                            href="tournament-registration.html?event=cs2-lockdown"
                             class="
                                 btn
                                 btn-main
@@ -1701,8 +1667,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 24
-                     PUBG
+                     07 - PUBG LAST SQUAD
                 ====================================== -->
 
                 <div
@@ -1728,7 +1693,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -1743,6 +1707,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -1763,6 +1728,7 @@
                                     Last Squad Standing
 
                                 </h4>
+
 
                             </div>
 
@@ -1807,7 +1773,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=pubg-last-squad"
+                            href="tournament-registration.html?event=pubg-last-squad"
                             class="
                                 btn
                                 btn-main
@@ -1828,8 +1794,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 26
-                     HONOR OF KINGS
+                     08 - HONOR OF KINGS
                 ====================================== -->
 
                 <div
@@ -1855,7 +1820,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -1870,6 +1834,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -1890,6 +1855,7 @@
                                     Rise of Champions
 
                                 </h4>
+
 
                             </div>
 
@@ -1934,7 +1900,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=hok-rise"
+                            href="tournament-registration.html?event=hok-rise"
                             class="
                                 btn
                                 btn-main
@@ -1955,8 +1921,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 28
-                     DOTA 2
+                     09 - DOTA 2
                 ====================================== -->
 
                 <div
@@ -1982,7 +1947,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -1997,6 +1961,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -2017,6 +1982,7 @@
                                     Battle for the Throne
 
                                 </h4>
+
 
                             </div>
 
@@ -2061,7 +2027,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=dota2-throne"
+                            href="tournament-registration.html?event=dota2-throne"
                             class="
                                 btn
                                 btn-main
@@ -2082,8 +2048,7 @@
 
 
                 <!-- =====================================
-                     OCTOBER 30
-                     EA SPORTS FC
+                     10 - EA FC
                 ====================================== -->
 
                 <div
@@ -2109,7 +2074,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -2124,6 +2088,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -2144,6 +2109,7 @@
                                     Road to Glory
 
                                 </h4>
+
 
                             </div>
 
@@ -2188,7 +2154,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=fc-road"
+                            href="tournament-registration.html?event=fc-road"
                             class="
                                 btn
                                 btn-main
@@ -2209,8 +2175,7 @@
 
 
                 <!-- =====================================
-                     NOVEMBER 02
-                     VALORANT COMMUNITY
+                     11 - VALO NIGHT
                 ====================================== -->
 
                 <div
@@ -2236,7 +2201,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -2251,6 +2215,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -2271,6 +2236,7 @@
                                     Neon Rush
 
                                 </h4>
+
 
                             </div>
 
@@ -2346,8 +2312,7 @@
 
 
                 <!-- =====================================
-                     NOVEMBER 08
-                     CS2
+                     12 - CS2 CLUTCH PROTOCOL
                 ====================================== -->
 
                 <div
@@ -2373,7 +2338,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -2388,6 +2352,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -2408,6 +2373,7 @@
                                     Clutch Protocol
 
                                 </h4>
+
 
                             </div>
 
@@ -2452,7 +2418,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=cs2-clutch"
+                            href="tournament-registration.html?event=cs2-clutch"
                             class="
                                 btn
                                 btn-main
@@ -2473,8 +2439,7 @@
 
 
                 <!-- =====================================
-                     NOVEMBER 14
-                     PUBG
+                     13 - PUBG SURVIVAL PROTOCOL
                 ====================================== -->
 
                 <div
@@ -2500,7 +2465,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -2515,6 +2479,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -2535,6 +2500,7 @@
                                     Survival Protocol
 
                                 </h4>
+
 
                             </div>
 
@@ -2579,7 +2545,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=pubg-survival"
+                            href="tournament-registration.html?event=pubg-survival"
                             class="
                                 btn
                                 btn-main
@@ -2600,8 +2566,7 @@
 
 
                 <!-- =====================================
-                     NOVEMBER 21
-                     ALL STAR
+                     14 - ALL STAR NIGHT
                 ====================================== -->
 
                 <div
@@ -2627,7 +2592,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -2642,6 +2606,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -2662,6 +2627,7 @@
                                     All-Star Night
 
                                 </h4>
+
 
                             </div>
 
@@ -2737,8 +2703,7 @@
 
 
                 <!-- =====================================
-                     NOVEMBER 29
-                     GRAND FINALE
+                     15 - FINAL STRIKE
                 ====================================== -->
 
                 <div
@@ -2764,7 +2729,6 @@
                             "
                         >
 
-
                             <div class="event-date">
 
                                 <span class="day">
@@ -2779,6 +2743,7 @@
 
 
                             <div>
+
 
                                 <span class="event-status">
 
@@ -2799,6 +2764,7 @@
                                     Final Strike
 
                                 </h4>
+
 
                             </div>
 
@@ -2843,7 +2809,7 @@
 
 
                         <a
-                            href="tournamentRegistration.html?event=final-strike"
+                            href="tournament-registration.html?event=final-strike"
                             class="
                                 btn
                                 btn-main
@@ -2901,7 +2867,7 @@
             >
 
 
-                <!-- HEADER -->
+                <!-- MODAL HEADER -->
 
                 <div class="modal-header">
 
@@ -2910,7 +2876,9 @@
                         class="modal-title"
                         id="eventDetailsTitle"
                     >
+
                         Event Details
+
                     </h5>
 
 
@@ -2926,7 +2894,7 @@
 
 
 
-                <!-- BODY -->
+                <!-- MODAL BODY -->
 
                 <div class="modal-body">
 
@@ -3000,7 +2968,7 @@
 
 
 
-                <!-- FOOTER -->
+                <!-- MODAL FOOTER -->
 
                 <div class="modal-footer">
 
@@ -3032,7 +3000,6 @@
     ========================= -->
 
     <footer>
-
 
         <div class="container text-center">
 
@@ -3113,7 +3080,7 @@
 
 
     <!-- =========================
-         BOOTSTRAP JS
+         BOOTSTRAP JAVASCRIPT
     ========================= -->
 
     <script
@@ -3140,16 +3107,6 @@
         const TIME_API_URL =
             "https://www.timeapi.io/api/Time/current/zone?timeZone=Asia/Kuala_Lumpur";
 
-
-        /*
-            Malaysia uses UTC+08:00.
-
-            The API gives us the local date/time
-            for Asia/Kuala_Lumpur.
-
-            We convert it into an ISO timestamp
-            by attaching +08:00.
-        */
 
         const MALAYSIA_OFFSET =
             "+08:00";
@@ -3196,18 +3153,6 @@
             );
 
 
-        const apiStatusText =
-            document.getElementById(
-                "apiStatusText"
-            );
-
-
-        const apiIndicatorDot =
-            document.getElementById(
-                "apiIndicatorDot"
-            );
-
-
         const nextEventName =
             document.getElementById(
                 "nextEventName"
@@ -3240,11 +3185,6 @@
             );
 
 
-
-        /* =========================================
-           CURRENT API TIME
-        ========================================= */
-
         let currentApiTime =
             null;
 
@@ -3266,7 +3206,7 @@
 
 
             eventItems.sort(
-                function (a, b) {
+                function(a, b) {
 
 
                     const dateA =
@@ -3281,16 +3221,14 @@
                         );
 
 
-                    return (
-                        dateA - dateB
-                    );
+                    return dateA - dateB;
 
                 }
             );
 
 
             eventItems.forEach(
-                function (event) {
+                function(event) {
 
                     eventContainer.appendChild(
                         event
@@ -3318,9 +3256,8 @@
                 typeFilter.value;
 
 
-
             eventItems.forEach(
-                function (event) {
+                function(event) {
 
 
                     const eventGame =
@@ -3331,16 +3268,16 @@
                         event.dataset.type;
 
 
-
                     const gameMatch =
                         selectedGame === "all" ||
-                        selectedGame === eventGame;
+                        selectedGame ===
+                        eventGame;
 
 
                     const typeMatch =
                         selectedType === "all" ||
-                        selectedType === eventType;
-
+                        selectedType ===
+                        eventType;
 
 
                     if (
@@ -3420,6 +3357,30 @@
 
 
         /* =========================================
+           FORMAT TIME WITHOUT SECONDS
+        ========================================= */
+
+        function formatTimeWithoutSeconds(date) {
+
+
+            return new Intl.DateTimeFormat(
+                "en-MY",
+                {
+                    timeZone: TIMEZONE,
+
+                    hour: "numeric",
+
+                    minute: "2-digit",
+
+                    hour12: true
+                }
+            ).format(date);
+
+        }
+
+
+
+        /* =========================================
            GET CURRENT TIME
         ========================================= */
 
@@ -3427,12 +3388,7 @@
 
 
             /*
-                If the API was successfully loaded,
-                advance the API timestamp using the
-                elapsed local time.
-
-                This means we don't need to call the
-                API every second.
+                Use the API time as the base.
             */
 
             if (
@@ -3448,8 +3404,10 @@
 
 
                 return new Date(
+
                     currentApiTime.getTime() +
                     elapsed
+
                 );
 
             }
@@ -3457,10 +3415,9 @@
 
 
             /*
-                FALLBACK
-
-                Browser time interpreted in the
-                Malaysia timezone for display.
+                Fallback to browser time.
+                Display formatting still uses
+                Asia/Kuala_Lumpur.
             */
 
             return new Date();
@@ -3470,7 +3427,7 @@
 
 
         /* =========================================
-           FETCH TIME FROM API
+           FETCH TIME API
         ========================================= */
 
         async function fetchApiTime() {
@@ -3479,27 +3436,15 @@
             try {
 
 
-                apiStatusText.textContent =
-                    "Connecting to Time API...";
-
-
-                apiIndicatorDot
-                    .classList
-                    .remove(
-                        "fallback"
-                    );
-
-
-
                 const response =
                     await fetch(
                         TIME_API_URL,
                         {
                             method: "GET",
+
                             cache: "no-store"
                         }
                     );
-
 
 
                 if (
@@ -3513,20 +3458,15 @@
                 }
 
 
-
                 const data =
                     await response.json();
 
 
 
                 /*
-                    TimeAPI returns a local
-                    dateTime such as:
-
-                    2026-08-18T17:19:xx
-
-                    We attach Malaysia's
-                    +08:00 offset.
+                    Convert API's local
+                    Malaysia time to an
+                    offset-aware Date.
                 */
 
                 const apiDateString =
@@ -3534,29 +3474,27 @@
                     MALAYSIA_OFFSET;
 
 
-                const parsedApiDate =
+                const parsedDate =
                     new Date(
                         apiDateString
                     );
 
 
-
                 if (
                     Number.isNaN(
-                        parsedApiDate.getTime()
+                        parsedDate.getTime()
                     )
                 ) {
 
                     throw new Error(
-                        "Invalid date returned by API."
+                        "Invalid time received from API."
                     );
 
                 }
 
 
-
                 currentApiTime =
-                    parsedApiDate;
+                    parsedDate;
 
 
                 apiFetchedAt =
@@ -3567,20 +3505,7 @@
                     true;
 
 
-
-                apiStatusText.textContent =
-                    "Live time from Time API";
-
-
-                apiIndicatorDot
-                    .classList
-                    .remove(
-                        "fallback"
-                    );
-
-
                 updateClock();
-
 
 
             }
@@ -3598,17 +3523,6 @@
                     false;
 
 
-                apiStatusText.textContent =
-                    "API unavailable — using local clock";
-
-
-                apiIndicatorDot
-                    .classList
-                    .add(
-                        "fallback"
-                    );
-
-
                 updateClock();
 
             }
@@ -3618,7 +3532,7 @@
 
 
         /* =========================================
-           UPDATE LIVE CLOCK
+           UPDATE CLOCK
         ========================================= */
 
         function updateClock() {
@@ -3626,7 +3540,6 @@
 
             const now =
                 getCurrentTime();
-
 
 
             liveTime.textContent =
@@ -3640,7 +3553,6 @@
             timeZone.textContent =
                 TIMEZONE +
                 " (UTC+08:00)";
-
 
 
             updateEventStatuses(
@@ -3657,12 +3569,10 @@
 
 
         /* =========================================
-           EVENT STATUS
+           UPDATE EVENT STATUS
         ========================================= */
 
-        function updateEventStatuses(
-            now
-        ) {
+        function updateEventStatuses(now) {
 
 
             eventItems.forEach(
@@ -3694,22 +3604,24 @@
 
 
 
+                    /*
+                        LIVE
+                    */
+
                     if (
                         now >= start &&
                         now < end
                     ) {
 
 
-                        /*
-                           EVENT IS LIVE
-                        */
-
                         statusElement.innerHTML = `
 
                             <span
                                 class="status-live"
                             >
+
                                 LIVE NOW
+
                             </span>
 
                         `;
@@ -3724,25 +3636,27 @@
                             "event-ended"
                         );
 
-
                     }
 
+
+
+                    /*
+                        ENDED
+                    */
 
                     else if (
                         now >= end
                     ) {
 
 
-                        /*
-                           EVENT HAS ENDED
-                        */
-
                         statusElement.innerHTML = `
 
                             <span
                                 class="status-ended"
                             >
+
                                 ENDED
+
                             </span>
 
                         `;
@@ -3757,23 +3671,25 @@
                             "event-live"
                         );
 
-
                     }
 
 
+
+                    /*
+                        UPCOMING
+                    */
+
                     else {
 
-
-                        /*
-                           EVENT IS UPCOMING
-                        */
 
                         statusElement.innerHTML = `
 
                             <span
                                 class="status-upcoming"
                             >
+
                                 UPCOMING
+
                             </span>
 
                         `;
@@ -3798,18 +3714,17 @@
 
 
         /* =========================================
-           GET NEXT EVENT
+           FIND NEXT EVENT
         ========================================= */
 
-        function getNextEvent(
-            now
-        ) {
+        function getNextEvent(now) {
 
 
             const upcomingEvents =
                 eventItems
                 .map(
                     function(event) {
+
 
                         return {
 
@@ -3828,6 +3743,7 @@
                 .filter(
                     function(item) {
 
+
                         return (
                             item.start >
                             now
@@ -3837,6 +3753,7 @@
                 )
                 .sort(
                     function(a, b) {
+
 
                         return (
                             a.start -
@@ -3866,9 +3783,7 @@
            UPDATE NEXT EVENT
         ========================================= */
 
-        function updateNextEvent(
-            now
-        ) {
+        function updateNextEvent(now) {
 
 
             const next =
@@ -3884,18 +3799,26 @@
                     "No upcoming events";
 
 
-                nextEventDate.innerHTML =
-                    `
-                        <i class="bi bi-calendar-event"></i>
-                        All scheduled events have ended.
-                    `;
+                nextEventDate.innerHTML = `
+
+                    <i
+                        class="bi bi-calendar-event"
+                    ></i>
+
+                    All scheduled events have ended.
+
+                `;
 
 
-                nextEventLocation.innerHTML =
-                    `
-                        <i class="bi bi-info-circle"></i>
-                        Check back for new events.
-                    `;
+                nextEventLocation.innerHTML = `
+
+                    <i
+                        class="bi bi-info-circle"
+                    ></i>
+
+                    Check back for new events.
+
+                `;
 
 
                 nextEventCountdown.textContent =
@@ -3905,7 +3828,6 @@
                 return;
 
             }
-
 
 
             const event =
@@ -3924,25 +3846,32 @@
                 event.dataset.location;
 
 
-
             nextEventName.textContent =
                 name;
 
 
-            nextEventDate.innerHTML =
-                `
-                    <i class="bi bi-calendar-event"></i>
-                    ${formatDate(start)}
-                    at
-                    ${formatTimeWithoutSeconds(start)}
-                `;
+            nextEventDate.innerHTML = `
+
+                <i
+                    class="bi bi-calendar-event"
+                ></i>
+
+                ${formatDate(start)}
+                at
+                ${formatTimeWithoutSeconds(start)}
+
+            `;
 
 
-            nextEventLocation.innerHTML =
-                `
-                    <i class="bi bi-geo-alt"></i>
-                    ${location}
-                `;
+            nextEventLocation.innerHTML = `
+
+                <i
+                    class="bi bi-geo-alt"
+                ></i>
+
+                ${location}
+
+            `;
 
 
             nextEventCountdown.textContent =
@@ -3950,32 +3879,6 @@
                 formatCountdown(
                     start - now
                 );
-
-        }
-
-
-
-        /* =========================================
-           FORMAT TIME WITHOUT SECONDS
-        ========================================= */
-
-        function formatTimeWithoutSeconds(
-            date
-        ) {
-
-
-            return new Intl.DateTimeFormat(
-                "en-MY",
-                {
-                    timeZone: TIMEZONE,
-
-                    hour: "numeric",
-
-                    minute: "2-digit",
-
-                    hour12: true
-                }
-            ).format(date);
 
         }
 
@@ -3999,7 +3902,6 @@
             }
 
 
-
             let totalSeconds =
                 Math.floor(
                     milliseconds / 1000
@@ -4008,8 +3910,7 @@
 
             const days =
                 Math.floor(
-                    totalSeconds /
-                    86400
+                    totalSeconds / 86400
                 );
 
 
@@ -4019,8 +3920,7 @@
 
             const hours =
                 Math.floor(
-                    totalSeconds /
-                    3600
+                    totalSeconds / 3600
                 );
 
 
@@ -4030,14 +3930,12 @@
 
             const minutes =
                 Math.floor(
-                    totalSeconds /
-                    60
+                    totalSeconds / 60
                 );
 
 
             const seconds =
-                totalSeconds %
-                60;
+                totalSeconds % 60;
 
 
 
@@ -4046,12 +3944,14 @@
             ) {
 
                 return (
+
                     days +
                     "d " +
                     hours +
                     "h " +
                     minutes +
                     "m"
+
                 );
 
             }
@@ -4062,22 +3962,26 @@
             ) {
 
                 return (
+
                     hours +
                     "h " +
                     minutes +
                     "m " +
                     seconds +
                     "s"
+
                 );
 
             }
 
 
             return (
+
                 minutes +
                 "m " +
                 seconds +
                 "s"
+
             );
 
         }
@@ -4154,7 +4058,7 @@
 
 
         /* =========================================
-           FILTER EVENT LISTENERS
+           FILTER LISTENERS
         ========================================= */
 
         gameFilter.addEventListener(
@@ -4171,7 +4075,7 @@
 
 
         /* =========================================
-           INITIALISE PAGE
+           INITIALISE
         ========================================= */
 
         sortEventsByDate();
