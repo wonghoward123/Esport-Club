@@ -1095,3 +1095,27 @@ footer a:hover {
 
     border: 0;
 }
+
+/* =========================================
+   CLICKABLE GAME CARDS
+========================================= */
+
+.game-card-link {
+    display: block;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    height: 100%;
+}
+
+.game-card-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.game-card-link .custom-card {
+    height: 100%;
+    cursor: pointer;
+}
