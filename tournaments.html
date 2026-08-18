@@ -12,37 +12,46 @@
 
     <!-- =========================
          BOOTSTRAP CSS
-    ========================= -->
+    ========================== -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
 
     <!-- =========================
          BOOTSTRAP ICONS
-    ========================= -->
+    ========================== -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
 
 
     <!-- =========================
          SHARED CSS
-    ========================= -->
+    ========================== -->
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
-
-    <!-- =========================
-         TOURNAMENT PAGE CSS
-    ========================= -->
 
     <style>
+
         /* =========================================
            TOURNAMENT PAGE
         ========================================= */
 
         .tournament-page {
+
             background-color: #0b0b14;
+
             color: #ffffff;
+
         }
 
 
@@ -81,7 +90,8 @@
             border-color: #00e5ff;
 
             box-shadow:
-                0 0 0 0.2rem rgba(0, 229, 255, 0.15);
+                0 0 0 0.2rem
+                rgba(0, 229, 255, 0.15);
 
         }
 
@@ -110,7 +120,8 @@
             border-color: #00e5ff;
 
             box-shadow:
-                0 0 0 0.2rem rgba(0, 229, 255, 0.15);
+                0 0 0 0.2rem
+                rgba(0, 229, 255, 0.15);
 
         }
 
@@ -152,7 +163,8 @@
             border-color: #00e5ff;
 
             box-shadow:
-                0 10px 30px rgba(0, 229, 255, 0.08);
+                0 10px 30px
+                rgba(0, 229, 255, 0.08);
 
         }
 
@@ -537,441 +549,567 @@
             }
 
         }
+
     </style>
 
 </head>
 
 
-
 <body class="tournament-page">
 
 
-    <!-- =========================
+<!-- =========================
      NAVIGATION BAR
 ========================= -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 
-        <div class="container">
-
-
-            <!-- BRAND -->
-
-            <a class="navbar-brand" href="index.html">
-
-                <i class="bi bi-controller"></i>
-
-                NexArena
-
-            </a>
+    <div class="container">
 
 
-            <!-- MOBILE BUTTON -->
+        <!-- BRAND -->
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
 
-                <span class="navbar-toggler-icon"></span>
+            <i class="bi bi-controller"></i>
 
-            </button>
+            NexArena
+
+        </a>
 
 
-            <!-- NAVIGATION -->
+        <!-- MOBILE BUTTON -->
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
 
-                <ul class="navbar-nav ms-auto">
+            <span class="navbar-toggler-icon"></span>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            Home
-                        </a>
-                    </li>
+        </button>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">
-                            About
-                        </a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="games.html">
-                            Games
-                        </a>
-                    </li>
+        <!-- NAVIGATION -->
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="players.html">
-                            Players
-                        </a>
-                    </li>
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="teams.html">
-                            Teams
-                        </a>
-                    </li>
+            <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="tournaments.html">
-                            Tournaments
-                        </a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="schedule.html">
-                            Schedule
-                        </a>
-                    </li>
+                <li class="nav-item">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="faq.html">
-                            FAQ
-                        </a>
-                    </li>
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
-                            Contact
-                        </a>
-                    </li>
+                        Home
 
-                </ul>
-                <div class="nav-auth">
-
-                    <a href="login.html" class="nav-login">
-                        Login
                     </a>
 
-                    <a href="registration.html" class="nav-register">
-                        Register
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+
+                        About
+
                     </a>
 
-                </div>
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="games.html"
+                    >
+
+                        Games
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="players.html"
+                    >
+
+                        Players
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="teams.html"
+                    >
+
+                        Teams
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="tournaments.html"
+                    >
+
+                        Tournaments
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="schedule.html"
+                    >
+
+                        Schedule
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="faq.html"
+                    >
+
+                        FAQ
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html"
+                    >
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+            <div class="nav-auth">
+
+                <a
+                    href="login.html"
+                    class="nav-login"
+                >
+
+                    Login
+
+                </a>
+
+
+                <a
+                    href="registration.html"
+                    class="nav-register"
+                >
+
+                    Register
+
+                </a>
+
             </div>
+
 
         </div>
 
-    </nav>
+    </div>
+
+</nav>
 
 
 
-    <!-- =========================
+<!-- =========================
      PAGE HEADER
 ========================= -->
 
-    <section class="schedule-header">
+<section class="schedule-header">
 
-        <div class="container text-center">
-
-
-            <h1>
-
-                E-Sports <span>Tournaments</span>
-
-            </h1>
+    <div class="container text-center">
 
 
-            <p>
+        <h1>
 
-                Explore competitive tournaments, prize pools,
-                schedules and registration opportunities at NexArena.
+            E-Sports
 
-            </p>
+            <span>
+                Tournaments
+            </span>
 
-
-        </div>
-
-    </section>
+        </h1>
 
 
+        <p>
 
-    <!-- =========================
+            Explore competitive tournaments, prize pools,
+            schedules and registration opportunities at NexArena.
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
      MAIN CONTENT
 ========================= -->
 
-    <section class="section-padding">
+<section class="section-padding">
 
-        <div class="container">
-
-
-            <!-- =========================
-             FILTER SECTION
-        ========================= -->
-
-            <div class="schedule-filter">
+    <div class="container">
 
 
-                <div class="row g-4 align-items-end">
+        <!-- FILTER SECTION -->
+
+        <div class="schedule-filter">
+
+            <div class="row g-4 align-items-end">
 
 
-                    <!-- SEARCH -->
+                <!-- SEARCH -->
 
-                    <div class="col-lg-5">
+                <div class="col-lg-5">
 
-                        <label for="tournamentSearch" class="form-label">
+                    <label
+                        for="tournamentSearch"
+                        class="form-label"
+                    >
 
-                            <i class="bi bi-search"></i>
+                        <i class="bi bi-search"></i>
 
-                            Search Tournament
+                        Search Tournament
 
-                        </label>
-
-
-                        <input type="text" id="tournamentSearch" class="form-control"
-                            placeholder="Search tournament...">
-
-                    </div>
+                    </label>
 
 
+                    <input
+                        type="text"
+                        id="tournamentSearch"
+                        class="form-control"
+                        placeholder="Search tournament..."
+                    >
 
-                    <!-- GAME -->
-
-                    <div class="col-lg-3">
-
-                        <label for="gameFilter" class="form-label">
-
-                            <i class="bi bi-controller"></i>
-
-                            Filter by Game
-
-                        </label>
+                </div>
 
 
-                        <select id="gameFilter" class="form-select">
+                <!-- GAME -->
 
-                            <option value="all">
-                                All Games
-                            </option>
+                <div class="col-lg-3">
 
-                            <option value="valorant">
-                                Valorant
-                            </option>
+                    <label
+                        for="gameFilter"
+                        class="form-label"
+                    >
 
-                            <option value="cs2">
-                                Counter-Strike 2
-                            </option>
+                        <i class="bi bi-controller"></i>
 
-                            <option value="pubg">
-                                PUBG
-                            </option>
+                        Filter by Game
 
-                            <option value="hok">
-                                Honor of Kings
-                            </option>
-
-                            <option value="dota2">
-                                DOTA 2
-                            </option>
-
-                            <option value="fc">
-                                EA Sports FC
-                            </option>
-
-                            <option value="rocket">
-                                Rocket League
-                            </option>
-
-                            <option value="various">
-                                Various Games
-                            </option>
-
-                        </select>
-
-                    </div>
+                    </label>
 
 
+                    <select
+                        id="gameFilter"
+                        class="form-select"
+                    >
 
-                    <!-- STATUS -->
+                        <option value="all">
+                            All Games
+                        </option>
 
-                    <div class="col-lg-2">
+                        <option value="valorant">
+                            Valorant
+                        </option>
 
-                        <label for="statusFilter" class="form-label">
+                        <option value="cs2">
+                            Counter-Strike 2
+                        </option>
 
-                            <i class="bi bi-circle-half"></i>
+                        <option value="pubg">
+                            PUBG
+                        </option>
 
-                            Status
+                        <option value="hok">
+                            Honor of Kings
+                        </option>
 
-                        </label>
+                        <option value="dota2">
+                            DOTA 2
+                        </option>
+
+                        <option value="fc">
+                            EA Sports FC
+                        </option>
+
+                        <option value="rocket">
+                            Rocket League
+                        </option>
+
+                        <option value="various">
+                            Various Games
+                        </option>
+
+                    </select>
+
+                </div>
 
 
-                        <select id="statusFilter" class="form-select">
+                <!-- STATUS -->
 
-                            <option value="all">
-                                All Status
-                            </option>
+                <div class="col-lg-2">
 
-                            <option value="open">
-                                Registration Open
-                            </option>
+                    <label
+                        for="statusFilter"
+                        class="form-label"
+                    >
 
-                            <option value="upcoming">
-                                Upcoming
-                            </option>
+                        <i class="bi bi-circle-half"></i>
 
-                        </select>
+                        Status
 
-                    </div>
+                    </label>
 
 
+                    <select
+                        id="statusFilter"
+                        class="form-select"
+                    >
 
-                    <!-- RESET -->
+                        <option value="all">
+                            All Status
+                        </option>
 
-                    <div class="col-lg-2">
+                        <option value="open">
+                            Registration Open
+                        </option>
 
-                        <button type="button" id="clearFilters" class="btn btn-outline-info w-100">
+                        <option value="upcoming">
+                            Upcoming
+                        </option>
 
-                            <i class="bi bi-arrow-counterclockwise"></i>
+                    </select>
 
-                            Reset
+                </div>
 
-                        </button>
 
-                    </div>
+                <!-- RESET -->
 
+                <div class="col-lg-2">
+
+                    <button
+                        type="button"
+                        id="clearFilters"
+                        class="btn btn-outline-info w-100"
+                    >
+
+                        <i class="bi bi-arrow-counterclockwise"></i>
+
+                        Reset
+
+                    </button>
 
                 </div>
 
 
             </div>
 
-
-
-            <!-- =========================
-             RESULT COUNT
-        ========================= -->
-
-            <div class="result-text" id="resultText">
-
-                Showing all tournaments
-
-            </div>
+        </div>
 
 
 
-            <!-- =========================
+        <!-- RESULT COUNT -->
+
+        <div
+            class="result-text"
+            id="resultText"
+        >
+
+            Showing all tournaments
+
+        </div>
+
+
+
+        <!-- =====================================================
              TOURNAMENT GRID
-        ========================= -->
+        ====================================================== -->
 
-            <div class="row g-4" id="tournamentContainer">
-
-
-
-                <!-- =====================================
-                 01
-                 ROCKET LEAGUE
-            ====================================== -->
-
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="Rocket League Turbo Rush" data-game="rocket"
-                    data-status="open">
-
-                    <div class="tournament-card">
+        <div
+            class="row g-4"
+            id="tournamentContainer"
+        >
 
 
-                        <!-- GAME -->
+            <!-- =================================================
+                 01 - ROCKET LEAGUE
+            ================================================== -->
 
-                        <div class="tournament-game-header">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="Rocket League Turbo Rush"
+                data-game="rocket"
+                data-status="open"
+            >
 
-                            <div class="tournament-game-name">
+                <div class="tournament-card">
 
-                                ROCKET LEAGUE
 
-                            </div>
+                    <div class="tournament-game-header">
+
+                        <div class="tournament-game-name">
+
+                            ROCKET LEAGUE
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-open">
+
+                                REGISTRATION OPEN
+
+                            </span>
 
                         </div>
 
 
-                        <!-- CONTENT -->
+                        <h4>
 
-                        <div class="tournament-content">
+                            Rocket League: Turbo Rush
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-open">
+                            A fast-paced Rocket League tournament
+                            where teams compete in high-speed
+                            online matches.
 
-                                    REGISTRATION OPEN
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                October 2, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                3:00 PM – 6:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-globe"></i>
+
+                                Online
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                12 Teams
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $300
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                Rocket League: Turbo Rush
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                A fast-paced Rocket League tournament
-                                where teams compete in high-speed
-                                online matches.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    October 2, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    3:00 PM – 6:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-globe"></i>
-
-                                    Online
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    12 Teams
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $300
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light flex-fill"
+                                onclick="
                                     showTournamentDetails(
                                         'Rocket League: Turbo Rush',
                                         'Rocket League',
@@ -982,143 +1120,154 @@
                                         '$300',
                                         'A fast-paced Rocket League tournament where teams compete in high-speed online matches.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
-
-
-                                <a href="tournamentRegistration.html?event=rocket-turbo" class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
+                            </button>
 
 
-                            </div>
+                            <a
+                                href="tournamentRegistration.html?event=rocket-turbo"
+                                class="btn btn-main flex-fill"
+                            >
+
+                                Register
+
+                            </a>
+
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 02
-                 VALORANT
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="Valorant Neon Ascension" data-game="valorant"
-                    data-status="open">
+            <!-- =================================================
+                 02 - VALORANT
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="Valorant Neon Ascension"
+                data-game="valorant"
+                data-status="open"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                VALORANT
+                            VALORANT
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-open">
+
+                                REGISTRATION OPEN
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            Valorant Championship 2026
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-open">
+                            A high-intensity tactical tournament
+                            where teams battle through competitive
+                            Valorant matches.
 
-                                    REGISTRATION OPEN
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                October 20, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                2:00 PM – 6:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-geo-alt"></i>
+
+                                Main Arena
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                16 Teams
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $500
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                Valorant: Neon Ascension
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                A high-intensity tactical tournament
-                                where teams battle through competitive
-                                Valorant matches.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    October 20, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    2:00 PM – 6:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-geo-alt"></i>
-
-                                    Main Arena
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    16 Teams
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $500
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light flex-fill"
+                                onclick="
                                     showTournamentDetails(
-                                        'Valorant: Neon Ascension',
+                                        'Valorant Championship 2026',
                                         'Valorant',
                                         'October 20, 2026',
                                         '2:00 PM – 6:00 PM',
@@ -1127,142 +1276,152 @@
                                         '$500',
                                         'A high-intensity tactical tournament where teams battle through competitive Valorant matches.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
-
-
-                                <a href="tournamentRegistration.html?event=valorant-neon"
-                                    class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
+                            </button>
 
 
-                            </div>
+                            <a
+                                href="tournamentRegistration.html?event=valorant-neon"
+                                class="btn btn-main flex-fill"
+                            >
+
+                                Register
+
+                            </a>
+
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 03
-                 CS2
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="CS2 Tactical Lockdown" data-game="cs2"
-                    data-status="open">
+            <!-- =================================================
+                 03 - CS2
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="CS2 Tactical Lockdown"
+                data-game="cs2"
+                data-status="open"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                COUNTER-STRIKE 2
+                            COUNTER-STRIKE 2
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-open">
+
+                                REGISTRATION OPEN
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            CS2: Tactical Lockdown
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-open">
+                            Precision, strategy and communication
+                            collide in this competitive
+                            Counter-Strike 2 campus showdown.
 
-                                    REGISTRATION OPEN
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                October 22, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                2:00 PM – 6:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-geo-alt"></i>
+
+                                Main Arena
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                12 Teams
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $450
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                CS2: Tactical Lockdown
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                Precision, strategy and communication
-                                collide in this competitive
-                                Counter-Strike 2 campus showdown.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    October 22, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    2:00 PM – 6:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-geo-alt"></i>
-
-                                    Main Arena
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    12 Teams
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $450
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light flex-fill"
+                                onclick="
                                     showTournamentDetails(
                                         'CS2: Tactical Lockdown',
                                         'Counter-Strike 2',
@@ -1273,141 +1432,152 @@
                                         '$450',
                                         'Precision, strategy and communication collide in this competitive Counter-Strike 2 campus showdown.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
-
-
-                                <a href="tournamentRegistration.html?event=cs2-lockdown" class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
+                            </button>
 
 
-                            </div>
+                            <a
+                                href="tournamentRegistration.html?event=cs2-lockdown"
+                                class="btn btn-main flex-fill"
+                            >
+
+                                Register
+
+                            </a>
+
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 04
-                 PUBG
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="PUBG Last Squad Standing" data-game="pubg"
-                    data-status="open">
+            <!-- =================================================
+                 04 - PUBG
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="PUBG Last Squad Standing"
+                data-game="pubg"
+                data-status="open"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                PUBG
+                            PUBG
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-open">
+
+                                REGISTRATION OPEN
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            PUBG: Last Squad Standing
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-open">
+                            Survive, outplay and outlast the competition
+                            in a battle royale tournament where only
+                            one squad can take the victory.
 
-                                    REGISTRATION OPEN
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                October 24, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                3:00 PM – 7:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-globe"></i>
+
+                                Online
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                20 Teams
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $600
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                PUBG: Last Squad Standing
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                Survive, outplay and outlast the competition
-                                in a battle royale tournament where only
-                                one squad can take the victory.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    October 24, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    3:00 PM – 7:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-globe"></i>
-
-                                    Online
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    20 Teams
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $600
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light flex-fill"
+                                onclick="
                                     showTournamentDetails(
                                         'PUBG: Last Squad Standing',
                                         'PUBG',
@@ -1418,141 +1588,152 @@
                                         '$600',
                                         'Survive, outplay and outlast the competition in a battle royale tournament where only one squad can take the victory.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
-
-
-                                <a href="tournamentRegistration.html?event=pubg-last-squad"
-                                    class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
+                            </button>
 
 
-                            </div>
+                            <a
+                                href="tournamentRegistration.html?event=pubg-last-squad"
+                                class="btn btn-main flex-fill"
+                            >
+
+                                Register
+
+                            </a>
+
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 05
-                 HONOR OF KINGS
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="Honor of Kings Rise of Champions"
-                    data-game="hok" data-status="upcoming">
+            <!-- =================================================
+                 05 - HONOR OF KINGS
+                 UPCOMING - NO REGISTER BUTTON
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="Honor of Kings Rise of Champions"
+                data-game="hok"
+                data-status="upcoming"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                HONOR OF KINGS
+                            HONOR OF KINGS
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-upcoming">
+
+                                UPCOMING
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            Honor of Kings: Rise of Champions
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-upcoming">
+                            Build the perfect team, master your heroes
+                            and fight your way through the competition.
 
-                                    UPCOMING
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                October 26, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                2:00 PM – 6:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-globe"></i>
+
+                                Online
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                12 Teams
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $400
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                Honor of Kings: Rise of Champions
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                Build the perfect team, master your heroes
-                                and fight your way through the competition.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    October 26, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    2:00 PM – 6:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-globe"></i>
-
-                                    Online
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    12 Teams
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $400
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light w-100"
+                                onclick="
                                     showTournamentDetails(
                                         'Honor of Kings: Rise of Champions',
                                         'Honor of Kings',
@@ -1563,141 +1744,143 @@
                                         '$400',
                                         'Build the perfect team, master your heroes and fight your way through the competition.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
+                            </button>
 
-
-                                <a href="tournamentRegistration.html?event=hok-rise" class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
-
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 06
-                 DOTA 2
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="DOTA 2 Battle for the Throne"
-                    data-game="dota2" data-status="upcoming">
+            <!-- =================================================
+                 06 - DOTA 2
+                 UPCOMING - NO REGISTER BUTTON
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="DOTA 2 Battle for the Throne"
+                data-game="dota2"
+                data-status="upcoming"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                DOTA 2
+                            DOTA 2
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-upcoming">
+
+                                UPCOMING
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            DOTA 2: Battle for the Throne
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-upcoming">
+                            Gather your strongest lineup and fight
+                            your way through a strategic DOTA 2
+                            tournament for the ultimate crown.
 
-                                    UPCOMING
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                October 28, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                2:00 PM – 7:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-globe"></i>
+
+                                Online
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                10 Teams
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $450
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                DOTA 2: Battle for the Throne
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                Gather your strongest lineup and fight
-                                your way through a strategic DOTA 2
-                                tournament for the ultimate crown.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    October 28, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    2:00 PM – 7:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-globe"></i>
-
-                                    Online
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    10 Teams
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $450
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light w-100"
+                                onclick="
                                     showTournamentDetails(
                                         'DOTA 2: Battle for the Throne',
                                         'DOTA 2',
@@ -1708,141 +1891,143 @@
                                         '$450',
                                         'Gather your strongest lineup and fight your way through a strategic DOTA 2 tournament for the ultimate crown.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
+                            </button>
 
-
-                                <a href="tournamentRegistration.html?event=dota2-throne" class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
-
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 07
-                 EA SPORTS FC
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="EA FC Road to Glory" data-game="fc"
-                    data-status="upcoming">
+            <!-- =================================================
+                 07 - EA SPORTS FC
+                 UPCOMING - NO REGISTER BUTTON
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="EA FC Road to Glory"
+                data-game="fc"
+                data-status="upcoming"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                EA SPORTS FC
+                            EA SPORTS FC
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-upcoming">
+
+                                UPCOMING
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            EA FC: Road to Glory
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-upcoming">
+                            A competitive football showdown
+                            featuring individual players battling
+                            through a tournament bracket.
 
-                                    UPCOMING
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                October 30, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                3:00 PM – 5:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-geo-alt"></i>
+
+                                Main Arena
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                16 Players
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $250
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                EA FC: Road to Glory
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                A competitive football showdown
-                                featuring individual players battling
-                                through a tournament bracket.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    October 30, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    3:00 PM – 5:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-geo-alt"></i>
-
-                                    Main Arena
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    16 Players
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $250
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light w-100"
+                                onclick="
                                     showTournamentDetails(
                                         'EA FC: Road to Glory',
                                         'EA Sports FC',
@@ -1853,141 +2038,143 @@
                                         '$250',
                                         'A competitive football showdown featuring individual players battling through a tournament bracket.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
+                            </button>
 
-
-                                <a href="tournamentRegistration.html?event=fc-road" class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
-
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 08
-                 CS2 CLUTCH PROTOCOL
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="CS2 Clutch Protocol" data-game="cs2"
-                    data-status="open">
+            <!-- =================================================
+                 08 - CS2 CLUTCH PROTOCOL
+                 REGISTRATION OPEN
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="CS2 Clutch Protocol"
+                data-game="cs2"
+                data-status="open"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                COUNTER-STRIKE 2
+                            COUNTER-STRIKE 2
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-open">
+
+                                REGISTRATION OPEN
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            CS2: Clutch Protocol
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-open">
+                            Take your team into the server and
+                            prove who has the strongest tactical
+                            discipline in NexArena.
 
-                                    REGISTRATION OPEN
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                November 8, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                2:00 PM – 7:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-geo-alt"></i>
+
+                                Main Arena
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                16 Teams
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $500
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                CS2: Clutch Protocol
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                Take your team into the server and
-                                prove who has the strongest tactical
-                                discipline in NexArena.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    November 8, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    2:00 PM – 7:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-geo-alt"></i>
-
-                                    Main Arena
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    16 Teams
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $500
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light flex-fill"
+                                onclick="
                                     showTournamentDetails(
                                         'CS2: Clutch Protocol',
                                         'Counter-Strike 2',
@@ -1998,141 +2185,153 @@
                                         '$500',
                                         'Take your team into the server and prove who has the strongest tactical discipline in NexArena.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
-
-
-                                <a href="tournamentRegistration.html?event=cs2-clutch" class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
+                            </button>
 
 
-                            </div>
+                            <a
+                                href="tournamentRegistration.html?event=cs2-clutch"
+                                class="btn btn-main flex-fill"
+                            >
+
+                                Register
+
+                            </a>
+
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 09
-                 PUBG SURVIVAL PROTOCOL
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="PUBG Survival Protocol" data-game="pubg"
-                    data-status="upcoming">
+            <!-- =================================================
+                 09 - PUBG SURVIVAL PROTOCOL
+                 UPCOMING - NO REGISTER BUTTON
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="PUBG Survival Protocol"
+                data-game="pubg"
+                data-status="upcoming"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                PUBG
+                            PUBG
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-upcoming">
+
+                                UPCOMING
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            PUBG: Survival Protocol
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-upcoming">
+                            A high-pressure battle royale event
+                            where every decision matters and only
+                            one squad survives the final circle.
 
-                                    UPCOMING
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                November 14, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                3:00 PM – 8:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-globe"></i>
+
+                                Online
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-people"></i>
+
+                                20 Teams
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $600
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                PUBG: Survival Protocol
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                A high-pressure battle royale event
-                                where every decision matters and only
-                                one squad survives the final circle.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    November 14, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    3:00 PM – 8:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-globe"></i>
-
-                                    Online
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-people"></i>
-
-                                    20 Teams
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $600
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light w-100"
+                                onclick="
                                     showTournamentDetails(
                                         'PUBG: Survival Protocol',
                                         'PUBG',
@@ -2143,142 +2342,143 @@
                                         '$600',
                                         'A high-pressure battle royale event where every decision matters and only one squad survives the final circle.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
+                            </button>
 
-
-                                <a href="tournamentRegistration.html?event=pubg-survival"
-                                    class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
-
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- =====================================
-                 10
-                 FINAL STRIKE
-            ====================================== -->
 
-                <div class="col-md-6 col-xl-4 tournament-item" data-name="NexArena Final Strike" data-game="various"
-                    data-status="upcoming">
+            <!-- =================================================
+                 10 - FINAL STRIKE
+                 UPCOMING - NO REGISTER BUTTON
+            ================================================== -->
 
-                    <div class="tournament-card">
+            <div
+                class="col-md-6 col-xl-4 tournament-item"
+                data-name="NexArena Final Strike"
+                data-game="various"
+                data-status="upcoming"
+            >
+
+                <div class="tournament-card">
 
 
-                        <div class="tournament-game-header">
+                    <div class="tournament-game-header">
 
-                            <div class="tournament-game-name">
+                        <div class="tournament-game-name">
 
-                                VARIOUS GAMES
+                            VARIOUS GAMES
 
-                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tournament-content">
+
+
+                        <div class="tournament-status">
+
+                            <span class="status-upcoming">
+
+                                UPCOMING
+
+                            </span>
 
                         </div>
 
 
-                        <div class="tournament-content">
+                        <h4>
+
+                            NexArena: Final Strike
+
+                        </h4>
 
 
-                            <div class="tournament-status">
+                        <p class="tournament-description">
 
-                                <span class="status-upcoming">
+                            The final major tournament of the schedule,
+                            bringing together the best NexArena players
+                            for championship competition.
 
-                                    UPCOMING
+                        </p>
+
+
+                        <div class="tournament-meta">
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                                November 29, 2026
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-clock"></i>
+
+                                2:00 PM – 8:00 PM
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-geo-alt"></i>
+
+                                Main Arena
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-stars"></i>
+
+                                Grand Finale
+
+                            </div>
+
+
+                            <div class="tournament-meta-item">
+
+                                <i class="bi bi-trophy"></i>
+
+                                <span class="prize-pool">
+
+                                    Prize Pool: $1,000
 
                                 </span>
 
                             </div>
 
 
-                            <h4>
-
-                                NexArena: Final Strike
-
-                            </h4>
+                        </div>
 
 
-                            <p class="tournament-description">
-
-                                The final major tournament of the schedule,
-                                bringing together the best NexArena players
-                                for championship competition.
-
-                            </p>
+                        <div class="d-flex gap-2">
 
 
-                            <div class="tournament-meta">
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-calendar-event"></i>
-
-                                    November 29, 2026
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-clock"></i>
-
-                                    2:00 PM – 8:00 PM
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-geo-alt"></i>
-
-                                    Main Arena
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-stars"></i>
-
-                                    Grand Finale
-
-                                </div>
-
-
-                                <div class="tournament-meta-item">
-
-                                    <i class="bi bi-trophy"></i>
-
-                                    <span class="prize-pool">
-
-                                        Prize Pool: $1,000
-
-                                    </span>
-
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex gap-2">
-
-
-                                <button type="button" class="btn btn-outline-light flex-fill" onclick="
+                            <button
+                                type="button"
+                                class="btn btn-outline-light w-100"
+                                onclick="
                                     showTournamentDetails(
                                         'NexArena: Final Strike',
                                         'Various Games',
@@ -2289,626 +2489,670 @@
                                         '$1,000',
                                         'The final major tournament of the schedule, bringing together the best NexArena players for championship competition.'
                                     )
-                                ">
+                                "
+                            >
 
-                                    Details
+                                Details
 
-                                </button>
+                            </button>
 
-
-                                <a href="tournamentRegistration.html?event=final-strike" class="btn btn-main flex-fill">
-
-                                    Register
-
-                                </a>
-
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
                 </div>
-
-
-            </div>
-
-
-
-            <!-- =========================
-             NO RESULTS
-        ========================= -->
-
-            <div id="noTournaments" class="no-tournaments mt-4" style="display:none;">
-
-                <i class="bi bi-search"></i>
-
-
-                <h4>
-                    No Tournaments Found
-                </h4>
-
-
-                <p>
-                    Try another tournament name or game.
-                </p>
 
             </div>
 
 
         </div>
 
-    </section>
+
+
+        <!-- =================================================
+             NO RESULTS
+        ================================================== -->
+
+        <div
+            id="noTournaments"
+            class="no-tournaments mt-4"
+            style="display:none;"
+        >
+
+            <i class="bi bi-search"></i>
+
+
+            <h4>
+
+                No Tournaments Found
+
+            </h4>
+
+
+            <p>
+
+                Try another tournament name or game.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
 
-    <!-- =========================
+<!-- =========================
      TOURNAMENT DETAILS MODAL
 ========================= -->
 
-    <div class="modal fade tournament-modal" id="tournamentDetailsModal" tabindex="-1"
-        aria-labelledby="tournamentDetailsTitle" aria-hidden="true">
+<div
+    class="modal fade tournament-modal"
+    id="tournamentDetailsModal"
+    tabindex="-1"
+    aria-labelledby="tournamentDetailsTitle"
+    aria-hidden="true"
+>
 
-        <div class="
+    <div
+        class="
             modal-dialog
             modal-dialog-centered
-        ">
+        "
+    >
 
-            <div class="modal-content">
-
-
-                <!-- HEADER -->
-
-                <div class="modal-header">
-
-                    <h5 class="modal-title" id="tournamentDetailsTitle">
-                        Tournament Details
-                    </h5>
+        <div class="modal-content">
 
 
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+            <!-- HEADER -->
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="tournamentDetailsTitle"
+                >
+
+                    Tournament Details
+
+                </h5>
+
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+
+            </div>
+
+
+            <!-- BODY -->
+
+            <div class="modal-body">
+
+
+                <div
+                    class="modal-game-title"
+                    id="modalGameTitle"
+                ></div>
+
+
+                <div class="modal-info-item">
+
+                    <i class="bi bi-calendar-event"></i>
+
+                    <div>
+
+                        <strong>
+                            Date:
+                        </strong>
+
+                        <span id="modalDate"></span>
+
+                    </div>
 
                 </div>
 
 
-                <!-- BODY -->
+                <div class="modal-info-item">
 
-                <div class="modal-body">
+                    <i class="bi bi-clock"></i>
 
+                    <div>
 
-                    <div class="modal-game-title" id="modalGameTitle"></div>
+                        <strong>
+                            Time:
+                        </strong>
 
-
-                    <div class="modal-info-item">
-
-                        <i class="bi bi-calendar-event"></i>
-
-                        <div>
-
-                            <strong>
-                                Date:
-                            </strong>
-
-                            <span id="modalDate"></span>
-
-                        </div>
+                        <span id="modalTime"></span>
 
                     </div>
 
-
-                    <div class="modal-info-item">
-
-                        <i class="bi bi-clock"></i>
-
-                        <div>
-
-                            <strong>
-                                Time:
-                            </strong>
-
-                            <span id="modalTime"></span>
-
-                        </div>
-
-                    </div>
+                </div>
 
 
-                    <div class="modal-info-item">
+                <div class="modal-info-item">
 
-                        <i class="bi bi-geo-alt"></i>
+                    <i class="bi bi-geo-alt"></i>
 
-                        <div>
+                    <div>
 
-                            <strong>
-                                Venue:
-                            </strong>
+                        <strong>
+                            Venue:
+                        </strong>
 
-                            <span id="modalVenue"></span>
-
-                        </div>
+                        <span id="modalVenue"></span>
 
                     </div>
 
-
-                    <div class="modal-info-item">
-
-                        <i class="bi bi-people"></i>
-
-                        <div>
-
-                            <strong>
-                                Participants:
-                            </strong>
-
-                            <span id="modalParticipants"></span>
-
-                        </div>
-
-                    </div>
+                </div>
 
 
-                    <div class="modal-info-item">
+                <div class="modal-info-item">
 
-                        <i class="bi bi-trophy"></i>
+                    <i class="bi bi-people"></i>
 
-                        <div>
+                    <div>
 
-                            <strong>
-                                Prize Pool:
-                            </strong>
+                        <strong>
+                            Participants:
+                        </strong>
 
-                            <span class="modal-prize" id="modalPrize"></span>
-
-                        </div>
+                        <span id="modalParticipants"></span>
 
                     </div>
 
+                </div>
 
-                    <hr style="
+
+                <div class="modal-info-item">
+
+                    <i class="bi bi-trophy"></i>
+
+                    <div>
+
+                        <strong>
+                            Prize Pool:
+                        </strong>
+
+                        <span
+                            class="modal-prize"
+                            id="modalPrize"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <hr
+                    style="
                         border-color:#29293a;
-                    ">
+                    "
+                >
 
 
-                    <p class="event-info" id="modalDescription"></p>
-
-
-                </div>
-
-
-                <!-- FOOTER -->
-
-                <div class="modal-footer">
-
-
-                    <button type="button" class="btn btn-main" data-bs-dismiss="modal">
-
-                        Close
-
-                    </button>
-
-
-                </div>
+                <p
+                    class="event-info"
+                    id="modalDescription"
+                ></p>
 
 
             </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="modal-footer">
+
+
+                <button
+                    type="button"
+                    class="btn btn-main"
+                    data-bs-dismiss="modal"
+                >
+
+                    Close
+
+                </button>
+
+
+            </div>
+
 
         </div>
 
     </div>
 
+</div>
 
 
-    <!-- =========================
+
+<!-- =========================
      FOOTER
 ========================= -->
 
-    <footer>
+<footer>
 
-        <div class="container text-center">
-
-            <h5 class="text-white">
-
-                <i class="bi bi-controller"></i>
-
-                NexArena
-
-            </h5>
+    <div class="container text-center">
 
 
-            <p class="mt-3">
+        <h5 class="text-white">
 
-                Play. Compete. Connect.
+            <i class="bi bi-controller"></i>
 
-            </p>
+            NexArena
 
-
-            <!-- SOCIAL MEDIA LINKS -->
-
-            <div class="mb-3">
-
-                <!-- Instagram -->
-
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-instagram"></i>
-                    Instagram
-                </a>
+        </h5>
 
 
-                <!-- Discord -->
+        <p class="mt-3">
 
-                <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-discord"></i>
-                    Discord
-                </a>
+            Play. Compete. Connect.
 
-
-                <!-- YouTube -->
-
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="bi bi-youtube"></i>
-                    YouTube
-                </a>
-
-            </div>
+        </p>
 
 
-            <p class="mb-0">
+        <div class="mb-3">
 
-                &copy; 2026 NexArena.
-                All Rights Reserved.
 
-            </p>
+            <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-instagram"></i>
+
+                Instagram
+
+            </a>
+
+
+            <a
+                href="https://discord.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-discord"></i>
+
+                Discord
+
+            </a>
+
+
+            <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-youtube"></i>
+
+                YouTube
+
+            </a>
 
 
         </div>
 
-    </footer>
+
+        <p class="mb-0">
+
+            &copy; 2026 NexArena.
+            All Rights Reserved.
+
+        </p>
+
+
+    </div>
+
+</footer>
 
 
 
-    <!-- =========================
+<!-- =========================
      BOOTSTRAP JS
 ========================= -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
 
 
 
-    <!-- =========================
+<!-- =========================
      TOURNAMENT JAVASCRIPT
 ========================= -->
 
-    <script>
+<script>
+
+    /* =========================================
+       ELEMENTS
+    ========================================= */
+
+    const tournamentSearch =
+        document.getElementById(
+            "tournamentSearch"
+        );
 
 
-        /* =========================================
-           ELEMENTS
-        ========================================= */
-
-        const tournamentSearch =
-            document.getElementById(
-                "tournamentSearch"
-            );
+    const gameFilter =
+        document.getElementById(
+            "gameFilter"
+        );
 
 
-        const gameFilter =
-            document.getElementById(
-                "gameFilter"
-            );
+    const statusFilter =
+        document.getElementById(
+            "statusFilter"
+        );
 
 
-        const statusFilter =
-            document.getElementById(
-                "statusFilter"
-            );
+    const clearFilters =
+        document.getElementById(
+            "clearFilters"
+        );
 
 
-        const clearFilters =
-            document.getElementById(
-                "clearFilters"
-            );
+    const tournamentItems =
+        Array.from(
+            document.querySelectorAll(
+                ".tournament-item"
+            )
+        );
 
 
-        const tournamentItems =
-            Array.from(
-                document.querySelectorAll(
-                    ".tournament-item"
-                )
-            );
+    const tournamentContainer =
+        document.getElementById(
+            "tournamentContainer"
+        );
 
 
-        const tournamentContainer =
-            document.getElementById(
-                "tournamentContainer"
-            );
+    const noTournaments =
+        document.getElementById(
+            "noTournaments"
+        );
 
 
-        const noTournaments =
-            document.getElementById(
-                "noTournaments"
-            );
-
-
-        const resultText =
-            document.getElementById(
-                "resultText"
-            );
-
-
-
-        /* =========================================
-           FILTER
-        ========================================= */
-
-        function filterTournaments() {
-
-
-            const searchText =
-                tournamentSearch.value
-                    .toLowerCase()
-                    .trim();
-
-
-            const selectedGame =
-                gameFilter.value;
-
-
-            const selectedStatus =
-                statusFilter.value;
-
-
-            let visibleCount = 0;
+    const resultText =
+        document.getElementById(
+            "resultText"
+        );
 
 
 
-            tournamentItems.forEach(
-                function (item) {
+    /* =========================================
+       FILTER
+    ========================================= */
+
+    function filterTournaments() {
 
 
-                    const tournamentName =
-                        item.dataset.name
-                            .toLowerCase();
+        const searchText =
+            tournamentSearch.value
+                .toLowerCase()
+                .trim();
 
 
-                    const tournamentGame =
-                        item.dataset.game;
+        const selectedGame =
+            gameFilter.value;
 
 
-                    const tournamentStatus =
-                        item.dataset.status;
+        const selectedStatus =
+            statusFilter.value;
 
 
-
-                    const searchMatch =
-                        searchText === "" ||
-                        tournamentName.includes(
-                            searchText
-                        );
+        let visibleCount = 0;
 
 
-                    const gameMatch =
-                        selectedGame === "all" ||
-                        selectedGame ===
-                        tournamentGame;
+        tournamentItems.forEach(
+            function (item) {
 
 
-                    const statusMatch =
-                        selectedStatus === "all" ||
-                        selectedStatus ===
-                        tournamentStatus;
+                const tournamentName =
+                    item.dataset.name
+                        .toLowerCase();
 
 
+                const tournamentGame =
+                    item.dataset.game;
 
-                    if (
-                        searchMatch &&
-                        gameMatch &&
-                        statusMatch
-                    ) {
 
-                        item.style.display =
-                            "";
+                const tournamentStatus =
+                    item.dataset.status;
 
-                        visibleCount++;
 
-                    }
+                const searchMatch =
+                    searchText === "" ||
+                    tournamentName.includes(
+                        searchText
+                    );
 
-                    else {
 
-                        item.style.display =
-                            "none";
+                const gameMatch =
+                    selectedGame === "all" ||
+                    selectedGame ===
+                    tournamentGame;
 
-                    }
+
+                const statusMatch =
+                    selectedStatus === "all" ||
+                    selectedStatus ===
+                    tournamentStatus;
+
+
+                if (
+                    searchMatch &&
+                    gameMatch &&
+                    statusMatch
+                ) {
+
+                    item.style.display = "";
+
+                    visibleCount++;
 
                 }
+
+                else {
+
+                    item.style.display = "none";
+
+                }
+
+            }
+        );
+
+
+        /* RESULT TEXT */
+
+        resultText.textContent =
+            "Showing " +
+            visibleCount +
+            " tournament" +
+            (
+                visibleCount === 1
+                    ? ""
+                    : "s"
             );
 
 
+        /* NO RESULTS */
 
-            /* RESULT TEXT */
-
-            resultText.textContent =
-                "Showing " +
-                visibleCount +
-                " tournament" +
-                (
-                    visibleCount === 1
-                        ? ""
-                        : "s"
-                );
-
-
-
-            /* NO RESULTS */
-
-            if (
-                visibleCount === 0
-            ) {
-
-                tournamentContainer.style.display =
-                    "none";
-
-                noTournaments.style.display =
-                    "block";
-
-            }
-
-            else {
-
-                tournamentContainer.style.display =
-                    "";
-
-                noTournaments.style.display =
-                    "none";
-
-            }
-
-        }
-
-
-
-        /* =========================================
-           RESET
-        ========================================= */
-
-        clearFilters.addEventListener(
-            "click",
-            function () {
-
-
-                tournamentSearch.value =
-                    "";
-
-
-                gameFilter.value =
-                    "all";
-
-
-                statusFilter.value =
-                    "all";
-
-
-                filterTournaments();
-
-            }
-        );
-
-
-
-        /* =========================================
-           FILTER EVENTS
-        ========================================= */
-
-        tournamentSearch.addEventListener(
-            "input",
-            filterTournaments
-        );
-
-
-        gameFilter.addEventListener(
-            "change",
-            filterTournaments
-        );
-
-
-        statusFilter.addEventListener(
-            "change",
-            filterTournaments
-        );
-
-
-
-        /* =========================================
-           DETAILS MODAL
-        ========================================= */
-
-        function showTournamentDetails(
-            title,
-            game,
-            date,
-            time,
-            venue,
-            participants,
-            prize,
-            description
+        if (
+            visibleCount === 0
         ) {
 
+            tournamentContainer.style.display =
+                "none";
 
-            document.getElementById(
-                "tournamentDetailsTitle"
-            ).textContent =
-                title;
-
-
-            document.getElementById(
-                "modalGameTitle"
-            ).textContent =
-                game;
-
-
-            document.getElementById(
-                "modalDate"
-            ).textContent =
-                date;
-
-
-            document.getElementById(
-                "modalTime"
-            ).textContent =
-                time;
-
-
-            document.getElementById(
-                "modalVenue"
-            ).textContent =
-                venue;
-
-
-            document.getElementById(
-                "modalParticipants"
-            ).textContent =
-                participants;
-
-
-            document.getElementById(
-                "modalPrize"
-            ).textContent =
-                prize;
-
-
-            document.getElementById(
-                "modalDescription"
-            ).textContent =
-                description;
-
-
-
-            const modalElement =
-                document.getElementById(
-                    "tournamentDetailsModal"
-                );
-
-
-            const modal =
-                bootstrap.Modal.getOrCreateInstance(
-                    modalElement
-                );
-
-
-            modal.show();
+            noTournaments.style.display =
+                "block";
 
         }
 
+        else {
+
+            tournamentContainer.style.display =
+                "";
+
+            noTournaments.style.display =
+                "none";
+
+        }
+
+    }
 
 
-        /* =========================================
-           INITIALISE
-        ========================================= */
 
-        filterTournaments();
+    /* =========================================
+       RESET
+    ========================================= */
 
-    </script>
+    clearFilters.addEventListener(
+        "click",
+        function () {
+
+
+            tournamentSearch.value =
+                "";
+
+
+            gameFilter.value =
+                "all";
+
+
+            statusFilter.value =
+                "all";
+
+
+            filterTournaments();
+
+        }
+    );
+
+
+
+    /* =========================================
+       FILTER EVENTS
+    ========================================= */
+
+    tournamentSearch.addEventListener(
+        "input",
+        filterTournaments
+    );
+
+
+    gameFilter.addEventListener(
+        "change",
+        filterTournaments
+    );
+
+
+    statusFilter.addEventListener(
+        "change",
+        filterTournaments
+    );
+
+
+
+    /* =========================================
+       DETAILS MODAL
+    ========================================= */
+
+    function showTournamentDetails(
+        title,
+        game,
+        date,
+        time,
+        venue,
+        participants,
+        prize,
+        description
+    ) {
+
+
+        document.getElementById(
+            "tournamentDetailsTitle"
+        ).textContent =
+            title;
+
+
+        document.getElementById(
+            "modalGameTitle"
+        ).textContent =
+            game;
+
+
+        document.getElementById(
+            "modalDate"
+        ).textContent =
+            date;
+
+
+        document.getElementById(
+            "modalTime"
+        ).textContent =
+            time;
+
+
+        document.getElementById(
+            "modalVenue"
+        ).textContent =
+            venue;
+
+
+        document.getElementById(
+            "modalParticipants"
+        ).textContent =
+            participants;
+
+
+        document.getElementById(
+            "modalPrize"
+        ).textContent =
+            prize;
+
+
+        document.getElementById(
+            "modalDescription"
+        ).textContent =
+            description;
+
+
+        const modalElement =
+            document.getElementById(
+                "tournamentDetailsModal"
+            );
+
+
+        const modal =
+            bootstrap.Modal.getOrCreateInstance(
+                modalElement
+            );
+
+
+        modal.show();
+
+    }
+
+
+
+    /* =========================================
+       INITIALISE
+    ========================================= */
+
+    filterTournaments();
+
+</script>
 
 
 </body>
