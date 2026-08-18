@@ -1292,10 +1292,6 @@
                             Most Wins
                         </option>
 
-                        <option value="losses">
-                            Fewest Losses
-                        </option>
-
 
                     </select>
 
@@ -1327,7 +1323,6 @@
 
                         <option value="asc">
                             Lowest
-
                         </option>
 
                     </select>
@@ -1336,10 +1331,6 @@
 
 
             </div>
-
-
-            
-
 
         </div>
 
@@ -1772,72 +1763,191 @@ $(document).ready(function () {
 
     function loadTeamFromAPI(team) {
 
-    const apiUrl =
-        "https://www.thesportsdb.com/api/v1/json/123/searchteams.php?t=" +
-        encodeURIComponent(team.name);
+        const apiUrl =
+            "https://www.thesportsdb.com/api/v1/json/123/searchteams.php?t=" +
+            encodeURIComponent(team.name);
 
 
-    return $.getJSON(apiUrl)
+        return $.getJSON(apiUrl)
 
-    .then(function (response) {
+        .then(function (response) {
 
-        let apiTeam = null;
-
-
-        if (
-            response &&
-            Array.isArray(response.teams) &&
-            response.teams.length > 0
-        ) {
-
-            /*
-             * Try exact name first
-             */
-            apiTeam =
-                response.teams.find(function (item) {
-
-                    return (
-                        item.strTeam &&
-                        item.strTeam
-                            .toLowerCase()
-                            .trim() ===
-                        team.name
-                            .toLowerCase()
-                            .trim()
-                    );
-
-                });
+            let apiTeam = null;
 
 
-            /*
-             * Otherwise use first result
-             */
-            if (!apiTeam) {
+            if (
+                response &&
+                Array.isArray(response.teams) &&
+                response.teams.length > 0
+            ) {
+
+                /*
+                 * Try exact name first
+                 */
 
                 apiTeam =
-                    response.teams[0];
+                    response.teams.find(
+                        function (item) {
+
+                            return (
+                                item.strTeam &&
+                                item.strTeam
+                                    .toLowerCase()
+                                    .trim() ===
+                                team.name
+                                    .toLowerCase()
+                                    .trim()
+                            );
+
+                        }
+                    );
+
+
+                /*
+                 * Otherwise use first result
+                 */
+
+                if (!apiTeam) {
+
+                    apiTeam =
+                        response.teams[0];
+
+                }
 
             }
 
-        }
+
+            /*
+             * =========================================
+             * FALLBACK FOR THE THREE MISSING TEAMS
+             * =========================================
+             */
+
+            if (!apiTeam) {
+
+                const fallbackData = {
+
+                    "Anyone's Legend": {
+
+                        badge:
+                            "https://liquipedia.net/commons/images/8/8a/Anyone%27s_Legend_logo.png",
+
+                        country:
+                            "China"
+
+                    },
 
 
-        /*
-         * =========================================
-         * FALLBACK FOR THE THREE MISSING TEAMS
-         * =========================================
-         */
+                    "RBLZ Gaming": {
 
-        if (!apiTeam) {
+                        badge:
+                            "https://liquipedia.net/commons/images/4/48/RBLZ_Gaming.png",
+
+                        country:
+                            "Germany"
+
+                    },
+
+
+                    "Twisted Minds": {
+
+                        badge:
+                            "https://liquipedia.net/commons/images/6/65/Twisted_Minds_logo.png",
+
+                        country:
+                            "Saudi Arabia"
+
+                    }
+
+                };
+
+
+                if (
+                    fallbackData[team.name]
+                ) {
+
+                    teamApiData[
+                        getSearchName(team)
+                    ] = {
+
+                        found: true,
+
+                        badge:
+                            fallbackData[
+                                team.name
+                            ].badge,
+
+                        country:
+                            fallbackData[
+                                team.name
+                            ].country
+
+                    };
+
+                    return;
+
+                }
+
+            }
+
+
+            /*
+             * =========================================
+             * NORMAL API RESULT
+             * =========================================
+             */
+
+            if (apiTeam) {
+
+                teamApiData[
+                    getSearchName(team)
+                ] = {
+
+                    found: true,
+
+                    badge:
+                        apiTeam.strBadge ||
+                        apiTeam.strLogo ||
+                        "",
+
+                    country:
+                        apiTeam.strCountry ||
+                        apiTeam.strLocation ||
+                        "Not available"
+
+                };
+
+            }
+
+            else {
+
+                teamApiData[
+                    getSearchName(team)
+                ] = {
+
+                    found: false,
+
+                    badge: "",
+
+                    country:
+                        "Not available"
+
+                };
+
+            }
+
+        })
+
+        .fail(function () {
+
+            /*
+             * If TheSportsDB itself fails,
+             * still use fallback data.
+             */
 
             const fallbackData = {
 
                 "Anyone's Legend": {
-
-                    /*
-                     * Use the team's official/esports
-                     * logo image.
-                     */
 
                     badge:
                         "https://liquipedia.net/commons/images/8/8a/Anyone%27s_Legend_logo.png",
@@ -1846,7 +1956,6 @@ $(document).ready(function () {
                         "China"
 
                 },
-
 
                 "RBLZ Gaming": {
 
@@ -1857,7 +1966,6 @@ $(document).ready(function () {
                         "Germany"
 
                 },
-
 
                 "Twisted Minds": {
 
@@ -1883,149 +1991,40 @@ $(document).ready(function () {
                     found: true,
 
                     badge:
-                        fallbackData[team.name].badge,
+                        fallbackData[
+                            team.name
+                        ].badge,
 
                     country:
-                        fallbackData[team.name].country
+                        fallbackData[
+                            team.name
+                        ].country
 
                 };
 
-                return;
+            }
+
+            else {
+
+                teamApiData[
+                    getSearchName(team)
+                ] = {
+
+                    found: false,
+
+                    badge: "",
+
+                    country:
+                        "Not available"
+
+                };
 
             }
 
-        }
+        });
 
+    }
 
-        /*
-         * =========================================
-         * NORMAL API RESULT
-         * =========================================
-         */
-
-        if (apiTeam) {
-
-            teamApiData[
-                getSearchName(team)
-            ] = {
-
-                found: true,
-
-                badge:
-                    apiTeam.strBadge ||
-                    apiTeam.strLogo ||
-                    "",
-
-                country:
-                    apiTeam.strCountry ||
-                    apiTeam.strLocation ||
-                    "Not available"
-
-            };
-
-        }
-
-        else {
-
-            teamApiData[
-                getSearchName(team)
-            ] = {
-
-                found: false,
-
-                badge: "",
-
-                country:
-                    "Not available"
-
-            };
-
-        }
-
-    })
-
-    .fail(function () {
-
-        /*
-         * If TheSportsDB itself fails,
-         * still use fallback data.
-         */
-
-        const fallbackData = {
-
-            "Anyone's Legend": {
-
-                badge:
-                    "https://liquipedia.net/commons/images/8/8a/Anyone%27s_Legend_logo.png",
-
-                country:
-                    "China"
-
-            },
-
-            "RBLZ Gaming": {
-
-                badge:
-                    "https://liquipedia.net/commons/images/4/48/RBLZ_Gaming.png",
-
-                country:
-                    "Germany"
-
-            },
-
-            "Twisted Minds": {
-
-                badge:
-                    "https://liquipedia.net/commons/images/6/65/Twisted_Minds_logo.png",
-
-                country:
-                    "Saudi Arabia"
-
-            }
-
-        };
-
-
-        if (
-            fallbackData[team.name]
-        ) {
-
-            teamApiData[
-                getSearchName(team)
-            ] = {
-
-                found: true,
-
-                badge:
-                    fallbackData[team.name].badge,
-
-                country:
-                    fallbackData[team.name].country
-
-            };
-
-        }
-
-        else {
-
-            teamApiData[
-                getSearchName(team)
-            ] = {
-
-                found: false,
-
-                badge: "",
-
-                country:
-                    "Not available"
-
-            };
-
-        }
-
-    });
-
-}
 
 
     /* =========================================
@@ -2033,19 +2032,6 @@ $(document).ready(function () {
     ========================================= */
 
     function loadAllTeamAPIData() {
-
-
-        $("#apiStatus")
-            .removeClass(
-                "api-success api-error"
-            )
-            .addClass(
-                "api-loading"
-            )
-            .text(
-                "Loading team logos and country information..."
-            );
-
 
         const requests = [];
 
@@ -2063,28 +2049,11 @@ $(document).ready(function () {
         );
 
 
-        /*
-         * Wait for all API requests.
-         */
-
         Promise.all(
             requests
         )
         .then(
             function () {
-
-
-                $("#apiStatus")
-                    .removeClass(
-                        "api-loading api-error"
-                    )
-                    .addClass(
-                        "api-success"
-                    )
-                    .text(
-                        "Team logos and country information loaded."
-                    );
-
 
                 renderTeams();
 
@@ -2141,13 +2110,6 @@ $(document).ready(function () {
                             );
 
 
-                    /*
-                     * Since Team Vitality has
-                     * multiple games, allow
-                     * filtering by any game
-                     * listed in its game field.
-                     */
-
                     const matchesGame =
                         selectedGame === "all"
                         ||
@@ -2202,19 +2164,6 @@ $(document).ready(function () {
 
                     valueB =
                         b.wins;
-
-                }
-
-
-                else if (
-                    sortBy === "losses"
-                ) {
-
-                    valueA =
-                        a.losses;
-
-                    valueB =
-                        b.losses;
 
                 }
 
@@ -2413,8 +2362,6 @@ $(document).ready(function () {
 
                     <tr>
 
-                        <!-- RANK -->
-
                         <td>
 
                             <span
@@ -2431,16 +2378,12 @@ $(document).ready(function () {
                         </td>
 
 
-                        <!-- LOGO -->
-
                         <td>
 
                             ${logoHTML}
 
                         </td>
 
-
-                        <!-- TEAM -->
 
                         <td>
 
@@ -2454,8 +2397,6 @@ $(document).ready(function () {
 
                         </td>
 
-
-                        <!-- COUNTRY -->
 
                         <td>
 
@@ -2474,8 +2415,6 @@ $(document).ready(function () {
                         </td>
 
 
-                        <!-- GAME -->
-
                         <td>
 
                             <span
@@ -2489,8 +2428,6 @@ $(document).ready(function () {
                         </td>
 
 
-                        <!-- WINS -->
-
                         <td>
 
                             ${team.wins}
@@ -2498,16 +2435,12 @@ $(document).ready(function () {
                         </td>
 
 
-                        <!-- LOSSES -->
-
                         <td>
 
                             ${team.losses}
 
                         </td>
 
-
-                        <!-- WIN RATE -->
 
                         <td>
 
@@ -2522,8 +2455,6 @@ $(document).ready(function () {
                         </td>
 
 
-                        <!-- POINTS -->
-
                         <td>
 
                             <span
@@ -2536,8 +2467,6 @@ $(document).ready(function () {
 
                         </td>
 
-
-                        <!-- STATUS -->
 
                         <td>
 
@@ -2721,18 +2650,8 @@ $(document).ready(function () {
     );
 
 
-    /*
-     * Render table immediately so the
-     * rankings appear while the API loads.
-     */
-
     renderTeams();
 
-
-    /*
-     * Then retrieve logo and country
-     * information from TheSportsDB.
-     */
 
     loadAllTeamAPIData();
 
