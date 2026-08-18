@@ -1296,9 +1296,6 @@
                             Fewest Losses
                         </option>
 
-                        <option value="name">
-                            Team Name A-Z
-                        </option>
 
                     </select>
 
@@ -2231,40 +2228,6 @@ $(document).ready(function () {
 
                     valueB =
                         getWinRate(b);
-
-                }
-
-
-                else if (
-                    sortBy === "name"
-                ) {
-
-                    valueA =
-                        a.name.toLowerCase();
-
-                    valueB =
-                        b.name.toLowerCase();
-
-                }
-
-
-                if (
-                    sortBy === "name"
-                ) {
-
-                    if (
-                        order === "asc"
-                    ) {
-
-                        return valueA.localeCompare(
-                            valueB
-                        );
-
-                    }
-
-                    return valueB.localeCompare(
-                        valueA
-                    );
 
                 }
 
